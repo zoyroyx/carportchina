@@ -29,4 +29,20 @@ $failure = [];
 try { processRequest($failure, 'fail', 'ip', 'email', function() { throw new RuntimeException('SMTP failed'); }, $now); } catch (RuntimeException $e) {}
 check(!isset($failure['sent']['fail']), 'SMTP failure never marked sent');
 check(processRequest($failure, 'fail', 'ip', 'email', $send, $now)['ok'], 'Retry after SMTP failure works');
+require __DIR__ . '/../backend/phpmailer/SMTP.php';
+require __DIR__ . '/../backend/HostingSMTP.php';
+class TestHostingSMTP extends HostingSMTP {
+    public function readFrom($socket): string { $this->smtp_conn = $socket; return $this->get_lines(); }
+}
+$smtp = new TestHostingSMTP(); $smtp->Timeout = 1; $smtp->Timelimit = 1;
+foreach (["250-host.example\r\n250-AUTH LOGIN\r\n250 OK\r\n", "220 Ready\r\n", "250\r\n"] as $reply) {
+    [$reader, $writer] = stream_socket_pair(STREAM_PF_UNIX, STREAM_SOCK_STREAM, STREAM_IPPROTO_IP);
+    fwrite($writer, $reply);
+    check($smtp->readFrom($reader) === $reply, 'Hosting SMTP reads complete reply');
+    fclose($reader); fclose($writer);
+}
+[$reader, $writer] = stream_socket_pair(STREAM_PF_UNIX, STREAM_SOCK_STREAM, STREAM_IPPROTO_IP);
+fwrite($writer, "250-incomplete\r\n");
+check($smtp->readFrom($reader) === '', 'Hosting SMTP rejects timed-out partial reply');
+fclose($reader); fclose($writer);
 echo "Request handler: $checks checks passed\n";

@@ -29,12 +29,14 @@ if ($data['website'] !== '') respond(422, ['ok'=>false, 'message'=>'Не уда�
 require __DIR__ . '/phpmailer/Exception.php';
 require __DIR__ . '/phpmailer/PHPMailer.php';
 require __DIR__ . '/phpmailer/SMTP.php';
+require __DIR__ . '/HostingSMTP.php';
 $file = fopen($private . '/requests-state.json', 'c+');
 if (!$file || !flock($file, LOCK_EX | LOCK_NB)) respond(503, ['ok'=>false, 'message'=>'Сервис занят. Повторите отправку через несколько секунд.']);
 $state = json_decode(stream_get_contents($file), true) ?? [];
 try {
     $result = processRequest($state, explode('.', $data['token'])[1], hash_hmac('sha256', 'ip:' . ($_SERVER['REMOTE_ADDR'] ?? ''), $config['signing_key']), hash_hmac('sha256', 'contact:' . strtolower(preg_replace('/[ ()-]/', '', $request['contact'])), $config['signing_key']), function($id) use ($request, $config) {
         $mail = new PHPMailer(true);
+        $mail->setSMTPInstance(new HostingSMTP());
         $mail->isSMTP(); $mail->Host = $config['host']; $mail->Port = 465;
         $mail->SMTPAuth = true; $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Username = 'corp@carportchina.ru'; $mail->Password = $config['password'];

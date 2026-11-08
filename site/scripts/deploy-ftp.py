@@ -81,7 +81,8 @@ if __name__ == '__main__':
             target = backup / name
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_bytes(data.getvalue())
-    folders = sorted({str(Path(n).parent).replace('\\', '/') for n in files if '/' in n}, key=lambda n: n.count('/'))
+    changed = [n for n in files if previous.get(n) != hashes[n]]
+    folders = sorted({str(Path(n).parent).replace('\\', '/') for n in changed if '/' in n}, key=lambda n: n.count('/'))
     for folder in folders:
         current = ''
         for part in folder.split('/'):
@@ -92,7 +93,6 @@ if __name__ == '__main__':
                 # Verify that an existing path is a directory rather than hiding permission errors.
                 ftp.cwd(remote(current))
                 ftp.cwd(BASE)
-    changed = [n for n in files if previous.get(n) != hashes[n]]
     assets = [n for n in changed if not n.endswith('.html') and n not in ['.htaccess', 'robots.txt', 'sitemap.xml']]
     def batch(names):
         connection = connect()

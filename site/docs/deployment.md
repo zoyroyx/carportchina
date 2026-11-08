@@ -10,15 +10,15 @@ The full source snapshot is in the repository `site/` directory. The working wor
 
 Actions uses Node 24 and pnpm 11.25.0, frozen install, typecheck, tests, and `pnpm build:static`. React server rendering generates 36 pages plus a 404 page; browser hydration retains interactive filtering, menus and video controls. The existing Node/Fastify dev runtime remains available locally. Hosting does not need a running Node process.
 
-Actions Secrets: FTP_HOST, FTP_PORT, FTP_USERNAME, FTP_PASSWORD. Credentials are not committed or stored in project notes. The upload script accepts secrets from its environment and limits all writes to `/carportchina.ru`. It does not delete remote files. New assets are uploaded before entry pages, each file via a temporary name and rename. A SHA256 manifest supports incremental uploads. The current FTP host is shared with other projects; they are outside the deployment target.
+Actions Secrets: FTP_HOST, FTP_PORT, FTP_USERNAME, FTP_PASSWORD, SMTP_PASSWORD, REQUEST_SIGNING_KEY. Credentials are not committed or stored in project notes. The upload script accepts secrets from its environment and limits public writes to `/carportchina.ru` and mail configuration to the fixed private sibling `/carportchina-private/config.php`. It does not delete remote files. New assets are uploaded before entry pages, each file via a temporary name and rename. A SHA256 manifest supports incremental uploads. The current FTP host is shared with other projects; they are outside the deployment target.
 
 Workflow artifact `carportchina-static` holds the release. `carportchina-previous-pages` retains overwritten entry HTML, robots, sitemap and .htaccess for 14 days. The initial index.html/robots.txt are also saved locally in output/deployment-2026-11-08/before/. To roll back, restore previous entry files from the artifact through the same scoped FTP workflow; previous hashed assets remain available because uploads never delete them.
 
-Apache .htaccess supplies old URL redirects and an actual 404 response, and marks filtered catalogue URLs noindex. Main commercial pages are indexable; placeholder contacts/legal pages remain noindex according to existing policy. robots and sitemap are generated from the same SEO rules as local SSR.
+Apache .htaccess supplies old URL redirects and an actual 404 response, and marks filtered catalogue URLs noindex. Main commercial pages are indexable; contacts with the confirmed email are indexable; legal pages remain noindex pending complete operator details. robots and sitemap are generated from the same SEO rules as local SSR.
 
 ## Boundaries
 
-Publication does not implement CMS, database or lead delivery. Existing forms remain explicitly marked as previews. Content and inventory refresh on each deployment; there is no background source synchronization. Changes under site/ on main trigger deployment; workflow_dispatch supports a manual run.
+CMS and a lead database are not implemented. Since 08.11.2026, shared forms send mail through PHP/SMTP to corp@carportchina.ru; see [mail-requests.md](mail-requests.md). PHP 8.1+ with OpenSSL is required; local Node preview does not execute PHP. Content and inventory refresh on each deployment; there is no background source synchronization. Changes under site/ on main trigger deployment; workflow_dispatch supports a manual run.
 
 ## Verification
 
