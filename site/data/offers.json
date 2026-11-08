@@ -1,0 +1,1297 @@
+[
+  {
+    "id": "changan-qiyuan-a06-2026",
+    "slug": "changan-qiyuan-a06-2026",
+    "title": "Changan Qiyuan A06",
+    "brand": "Changan",
+    "model": "Qiyuan A06",
+    "year": 2026,
+    "trim": "Laser Ultra+",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/changan-qiyuan-a06-2026/02.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/changan-qiyuan-a06-2026/02.webp",
+        "alt": "Changan Qiyuan A06 — Вид спереди, белый кузов"
+      },
+      {
+        "src": "/photos/catalog/changan-qiyuan-a06-2026/03.webp",
+        "alt": "Changan Qiyuan A06 — Вид сзади, белый кузов"
+      },
+      {
+        "src": "/photos/catalog/changan-qiyuan-a06-2026/04.webp",
+        "alt": "Changan Qiyuan A06 — Экран камеры заднего вида"
+      },
+      {
+        "src": "/photos/catalog/changan-qiyuan-a06-2026/05.webp",
+        "alt": "Changan Qiyuan A06 — Экран настроек автомобиля"
+      }
+    ],
+    "description": "Гибридный Changan Qiyuan A06 в комплектации Laser Ultra+. Панорамная крыша, премиальная аудиосистема, камеры кругового обзора и расширенный набор ассистентов. Передние и задние сиденья с подогревом и вентиляцией. Автомобиль предлагается под заказ.",
+    "highlights": [
+      "Гибрид 1,5 л",
+      "Задний привод",
+      "Запас хода 240 км"
+    ],
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "1,5 л · гибрид"
+      },
+      {
+        "label": "Привод",
+        "value": "Задний"
+      },
+      {
+        "label": "Заявленный запас хода",
+        "value": "240 км"
+      },
+      {
+        "label": "Поставка",
+        "value": "Под заказ"
+      }
+    ],
+    "sourcePrice": {
+      "fromRub": 2500000,
+      "date": "2026-11-01",
+      "note": "Цена из предложения от 1 ноября 2026 года. Состав расходов и итоговая стоимость рассчитываются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет, исполнение и оснащение конкретного автомобиля уточняются при подборе.",
+    "updatedAt": "2026-11-03",
+    "equipment": [
+      {
+        "title": "Безопасность",
+        "items": [
+          "Подушка безопасности водителя",
+          "Подушка безопасности пассажира",
+          "Подушки безопасности боковые",
+          "Подушки безопасности оконные (шторки)",
+          "Система предупреждения о столкновении",
+          "Система предотвращения столкновения",
+          "Система предупреждения о выезде из полосы",
+          "Система удержания в полосе",
+          "Ассистент движения в пробке",
+          "Антипробуксовочная система (ASR)",
+          "Система помощи при торможении (BAS; EBD)",
+          "Система помощи при старте в гору (HSA)",
+          "Система помощи при спуске",
+          "Система контроля слепых зон",
+          "Система помощи при выезде с парковки задним ходом",
+          "Крепление детского кресла (задний ряд) ISOFIX",
+          "Датчик давления в шинах",
+          "Антиблокировочная система (ABS)",
+          "Система стабилизации (ESP)"
+        ]
+      },
+      {
+        "title": "Обзор",
+        "items": [
+          "Датчик дождя",
+          "Датчик света",
+          "Дневные ходовые огни",
+          "Система управления дальним светом",
+          "Самозатемняющееся зеркало заднего вида",
+          "Светодиодные фары",
+          "Электрообогрев боковых зеркал"
+        ]
+      },
+      {
+        "title": "Мультимедиа",
+        "items": [
+          "Премиальная аудиосистема",
+          "Русифицированное меню",
+          "Мультимедиа система с ЖК-экраном",
+          "Дистанционное управление автомобилем",
+          "Беспроводная зарядка для смартфона",
+          "Универсальный порт (USB)",
+          "Навигационная система",
+          "Голосовое управление",
+          "Bluetooth",
+          "Розетка 12В",
+          "Розетка 220В"
+        ]
+      },
+      {
+        "title": "Комфорт",
+        "items": [
+          "Климат-контроль 2-зонный",
+          "Адаптивный круиз-контроль",
+          "Парктроник передний",
+          "Парктроник задний",
+          "Камеры кругового обзора",
+          "Регулировка руля по высоте",
+          "Регулировка руля по вылету",
+          "Дистанционный запуск двигателя",
+          "Мультифункциональное рулевое колесо",
+          "Электронная приборная панель",
+          "Система доступа без ключа",
+          "Запуск двигателя с кнопки",
+          "Электропривод крышки багажника",
+          "Электроскладывание зеркал",
+          "Память боковых зеркал",
+          "Электропривод зеркал",
+          "Задержка выключения фар",
+          "Система ионизации воздуха",
+          "Электростеклоподъемники передние",
+          "Электростеклоподъемники задние",
+          "Усилитель руля"
+        ]
+      },
+      {
+        "title": "Салон",
+        "items": [
+          "Кожа (материал салона)",
+          "Регулировка передних сидений по высоте",
+          "Электрорегулировка передних сидений",
+          "Электрорегулировка задних сидений",
+          "Передние сиденья с поясничной поддержкой",
+          "Подогрев передних сидений",
+          "Подогрев задних сидений",
+          "Вентиляция передних сидений",
+          "Вентиляция задних сидений",
+          "Панорамная крыша / лобовое стекло",
+          "Сиденья с массажем",
+          "Обогрев рулевого колеса",
+          "Отделка кожей рулевого колеса",
+          "Задний подлокотник",
+          "Складывающееся заднее сиденье",
+          "Функция складывания спинки сиденья пассажира",
+          "Декоративная подсветка салона",
+          "Передний центральный подлокотник",
+          "Память передних сидений",
+          "Память задних сидений"
+        ]
+      }
+    ],
+    "availability": "to_order"
+  },
+  {
+    "id": "geely-monjaro-2026",
+    "slug": "geely-monjaro-2026",
+    "title": "Geely Monjaro",
+    "brand": "Geely",
+    "model": "Monjaro",
+    "year": 2026,
+    "trim": "Максимальная",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/geely-monjaro-2026/07.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/geely-monjaro-2026/07.webp",
+        "alt": "Geely Monjaro — Вид спереди, зелёный кузов"
+      },
+      {
+        "src": "/photos/catalog/geely-monjaro-2026/08.webp",
+        "alt": "Geely Monjaro — Вид спереди, серебристый кузов"
+      },
+      {
+        "src": "/photos/catalog/geely-monjaro-2026/10.webp",
+        "alt": "Geely Monjaro — Вид спереди в шоуруме"
+      },
+      {
+        "src": "/photos/catalog/geely-monjaro-2026/09.webp",
+        "alt": "Geely Monjaro — Вид сзади в шоуруме"
+      },
+      {
+        "src": "/photos/catalog/geely-monjaro-2026/11.webp",
+        "alt": "Geely Monjaro — Задняя часть и боковой профиль"
+      },
+      {
+        "src": "/photos/catalog/geely-monjaro-2026/12.webp",
+        "alt": "Geely Monjaro — Решётка радиатора и фары"
+      },
+      {
+        "src": "/photos/catalog/geely-monjaro-2026/13.webp",
+        "alt": "Geely Monjaro — Передний ракурс на улице"
+      },
+      {
+        "src": "/photos/catalog/geely-monjaro-2026/06.webp",
+        "alt": "Geely Monjaro — Передняя панель и центральная консоль"
+      },
+      {
+        "src": "/photos/catalog/geely-monjaro-2026/14.webp",
+        "alt": "Geely Monjaro — Передняя панель с подсветкой"
+      },
+      {
+        "src": "/photos/catalog/geely-monjaro-2026/15.webp",
+        "alt": "Geely Monjaro — Место водителя и панель приборов"
+      },
+      {
+        "src": "/photos/catalog/geely-monjaro-2026/16.webp",
+        "alt": "Geely Monjaro — Передние сиденья и консоль"
+      }
+    ],
+    "description": "Новый Geely Monjaro в максимальной комплектации. Двигатель объёмом 2,0 литра мощностью 272 л.с. и полный привод. В галерее — экстерьер в нескольких цветах и варианты оформления салона. Конкретный цвет и оснащение согласовываются при подборе.",
+    "highlights": [
+      "2,0 л · 272 л.с.",
+      "Полный привод",
+      "Новый автомобиль"
+    ],
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "2,0 л"
+      },
+      {
+        "label": "Мощность",
+        "value": "272 л.с."
+      },
+      {
+        "label": "Привод",
+        "value": "Полный · 4WD"
+      },
+      {
+        "label": "Дата выпуска",
+        "value": "Июль 2026"
+      },
+      {
+        "label": "Состояние",
+        "value": "Новый"
+      }
+    ],
+    "sourcePrice": {
+      "fromRub": 4100000,
+      "date": "2026-11-01",
+      "note": "В предложении от 1 ноября 2026 года указана цена под ключ в Москве. Актуальная стоимость и состав расходов уточняются перед заказом."
+    },
+    "photoNote": "Фотографии из предложения. Цвет, исполнение и оснащение конкретного автомобиля уточняются при подборе.",
+    "updatedAt": "2026-11-03"
+  },
+  {
+    "id": "geely-galaxy-m7-2026",
+    "slug": "geely-galaxy-m7-2026",
+    "title": "Geely Galaxy M7",
+    "brand": "Geely",
+    "model": "Galaxy M7",
+    "year": 2026,
+    "trim": "Максимальная",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/geely-galaxy-m7-2026/19.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/geely-galaxy-m7-2026/19.webp",
+        "alt": "Geely Galaxy M7 — Передний ракурс, белый кузов"
+      },
+      {
+        "src": "/photos/catalog/geely-galaxy-m7-2026/17.webp",
+        "alt": "Geely Galaxy M7 — Передний ракурс, тёмный кузов"
+      },
+      {
+        "src": "/photos/catalog/geely-galaxy-m7-2026/18.webp",
+        "alt": "Geely Galaxy M7 — Вид сзади, белый кузов"
+      },
+      {
+        "src": "/photos/catalog/geely-galaxy-m7-2026/20.webp",
+        "alt": "Geely Galaxy M7 — Фары и передняя часть кузова"
+      },
+      {
+        "src": "/photos/catalog/geely-galaxy-m7-2026/21.webp",
+        "alt": "Geely Galaxy M7 — Боковой ракурс, тёмный кузов"
+      },
+      {
+        "src": "/photos/catalog/geely-galaxy-m7-2026/22.webp",
+        "alt": "Geely Galaxy M7 — Боковой ракурс, белый кузов"
+      },
+      {
+        "src": "/photos/catalog/geely-galaxy-m7-2026/23.webp",
+        "alt": "Geely Galaxy M7 — Передняя панель и салон"
+      },
+      {
+        "src": "/photos/catalog/geely-galaxy-m7-2026/24.webp",
+        "alt": "Geely Galaxy M7 — Панорамная крыша и салон"
+      },
+      {
+        "src": "/photos/catalog/geely-galaxy-m7-2026/25.webp",
+        "alt": "Geely Galaxy M7 — Задний ряд сидений"
+      }
+    ],
+    "description": "Новый гибридный Geely Galaxy M7 в максимальной комплектации. Силовая установка с двигателем 1,5 литра и заявленной суммарной мощностью 238 л.с. В галерее собраны внешние ракурсы и детали салона. Точное обозначение версии и оснащение сверяются перед заказом.",
+    "highlights": [
+      "Гибрид 1,5 л",
+      "238 л.с. суммарно",
+      "Новый автомобиль"
+    ],
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "1,5 л · гибрид"
+      },
+      {
+        "label": "Суммарная мощность",
+        "value": "238 л.с."
+      },
+      {
+        "label": "Привод",
+        "value": "2WD"
+      },
+      {
+        "label": "Дата выпуска",
+        "value": "Август 2026"
+      },
+      {
+        "label": "Состояние",
+        "value": "Новый"
+      }
+    ],
+    "sourcePrice": {
+      "fromRub": 3460000,
+      "date": "2026-11-01",
+      "note": "В предложении от 1 ноября 2026 года указана цена под ключ в Москве. Актуальная стоимость и состав расходов уточняются перед заказом."
+    },
+    "photoNote": "Фотографии из предложения. Цвет, исполнение и оснащение конкретного автомобиля уточняются при подборе.",
+    "updatedAt": "2026-11-03"
+  },
+  {
+    "id": "zeekr-8x-dawn-2026",
+    "slug": "zeekr-8x-dawn-2026",
+    "title": "ZEEKR 8X",
+    "brand": "ZEEKR",
+    "model": "8X",
+    "year": 2026,
+    "trim": "Dawn",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/zeekr-8x-dawn-2026/45.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/zeekr-8x-dawn-2026/45.webp",
+        "alt": "ZEEKR 8X — фото 1 из предложения"
+      },
+      {
+        "src": "/photos/catalog/zeekr-8x-dawn-2026/41.webp",
+        "alt": "ZEEKR 8X — фото 2 из предложения"
+      },
+      {
+        "src": "/photos/catalog/zeekr-8x-dawn-2026/42.webp",
+        "alt": "ZEEKR 8X — фото 3 из предложения"
+      },
+      {
+        "src": "/photos/catalog/zeekr-8x-dawn-2026/43.webp",
+        "alt": "ZEEKR 8X — фото 4 из предложения"
+      },
+      {
+        "src": "/photos/catalog/zeekr-8x-dawn-2026/44.webp",
+        "alt": "ZEEKR 8X — фото 5 из предложения"
+      },
+      {
+        "src": "/photos/catalog/zeekr-8x-dawn-2026/46.webp",
+        "alt": "ZEEKR 8X — фото 6 из предложения"
+      }
+    ],
+    "description": "Серый матовый кузов. Максимальная комплектация Dawn.",
+    "highlights": [
+      "Dawn",
+      "Матовый серый"
+    ],
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 03.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 12100000,
+      "date": "2026-11-03",
+      "note": "Цена по предложению поставщика. Итоговая стоимость, состав расходов и доступность подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения поставщика. Цвет и оснащение конкретного автомобиля уточняются при выборе.",
+    "updatedAt": "2026-11-07",
+    "stockPriceRub": 12100000,
+    "orderPriceRub": 11700000
+  },
+  {
+    "id": "lynk-co-900-15-ultra-2026",
+    "slug": "lynk-co-900-15-ultra-2026",
+    "title": "Lynk & Co 900",
+    "brand": "Lynk & Co",
+    "model": "900",
+    "year": 2026,
+    "trim": "1.5 Ultra",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/lynk-co-900-15-ultra-2026/47.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/lynk-co-900-15-ultra-2026/47.webp",
+        "alt": "Lynk & Co 900 — фото 1 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-900-15-ultra-2026/48.webp",
+        "alt": "Lynk & Co 900 — фото 2 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-900-15-ultra-2026/49.webp",
+        "alt": "Lynk & Co 900 — фото 3 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-900-15-ultra-2026/50.webp",
+        "alt": "Lynk & Co 900 — фото 4 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-900-15-ultra-2026/51.webp",
+        "alt": "Lynk & Co 900 — фото 5 из предложения"
+      }
+    ],
+    "description": "Серый кузов, рыжий салон, шесть мест и фаркоп. В наличии в Москве.",
+    "highlights": [
+      "1,5 л",
+      "6 мест",
+      "Фаркоп"
+    ],
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 03.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 7550000,
+      "date": "2026-11-03",
+      "note": "Цена по предложению поставщика. Итоговая стоимость, состав расходов и доступность подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения поставщика. Цвет и оснащение конкретного автомобиля уточняются при выборе.",
+    "updatedAt": "2026-11-07",
+    "stockPriceRub": 7550000
+  },
+  {
+    "id": "lynk-co-900-20-ultra-2026",
+    "slug": "lynk-co-900-20-ultra-2026",
+    "title": "Lynk & Co 900",
+    "brand": "Lynk & Co",
+    "model": "900",
+    "year": 2026,
+    "trim": "2.0 Ultra",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/lynk-co-900-20-ultra-2026/54.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/lynk-co-900-20-ultra-2026/54.webp",
+        "alt": "Lynk & Co 900 — фото 1 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-900-20-ultra-2026/52.webp",
+        "alt": "Lynk & Co 900 — фото 2 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-900-20-ultra-2026/53.webp",
+        "alt": "Lynk & Co 900 — фото 3 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-900-20-ultra-2026/55.webp",
+        "alt": "Lynk & Co 900 — фото 4 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-900-20-ultra-2026/56.webp",
+        "alt": "Lynk & Co 900 — фото 5 из предложения"
+      }
+    ],
+    "description": "Шесть мест, рыжий салон и фаркоп. Цвет выбранного автомобиля уточняется: описание и фотографии предложения различаются. В наличии в Москве.",
+    "highlights": [
+      "2,0 л",
+      "6 мест",
+      "Фаркоп"
+    ],
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 03.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 8300000,
+      "date": "2026-11-03",
+      "note": "Цена по предложению поставщика. Итоговая стоимость, состав расходов и доступность подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения поставщика. Цвет и оснащение конкретного автомобиля уточняются при выборе.",
+    "updatedAt": "2026-11-07",
+    "stockPriceRub": 8300000
+  },
+  {
+    "id": "lynk-co-07-gt-hybrid-2026",
+    "slug": "lynk-co-07-gt-hybrid-2026",
+    "title": "Lynk & Co 07 GT",
+    "brand": "Lynk & Co",
+    "model": "07 GT",
+    "year": 2026,
+    "trim": "Hybrid",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/lynk-co-07-gt-hybrid-2026/61.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-hybrid-2026/61.webp",
+        "alt": "Lynk & Co 07 GT — фото 1 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-hybrid-2026/57.webp",
+        "alt": "Lynk & Co 07 GT — фото 2 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-hybrid-2026/58.webp",
+        "alt": "Lynk & Co 07 GT — фото 3 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-hybrid-2026/59.webp",
+        "alt": "Lynk & Co 07 GT — фото 4 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-hybrid-2026/60.webp",
+        "alt": "Lynk & Co 07 GT — фото 5 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-hybrid-2026/62.webp",
+        "alt": "Lynk & Co 07 GT — фото 6 из предложения"
+      }
+    ],
+    "description": "Новый гибридный автомобиль без пробега. Доступны покупка из наличия и поставка из Китая.",
+    "highlights": [
+      "1,5 л · гибрид",
+      "530 л.с.",
+      "Без пробега"
+    ],
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 03.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 5000000,
+      "date": "2026-11-03",
+      "note": "Цена по предложению поставщика. Итоговая стоимость, состав расходов и доступность подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения поставщика. Цвет и оснащение конкретного автомобиля уточняются при выборе.",
+    "updatedAt": "2026-11-07",
+    "stockPriceRub": 5000000,
+    "orderPriceRub": 4900000
+  },
+  {
+    "id": "lynk-co-07-gt-export-2026",
+    "slug": "lynk-co-07-gt-export-2026",
+    "title": "Lynk & Co 07 GT",
+    "brand": "Lynk & Co",
+    "model": "07 GT",
+    "year": 2026,
+    "trim": "Limited Export",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/lynk-co-07-gt-export-2026/63.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-export-2026/63.webp",
+        "alt": "Lynk & Co 07 GT — фото 1 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-export-2026/64.webp",
+        "alt": "Lynk & Co 07 GT — фото 2 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-export-2026/65.webp",
+        "alt": "Lynk & Co 07 GT — фото 3 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-export-2026/66.webp",
+        "alt": "Lynk & Co 07 GT — фото 4 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-export-2026/67.webp",
+        "alt": "Lynk & Co 07 GT — фото 5 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-export-2026/68.webp",
+        "alt": "Lynk & Co 07 GT — фото 6 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-export-2026/69.webp",
+        "alt": "Lynk & Co 07 GT — фото 7 из предложения"
+      }
+    ],
+    "description": "Лимитированная экспортная версия: серый матовый кузов, голубой салон, синие суппорты и фаркоп. В наличии в Москве. Объём двигателя требует уточнения.",
+    "highlights": [
+      "530 л.с.",
+      "Полный привод",
+      "Фаркоп"
+    ],
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 03.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 5650000,
+      "date": "2026-11-03",
+      "note": "Цена по предложению поставщика. Итоговая стоимость, состав расходов и доступность подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения поставщика. Цвет и оснащение конкретного автомобиля уточняются при выборе.",
+    "updatedAt": "2026-11-07",
+    "stockPriceRub": 5650000
+  },
+  {
+    "id": "zeekr-9x-hyper-2026",
+    "slug": "zeekr-9x-hyper-2026",
+    "title": "ZEEKR 9X",
+    "brand": "ZEEKR",
+    "model": "9X",
+    "year": 2026,
+    "trim": "Hyper Black Obsidian",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/zeekr-9x-hyper-2026/73.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/zeekr-9x-hyper-2026/73.webp",
+        "alt": "ZEEKR 9X — фото 1 из предложения"
+      },
+      {
+        "src": "/photos/catalog/zeekr-9x-hyper-2026/70.webp",
+        "alt": "ZEEKR 9X — фото 2 из предложения"
+      },
+      {
+        "src": "/photos/catalog/zeekr-9x-hyper-2026/71.webp",
+        "alt": "ZEEKR 9X — фото 3 из предложения"
+      },
+      {
+        "src": "/photos/catalog/zeekr-9x-hyper-2026/72.webp",
+        "alt": "ZEEKR 9X — фото 4 из предложения"
+      },
+      {
+        "src": "/photos/catalog/zeekr-9x-hyper-2026/74.webp",
+        "alt": "ZEEKR 9X — фото 5 из предложения"
+      },
+      {
+        "src": "/photos/catalog/zeekr-9x-hyper-2026/75.webp",
+        "alt": "ZEEKR 9X — фото 6 из предложения"
+      },
+      {
+        "src": "/photos/catalog/zeekr-9x-hyper-2026/76.webp",
+        "alt": "ZEEKR 9X — фото 7 из предложения"
+      },
+      {
+        "src": "/photos/catalog/zeekr-9x-hyper-2026/77.webp",
+        "alt": "ZEEKR 9X — фото 8 из предложения"
+      }
+    ],
+    "description": "Чёрный кузов, синий салон с оранжевыми вставками. Поворотные сиденья, два передних экрана, фаркоп. Передача мастер-аккаунта.",
+    "highlights": [
+      "Black Obsidian",
+      "Поворотные сиденья",
+      "Мастер-аккаунт"
+    ],
+    "availability": "unknown",
+    "availabilityNote": "Статус по предложению от 03.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 12500000,
+      "date": "2026-11-03",
+      "note": "Цена по предложению поставщика. Итоговая стоимость, состав расходов и доступность подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения поставщика. Цвет и оснащение конкретного автомобиля уточняются при выборе.",
+    "updatedAt": "2026-11-07"
+  },
+  {
+    "id": "toyota-land-cruiser-300-2026",
+    "slug": "toyota-land-cruiser-300-2026",
+    "title": "Toyota Land Cruiser 300",
+    "brand": "Toyota",
+    "model": "Land Cruiser 300",
+    "year": 2026,
+    "trim": "Premium",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/toyota-land-cruiser-300-2026/78.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/toyota-land-cruiser-300-2026/78.webp",
+        "alt": "Toyota Land Cruiser 300 — фото 1 из предложения"
+      }
+    ],
+    "description": "Дизельный Land Cruiser 300 Premium на семь мест. По сообщению поставщика автомобиль в пути; текущая дата прибытия уточняется.",
+    "highlights": [
+      "3,3 л · дизель",
+      "299 л.с.",
+      "7 мест"
+    ],
+    "availability": "in_transit",
+    "availabilityNote": "Статус по предложению от 03.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 15400000,
+      "date": "2026-11-03",
+      "note": "Цена по предложению поставщика. Итоговая стоимость, состав расходов и доступность подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения поставщика. Цвет и оснащение конкретного автомобиля уточняются при выборе.",
+    "updatedAt": "2026-11-07"
+  },
+  {
+    "id": "gac-trumpchi-s9-2025",
+    "slug": "gac-trumpchi-s9-2025",
+    "title": "GAC Trumpchi S9",
+    "brand": "GAC",
+    "model": "Trumpchi S9",
+    "year": 2025,
+    "trim": "Ultra+",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/gac-trumpchi-s9-2025/79.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/gac-trumpchi-s9-2025/79.webp",
+        "alt": "GAC Trumpchi S9 — фото 1 из предложения"
+      }
+    ],
+    "description": "Новый гибридный автомобиль: чёрный кузов, рыжий салон, шесть мест и задние капитанские сиденья.",
+    "highlights": [
+      "1,5 л · гибрид",
+      "500 л.с.",
+      "6 мест"
+    ],
+    "availability": "unknown",
+    "availabilityNote": "Статус по предложению от 03.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 5050000,
+      "date": "2026-11-03",
+      "note": "Цена по предложению поставщика. Итоговая стоимость, состав расходов и доступность подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения поставщика. Цвет и оснащение конкретного автомобиля уточняются при выборе.",
+    "updatedAt": "2026-11-07"
+  },
+  {
+    "id": "gac-trumpchi-s7-2026",
+    "slug": "gac-trumpchi-s7-2026",
+    "title": "GAC Trumpchi S7",
+    "brand": "GAC",
+    "model": "Trumpchi S7",
+    "year": 2026,
+    "trim": "Ultra Lidar",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/gac-trumpchi-s7-2026/80.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/gac-trumpchi-s7-2026/80.webp",
+        "alt": "GAC Trumpchi S7 — фото 1 из предложения"
+      }
+    ],
+    "description": "Модельный год 2027, выпуск 2026. Белый кузов с чёрной крышей, рыжий салон. Заявленный электрический запас хода 240–255 км.",
+    "highlights": [
+      "1,5 л · гибрид",
+      "501 л.с.",
+      "Ultra Lidar"
+    ],
+    "availability": "unknown",
+    "availabilityNote": "Статус по предложению от 03.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 5150000,
+      "date": "2026-11-03",
+      "note": "Цена по предложению поставщика. Итоговая стоимость, состав расходов и доступность подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения поставщика. Цвет и оснащение конкретного автомобиля уточняются при выборе.",
+    "updatedAt": "2026-11-07"
+  },
+  {
+    "id": "lynk-co-07-gt-limited-2026",
+    "slug": "lynk-co-07-gt-limited-2026",
+    "title": "Lynk & Co 07 GT",
+    "brand": "Lynk & Co",
+    "model": "07 GT",
+    "trim": "Limited",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/lynk-co-07-gt-limited-2026/85.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-limited-2026/85.webp",
+        "alt": "Lynk & Co 07 GT — фото 1 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-limited-2026/81.webp",
+        "alt": "Lynk & Co 07 GT — фото 2 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-limited-2026/82.webp",
+        "alt": "Lynk & Co 07 GT — фото 3 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-limited-2026/83.webp",
+        "alt": "Lynk & Co 07 GT — фото 4 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-limited-2026/84.webp",
+        "alt": "Lynk & Co 07 GT — фото 5 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-limited-2026/86.webp",
+        "alt": "Lynk & Co 07 GT — фото 6 из предложения"
+      }
+    ],
+    "description": "Комплектация Limited, голубой, серебристый или чёрный кузов. Оформление через учёт — дополнительно 50 000 ₽ по предложению.",
+    "highlights": [
+      "Limited",
+      "Выбор цвета"
+    ],
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 03.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 5100000,
+      "date": "2026-11-03",
+      "note": "Цена по предложению поставщика. Итоговая стоимость, состав расходов и доступность подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения поставщика. Цвет и оснащение конкретного автомобиля уточняются при выборе.",
+    "updatedAt": "2026-11-07",
+    "stockPriceRub": 5100000
+  },
+  {
+    "id": "lynk-co-07-gt-limited-matte-2026",
+    "slug": "lynk-co-07-gt-limited-matte-2026",
+    "title": "Lynk & Co 07 GT",
+    "brand": "Lynk & Co",
+    "model": "07 GT",
+    "trim": "Limited Edition · серый мат",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/lynk-co-07-gt-limited-matte-2026/84.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-limited-matte-2026/84.webp",
+        "alt": "Lynk & Co 07 GT — фото 1 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-limited-matte-2026/81.webp",
+        "alt": "Lynk & Co 07 GT — фото 2 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-limited-matte-2026/82.webp",
+        "alt": "Lynk & Co 07 GT — фото 3 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-limited-matte-2026/83.webp",
+        "alt": "Lynk & Co 07 GT — фото 4 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-limited-matte-2026/85.webp",
+        "alt": "Lynk & Co 07 GT — фото 5 из предложения"
+      },
+      {
+        "src": "/photos/catalog/lynk-co-07-gt-limited-matte-2026/86.webp",
+        "alt": "Lynk & Co 07 GT — фото 6 из предложения"
+      }
+    ],
+    "description": "Отдельное предложение Limited Edition: серый матовый кузов и синий салон. Фотографии общей подборки Limited; точное исполнение уточняется.",
+    "highlights": [
+      "Серый мат",
+      "Синий салон"
+    ],
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 03.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 5180000,
+      "date": "2026-11-03",
+      "note": "Цена по предложению поставщика. Итоговая стоимость, состав расходов и доступность подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения поставщика. Цвет и оснащение конкретного автомобиля уточняются при выборе.",
+    "updatedAt": "2026-11-07",
+    "stockPriceRub": 5180000
+  },
+  {
+    "id": "volkswagen-tharu-xr-2026",
+    "slug": "volkswagen-tharu-xr-2026",
+    "title": "Volkswagen Tharu XR",
+    "brand": "Volkswagen",
+    "model": "Tharu XR",
+    "year": 2026,
+    "trim": "Moon",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/volkswagen-tharu-xr-2026/87.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/volkswagen-tharu-xr-2026/87.webp",
+        "alt": "Volkswagen Tharu XR — фото 1 из предложения"
+      }
+    ],
+    "description": "Новый Volkswagen Tharu XR Moon. Цвет — серый или чёрный.",
+    "highlights": [
+      "1,5 л · бензин",
+      "110 л.с.",
+      "Без пробега"
+    ],
+    "availability": "unknown",
+    "availabilityNote": "Статус по предложению от 03.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 2650000,
+      "date": "2026-11-03",
+      "note": "Цена по предложению поставщика. Итоговая стоимость, состав расходов и доступность подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения поставщика. Цвет и оснащение конкретного автомобиля уточняются при выборе.",
+    "updatedAt": "2026-11-07"
+  },
+  {
+    "id": "mercedes-benz-g63-amg-2026",
+    "slug": "mercedes-benz-g63-amg-2026",
+    "title": "Mercedes-Benz G 63 AMG",
+    "brand": "Mercedes-Benz",
+    "model": "G 63 AMG",
+    "year": 2026,
+    "trim": "AMG",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/mercedes-benz-g63-amg-2026/88.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/mercedes-benz-g63-amg-2026/88.webp",
+        "alt": "Mercedes-Benz G 63 AMG — фото 1 из предложения"
+      },
+      {
+        "src": "/photos/catalog/mercedes-benz-g63-amg-2026/89.webp",
+        "alt": "Mercedes-Benz G 63 AMG — фото 2 из предложения"
+      },
+      {
+        "src": "/photos/catalog/mercedes-benz-g63-amg-2026/90.webp",
+        "alt": "Mercedes-Benz G 63 AMG — фото 3 из предложения"
+      },
+      {
+        "src": "/photos/catalog/mercedes-benz-g63-amg-2026/91.webp",
+        "alt": "Mercedes-Benz G 63 AMG — фото 4 из предложения"
+      }
+    ],
+    "description": "Европейская версия: чёрный кузов и салон, внутренний карбон, фаркоп, задние мониторы и зимний пакет. В наличии в Москве с документами.",
+    "highlights": [
+      "Европейская версия",
+      "Карбон",
+      "Зимний пакет"
+    ],
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 03.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 30500000,
+      "date": "2026-11-03",
+      "note": "Цена по предложению поставщика. Итоговая стоимость, состав расходов и доступность подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения поставщика. Цвет и оснащение конкретного автомобиля уточняются при выборе.",
+    "updatedAt": "2026-11-07",
+    "stockPriceRub": 30500000
+  },
+  {
+    "id": "toyota-camry-85-2026",
+    "slug": "toyota-camry-85-2026",
+    "title": "Toyota Camry 85",
+    "brand": "Toyota",
+    "model": "Camry 85",
+    "year": 2026,
+    "trim": "2.0 Hybrid",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/toyota-camry-85-2026/96.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/toyota-camry-85-2026/96.webp",
+        "alt": "Toyota Camry 85 — фото 1 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-camry-85-2026/94.webp",
+        "alt": "Toyota Camry 85 — фото 2 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-camry-85-2026/95.webp",
+        "alt": "Toyota Camry 85 — фото 3 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-camry-85-2026/97.webp",
+        "alt": "Toyota Camry 85 — фото 4 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-camry-85-2026/98.webp",
+        "alt": "Toyota Camry 85 — фото 5 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-camry-85-2026/99.webp",
+        "alt": "Toyota Camry 85 — фото 6 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-camry-85-2026/100.webp",
+        "alt": "Toyota Camry 85 — фото 7 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-camry-85-2026/101.webp",
+        "alt": "Toyota Camry 85 — фото 8 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-camry-85-2026/102.webp",
+        "alt": "Toyota Camry 85 — фото 9 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-camry-85-2026/103.webp",
+        "alt": "Toyota Camry 85 — фото 10 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-camry-85-2026/104.webp",
+        "alt": "Toyota Camry 85 — фото 11 из предложения"
+      }
+    ],
+    "description": "Новая Toyota Camry с гибридной силовой установкой. Без пробега. В предложении указан коммерческий утильсбор.",
+    "highlights": [
+      "2,0 л · гибрид",
+      "Без пробега"
+    ],
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 07.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 4400000,
+      "date": "2026-11-07",
+      "note": "Цена по предложению поставщика. Итоговая стоимость, состав расходов и доступность подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения поставщика. Цвет и оснащение конкретного автомобиля уточняются при выборе.",
+    "updatedAt": "2026-11-07",
+    "stockPriceRub": 4400000,
+    "orderPriceRub": 4200000
+  },
+  {
+    "id": "toyota-rav4-2026",
+    "slug": "toyota-rav4-2026",
+    "title": "Toyota RAV4",
+    "brand": "Toyota",
+    "model": "RAV4",
+    "year": 2026,
+    "trim": "2.0 4WD CVT",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/toyota-rav4-2026/109.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/toyota-rav4-2026/109.webp",
+        "alt": "Toyota RAV4 — фото 1 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-rav4-2026/105.webp",
+        "alt": "Toyota RAV4 — фото 2 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-rav4-2026/106.webp",
+        "alt": "Toyota RAV4 — фото 3 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-rav4-2026/107.webp",
+        "alt": "Toyota RAV4 — фото 4 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-rav4-2026/108.webp",
+        "alt": "Toyota RAV4 — фото 5 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-rav4-2026/110.webp",
+        "alt": "Toyota RAV4 — фото 6 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-rav4-2026/111.webp",
+        "alt": "Toyota RAV4 — фото 7 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-rav4-2026/112.webp",
+        "alt": "Toyota RAV4 — фото 8 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-rav4-2026/113.webp",
+        "alt": "Toyota RAV4 — фото 9 из предложения"
+      }
+    ],
+    "description": "Максимальная комплектация по предложению, сборка Китай. Документы готовы. Цена из наличия указана для наличной оплаты.",
+    "highlights": [
+      "171 л.с.",
+      "Полный привод",
+      "Вариатор"
+    ],
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 07.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 4100000,
+      "date": "2026-11-07",
+      "note": "Цена по предложению поставщика. Итоговая стоимость, состав расходов и доступность подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения поставщика. Цвет и оснащение конкретного автомобиля уточняются при выборе.",
+    "updatedAt": "2026-11-07",
+    "stockPriceRub": 4100000,
+    "orderPriceRub": 3900000
+  },
+  {
+    "id": "toyota-highlander-2026",
+    "slug": "toyota-highlander-2026",
+    "title": "Toyota Highlander",
+    "brand": "Toyota",
+    "model": "Highlander",
+    "year": 2026,
+    "trim": "2.0 AWD",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/toyota-highlander-2026/114.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/toyota-highlander-2026/114.webp",
+        "alt": "Toyota Highlander — фото 1 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-highlander-2026/115.webp",
+        "alt": "Toyota Highlander — фото 2 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-highlander-2026/116.webp",
+        "alt": "Toyota Highlander — фото 3 из предложения"
+      },
+      {
+        "src": "/photos/catalog/toyota-highlander-2026/117.webp",
+        "alt": "Toyota Highlander — фото 4 из предложения"
+      }
+    ],
+    "description": "Новый Highlander: чёрный или белый кузов, автоматическая коробка и полный привод. В наличии в Москве.",
+    "highlights": [
+      "2,0 л · бензин",
+      "248 л.с.",
+      "Полный привод"
+    ],
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 07.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 5100000,
+      "date": "2026-11-07",
+      "note": "Цена по предложению поставщика. Итоговая стоимость, состав расходов и доступность подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения поставщика. Цвет и оснащение конкретного автомобиля уточняются при выборе.",
+    "updatedAt": "2026-11-07",
+    "stockPriceRub": 5100000,
+    "orderPriceRub": 5000000
+  }
+]

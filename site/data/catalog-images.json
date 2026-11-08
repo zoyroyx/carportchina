@@ -1,0 +1,632 @@
+{
+  "/photos/catalog/changan-qiyuan-a06-2026/02.webp": {
+    "width": 1080,
+    "height": 778,
+    "srcSet": "/photos/catalog/changan-qiyuan-a06-2026/02-360.webp 360w, /photos/catalog/changan-qiyuan-a06-2026/02-640.webp 640w, /photos/catalog/changan-qiyuan-a06-2026/02.webp 1080w",
+    "thumbnail": "/photos/catalog/changan-qiyuan-a06-2026/02-360.webp"
+  },
+  "/photos/catalog/changan-qiyuan-a06-2026/03.webp": {
+    "width": 1080,
+    "height": 756,
+    "srcSet": "/photos/catalog/changan-qiyuan-a06-2026/03-360.webp 360w, /photos/catalog/changan-qiyuan-a06-2026/03-640.webp 640w, /photos/catalog/changan-qiyuan-a06-2026/03.webp 1080w",
+    "thumbnail": "/photos/catalog/changan-qiyuan-a06-2026/03-360.webp"
+  },
+  "/photos/catalog/changan-qiyuan-a06-2026/04.webp": {
+    "width": 1080,
+    "height": 654,
+    "srcSet": "/photos/catalog/changan-qiyuan-a06-2026/04-360.webp 360w, /photos/catalog/changan-qiyuan-a06-2026/04-640.webp 640w, /photos/catalog/changan-qiyuan-a06-2026/04.webp 1080w",
+    "thumbnail": "/photos/catalog/changan-qiyuan-a06-2026/04-360.webp"
+  },
+  "/photos/catalog/changan-qiyuan-a06-2026/05.webp": {
+    "width": 1080,
+    "height": 785,
+    "srcSet": "/photos/catalog/changan-qiyuan-a06-2026/05-360.webp 360w, /photos/catalog/changan-qiyuan-a06-2026/05-640.webp 640w, /photos/catalog/changan-qiyuan-a06-2026/05.webp 1080w",
+    "thumbnail": "/photos/catalog/changan-qiyuan-a06-2026/05-360.webp"
+  },
+  "/photos/catalog/geely-monjaro-2026/07.webp": {
+    "width": 1080,
+    "height": 785,
+    "srcSet": "/photos/catalog/geely-monjaro-2026/07-360.webp 360w, /photos/catalog/geely-monjaro-2026/07-640.webp 640w, /photos/catalog/geely-monjaro-2026/07.webp 1080w",
+    "thumbnail": "/photos/catalog/geely-monjaro-2026/07-360.webp"
+  },
+  "/photos/catalog/geely-monjaro-2026/08.webp": {
+    "width": 1080,
+    "height": 750,
+    "srcSet": "/photos/catalog/geely-monjaro-2026/08-360.webp 360w, /photos/catalog/geely-monjaro-2026/08-640.webp 640w, /photos/catalog/geely-monjaro-2026/08.webp 1080w",
+    "thumbnail": "/photos/catalog/geely-monjaro-2026/08-360.webp"
+  },
+  "/photos/catalog/geely-monjaro-2026/10.webp": {
+    "width": 1080,
+    "height": 746,
+    "srcSet": "/photos/catalog/geely-monjaro-2026/10-360.webp 360w, /photos/catalog/geely-monjaro-2026/10-640.webp 640w, /photos/catalog/geely-monjaro-2026/10.webp 1080w",
+    "thumbnail": "/photos/catalog/geely-monjaro-2026/10-360.webp"
+  },
+  "/photos/catalog/geely-monjaro-2026/09.webp": {
+    "width": 1080,
+    "height": 768,
+    "srcSet": "/photos/catalog/geely-monjaro-2026/09-360.webp 360w, /photos/catalog/geely-monjaro-2026/09-640.webp 640w, /photos/catalog/geely-monjaro-2026/09.webp 1080w",
+    "thumbnail": "/photos/catalog/geely-monjaro-2026/09-360.webp"
+  },
+  "/photos/catalog/geely-monjaro-2026/11.webp": {
+    "width": 1080,
+    "height": 752,
+    "srcSet": "/photos/catalog/geely-monjaro-2026/11-360.webp 360w, /photos/catalog/geely-monjaro-2026/11-640.webp 640w, /photos/catalog/geely-monjaro-2026/11.webp 1080w",
+    "thumbnail": "/photos/catalog/geely-monjaro-2026/11-360.webp"
+  },
+  "/photos/catalog/geely-monjaro-2026/12.webp": {
+    "width": 1080,
+    "height": 782,
+    "srcSet": "/photos/catalog/geely-monjaro-2026/12-360.webp 360w, /photos/catalog/geely-monjaro-2026/12-640.webp 640w, /photos/catalog/geely-monjaro-2026/12.webp 1080w",
+    "thumbnail": "/photos/catalog/geely-monjaro-2026/12-360.webp"
+  },
+  "/photos/catalog/geely-monjaro-2026/13.webp": {
+    "width": 1080,
+    "height": 772,
+    "srcSet": "/photos/catalog/geely-monjaro-2026/13-360.webp 360w, /photos/catalog/geely-monjaro-2026/13-640.webp 640w, /photos/catalog/geely-monjaro-2026/13.webp 1080w",
+    "thumbnail": "/photos/catalog/geely-monjaro-2026/13-360.webp"
+  },
+  "/photos/catalog/geely-monjaro-2026/06.webp": {
+    "width": 1080,
+    "height": 573,
+    "srcSet": "/photos/catalog/geely-monjaro-2026/06-360.webp 360w, /photos/catalog/geely-monjaro-2026/06-640.webp 640w, /photos/catalog/geely-monjaro-2026/06.webp 1080w",
+    "thumbnail": "/photos/catalog/geely-monjaro-2026/06-360.webp"
+  },
+  "/photos/catalog/geely-monjaro-2026/14.webp": {
+    "width": 1080,
+    "height": 780,
+    "srcSet": "/photos/catalog/geely-monjaro-2026/14-360.webp 360w, /photos/catalog/geely-monjaro-2026/14-640.webp 640w, /photos/catalog/geely-monjaro-2026/14.webp 1080w",
+    "thumbnail": "/photos/catalog/geely-monjaro-2026/14-360.webp"
+  },
+  "/photos/catalog/geely-monjaro-2026/15.webp": {
+    "width": 1080,
+    "height": 655,
+    "srcSet": "/photos/catalog/geely-monjaro-2026/15-360.webp 360w, /photos/catalog/geely-monjaro-2026/15-640.webp 640w, /photos/catalog/geely-monjaro-2026/15.webp 1080w",
+    "thumbnail": "/photos/catalog/geely-monjaro-2026/15-360.webp"
+  },
+  "/photos/catalog/geely-monjaro-2026/16.webp": {
+    "width": 1080,
+    "height": 674,
+    "srcSet": "/photos/catalog/geely-monjaro-2026/16-360.webp 360w, /photos/catalog/geely-monjaro-2026/16-640.webp 640w, /photos/catalog/geely-monjaro-2026/16.webp 1080w",
+    "thumbnail": "/photos/catalog/geely-monjaro-2026/16-360.webp"
+  },
+  "/photos/catalog/geely-galaxy-m7-2026/19.webp": {
+    "width": 1080,
+    "height": 746,
+    "srcSet": "/photos/catalog/geely-galaxy-m7-2026/19-360.webp 360w, /photos/catalog/geely-galaxy-m7-2026/19-640.webp 640w, /photos/catalog/geely-galaxy-m7-2026/19.webp 1080w",
+    "thumbnail": "/photos/catalog/geely-galaxy-m7-2026/19-360.webp"
+  },
+  "/photos/catalog/geely-galaxy-m7-2026/17.webp": {
+    "width": 1080,
+    "height": 640,
+    "srcSet": "/photos/catalog/geely-galaxy-m7-2026/17-360.webp 360w, /photos/catalog/geely-galaxy-m7-2026/17-640.webp 640w, /photos/catalog/geely-galaxy-m7-2026/17.webp 1080w",
+    "thumbnail": "/photos/catalog/geely-galaxy-m7-2026/17-360.webp"
+  },
+  "/photos/catalog/geely-galaxy-m7-2026/18.webp": {
+    "width": 1080,
+    "height": 749,
+    "srcSet": "/photos/catalog/geely-galaxy-m7-2026/18-360.webp 360w, /photos/catalog/geely-galaxy-m7-2026/18-640.webp 640w, /photos/catalog/geely-galaxy-m7-2026/18.webp 1080w",
+    "thumbnail": "/photos/catalog/geely-galaxy-m7-2026/18-360.webp"
+  },
+  "/photos/catalog/geely-galaxy-m7-2026/20.webp": {
+    "width": 1080,
+    "height": 690,
+    "srcSet": "/photos/catalog/geely-galaxy-m7-2026/20-360.webp 360w, /photos/catalog/geely-galaxy-m7-2026/20-640.webp 640w, /photos/catalog/geely-galaxy-m7-2026/20.webp 1080w",
+    "thumbnail": "/photos/catalog/geely-galaxy-m7-2026/20-360.webp"
+  },
+  "/photos/catalog/geely-galaxy-m7-2026/21.webp": {
+    "width": 1080,
+    "height": 727,
+    "srcSet": "/photos/catalog/geely-galaxy-m7-2026/21-360.webp 360w, /photos/catalog/geely-galaxy-m7-2026/21-640.webp 640w, /photos/catalog/geely-galaxy-m7-2026/21.webp 1080w",
+    "thumbnail": "/photos/catalog/geely-galaxy-m7-2026/21-360.webp"
+  },
+  "/photos/catalog/geely-galaxy-m7-2026/22.webp": {
+    "width": 1055,
+    "height": 745,
+    "srcSet": "/photos/catalog/geely-galaxy-m7-2026/22-360.webp 360w, /photos/catalog/geely-galaxy-m7-2026/22-640.webp 640w, /photos/catalog/geely-galaxy-m7-2026/22.webp 1055w",
+    "thumbnail": "/photos/catalog/geely-galaxy-m7-2026/22-360.webp"
+  },
+  "/photos/catalog/geely-galaxy-m7-2026/23.webp": {
+    "width": 1080,
+    "height": 581,
+    "srcSet": "/photos/catalog/geely-galaxy-m7-2026/23-360.webp 360w, /photos/catalog/geely-galaxy-m7-2026/23-640.webp 640w, /photos/catalog/geely-galaxy-m7-2026/23.webp 1080w",
+    "thumbnail": "/photos/catalog/geely-galaxy-m7-2026/23-360.webp"
+  },
+  "/photos/catalog/geely-galaxy-m7-2026/24.webp": {
+    "width": 1080,
+    "height": 591,
+    "srcSet": "/photos/catalog/geely-galaxy-m7-2026/24-360.webp 360w, /photos/catalog/geely-galaxy-m7-2026/24-640.webp 640w, /photos/catalog/geely-galaxy-m7-2026/24.webp 1080w",
+    "thumbnail": "/photos/catalog/geely-galaxy-m7-2026/24-360.webp"
+  },
+  "/photos/catalog/geely-galaxy-m7-2026/25.webp": {
+    "width": 1077,
+    "height": 581,
+    "srcSet": "/photos/catalog/geely-galaxy-m7-2026/25-360.webp 360w, /photos/catalog/geely-galaxy-m7-2026/25-640.webp 640w, /photos/catalog/geely-galaxy-m7-2026/25.webp 1077w",
+    "thumbnail": "/photos/catalog/geely-galaxy-m7-2026/25-360.webp"
+  },
+  "/photos/catalog/zeekr-8x-dawn-2026/45.webp": {
+    "width": 1080,
+    "height": 733,
+    "srcSet": "/photos/catalog/zeekr-8x-dawn-2026/45-360.webp 360w, /photos/catalog/zeekr-8x-dawn-2026/45-640.webp 640w, /photos/catalog/zeekr-8x-dawn-2026/45.webp 1080w",
+    "thumbnail": "/photos/catalog/zeekr-8x-dawn-2026/45-360.webp"
+  },
+  "/photos/catalog/zeekr-8x-dawn-2026/41.webp": {
+    "width": 1080,
+    "height": 745,
+    "srcSet": "/photos/catalog/zeekr-8x-dawn-2026/41-360.webp 360w, /photos/catalog/zeekr-8x-dawn-2026/41-640.webp 640w, /photos/catalog/zeekr-8x-dawn-2026/41.webp 1080w",
+    "thumbnail": "/photos/catalog/zeekr-8x-dawn-2026/41-360.webp"
+  },
+  "/photos/catalog/zeekr-8x-dawn-2026/42.webp": {
+    "width": 1080,
+    "height": 723,
+    "srcSet": "/photos/catalog/zeekr-8x-dawn-2026/42-360.webp 360w, /photos/catalog/zeekr-8x-dawn-2026/42-640.webp 640w, /photos/catalog/zeekr-8x-dawn-2026/42.webp 1080w",
+    "thumbnail": "/photos/catalog/zeekr-8x-dawn-2026/42-360.webp"
+  },
+  "/photos/catalog/zeekr-8x-dawn-2026/43.webp": {
+    "width": 1080,
+    "height": 691,
+    "srcSet": "/photos/catalog/zeekr-8x-dawn-2026/43-360.webp 360w, /photos/catalog/zeekr-8x-dawn-2026/43-640.webp 640w, /photos/catalog/zeekr-8x-dawn-2026/43.webp 1080w",
+    "thumbnail": "/photos/catalog/zeekr-8x-dawn-2026/43-360.webp"
+  },
+  "/photos/catalog/zeekr-8x-dawn-2026/44.webp": {
+    "width": 1080,
+    "height": 729,
+    "srcSet": "/photos/catalog/zeekr-8x-dawn-2026/44-360.webp 360w, /photos/catalog/zeekr-8x-dawn-2026/44-640.webp 640w, /photos/catalog/zeekr-8x-dawn-2026/44.webp 1080w",
+    "thumbnail": "/photos/catalog/zeekr-8x-dawn-2026/44-360.webp"
+  },
+  "/photos/catalog/zeekr-8x-dawn-2026/46.webp": {
+    "width": 1080,
+    "height": 748,
+    "srcSet": "/photos/catalog/zeekr-8x-dawn-2026/46-360.webp 360w, /photos/catalog/zeekr-8x-dawn-2026/46-640.webp 640w, /photos/catalog/zeekr-8x-dawn-2026/46.webp 1080w",
+    "thumbnail": "/photos/catalog/zeekr-8x-dawn-2026/46-360.webp"
+  },
+  "/photos/catalog/lynk-co-900-15-ultra-2026/47.webp": {
+    "width": 1200,
+    "height": 608,
+    "srcSet": "/photos/catalog/lynk-co-900-15-ultra-2026/47-360.webp 360w, /photos/catalog/lynk-co-900-15-ultra-2026/47-640.webp 640w, /photos/catalog/lynk-co-900-15-ultra-2026/47.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-900-15-ultra-2026/47-360.webp"
+  },
+  "/photos/catalog/lynk-co-900-15-ultra-2026/48.webp": {
+    "width": 1200,
+    "height": 599,
+    "srcSet": "/photos/catalog/lynk-co-900-15-ultra-2026/48-360.webp 360w, /photos/catalog/lynk-co-900-15-ultra-2026/48-640.webp 640w, /photos/catalog/lynk-co-900-15-ultra-2026/48.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-900-15-ultra-2026/48-360.webp"
+  },
+  "/photos/catalog/lynk-co-900-15-ultra-2026/49.webp": {
+    "width": 1200,
+    "height": 596,
+    "srcSet": "/photos/catalog/lynk-co-900-15-ultra-2026/49-360.webp 360w, /photos/catalog/lynk-co-900-15-ultra-2026/49-640.webp 640w, /photos/catalog/lynk-co-900-15-ultra-2026/49.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-900-15-ultra-2026/49-360.webp"
+  },
+  "/photos/catalog/lynk-co-900-15-ultra-2026/50.webp": {
+    "width": 1200,
+    "height": 592,
+    "srcSet": "/photos/catalog/lynk-co-900-15-ultra-2026/50-360.webp 360w, /photos/catalog/lynk-co-900-15-ultra-2026/50-640.webp 640w, /photos/catalog/lynk-co-900-15-ultra-2026/50.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-900-15-ultra-2026/50-360.webp"
+  },
+  "/photos/catalog/lynk-co-900-15-ultra-2026/51.webp": {
+    "width": 1200,
+    "height": 605,
+    "srcSet": "/photos/catalog/lynk-co-900-15-ultra-2026/51-360.webp 360w, /photos/catalog/lynk-co-900-15-ultra-2026/51-640.webp 640w, /photos/catalog/lynk-co-900-15-ultra-2026/51.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-900-15-ultra-2026/51-360.webp"
+  },
+  "/photos/catalog/lynk-co-900-20-ultra-2026/54.webp": {
+    "width": 1200,
+    "height": 583,
+    "srcSet": "/photos/catalog/lynk-co-900-20-ultra-2026/54-360.webp 360w, /photos/catalog/lynk-co-900-20-ultra-2026/54-640.webp 640w, /photos/catalog/lynk-co-900-20-ultra-2026/54.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-900-20-ultra-2026/54-360.webp"
+  },
+  "/photos/catalog/lynk-co-900-20-ultra-2026/52.webp": {
+    "width": 1200,
+    "height": 593,
+    "srcSet": "/photos/catalog/lynk-co-900-20-ultra-2026/52-360.webp 360w, /photos/catalog/lynk-co-900-20-ultra-2026/52-640.webp 640w, /photos/catalog/lynk-co-900-20-ultra-2026/52.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-900-20-ultra-2026/52-360.webp"
+  },
+  "/photos/catalog/lynk-co-900-20-ultra-2026/53.webp": {
+    "width": 1200,
+    "height": 605,
+    "srcSet": "/photos/catalog/lynk-co-900-20-ultra-2026/53-360.webp 360w, /photos/catalog/lynk-co-900-20-ultra-2026/53-640.webp 640w, /photos/catalog/lynk-co-900-20-ultra-2026/53.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-900-20-ultra-2026/53-360.webp"
+  },
+  "/photos/catalog/lynk-co-900-20-ultra-2026/55.webp": {
+    "width": 1200,
+    "height": 612,
+    "srcSet": "/photos/catalog/lynk-co-900-20-ultra-2026/55-360.webp 360w, /photos/catalog/lynk-co-900-20-ultra-2026/55-640.webp 640w, /photos/catalog/lynk-co-900-20-ultra-2026/55.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-900-20-ultra-2026/55-360.webp"
+  },
+  "/photos/catalog/lynk-co-900-20-ultra-2026/56.webp": {
+    "width": 1200,
+    "height": 590,
+    "srcSet": "/photos/catalog/lynk-co-900-20-ultra-2026/56-360.webp 360w, /photos/catalog/lynk-co-900-20-ultra-2026/56-640.webp 640w, /photos/catalog/lynk-co-900-20-ultra-2026/56.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-900-20-ultra-2026/56-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-hybrid-2026/61.webp": {
+    "width": 1200,
+    "height": 776,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-hybrid-2026/61-360.webp 360w, /photos/catalog/lynk-co-07-gt-hybrid-2026/61-640.webp 640w, /photos/catalog/lynk-co-07-gt-hybrid-2026/61.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-hybrid-2026/61-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-hybrid-2026/57.webp": {
+    "width": 1200,
+    "height": 765,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-hybrid-2026/57-360.webp 360w, /photos/catalog/lynk-co-07-gt-hybrid-2026/57-640.webp 640w, /photos/catalog/lynk-co-07-gt-hybrid-2026/57.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-hybrid-2026/57-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-hybrid-2026/58.webp": {
+    "width": 1200,
+    "height": 773,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-hybrid-2026/58-360.webp 360w, /photos/catalog/lynk-co-07-gt-hybrid-2026/58-640.webp 640w, /photos/catalog/lynk-co-07-gt-hybrid-2026/58.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-hybrid-2026/58-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-hybrid-2026/59.webp": {
+    "width": 1200,
+    "height": 771,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-hybrid-2026/59-360.webp 360w, /photos/catalog/lynk-co-07-gt-hybrid-2026/59-640.webp 640w, /photos/catalog/lynk-co-07-gt-hybrid-2026/59.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-hybrid-2026/59-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-hybrid-2026/60.webp": {
+    "width": 1200,
+    "height": 787,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-hybrid-2026/60-360.webp 360w, /photos/catalog/lynk-co-07-gt-hybrid-2026/60-640.webp 640w, /photos/catalog/lynk-co-07-gt-hybrid-2026/60.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-hybrid-2026/60-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-hybrid-2026/62.webp": {
+    "width": 1200,
+    "height": 784,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-hybrid-2026/62-360.webp 360w, /photos/catalog/lynk-co-07-gt-hybrid-2026/62-640.webp 640w, /photos/catalog/lynk-co-07-gt-hybrid-2026/62.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-hybrid-2026/62-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-export-2026/63.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-export-2026/63-360.webp 360w, /photos/catalog/lynk-co-07-gt-export-2026/63-640.webp 640w, /photos/catalog/lynk-co-07-gt-export-2026/63.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-export-2026/63-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-export-2026/64.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-export-2026/64-360.webp 360w, /photos/catalog/lynk-co-07-gt-export-2026/64-640.webp 640w, /photos/catalog/lynk-co-07-gt-export-2026/64.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-export-2026/64-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-export-2026/65.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-export-2026/65-360.webp 360w, /photos/catalog/lynk-co-07-gt-export-2026/65-640.webp 640w, /photos/catalog/lynk-co-07-gt-export-2026/65.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-export-2026/65-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-export-2026/66.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-export-2026/66-360.webp 360w, /photos/catalog/lynk-co-07-gt-export-2026/66-640.webp 640w, /photos/catalog/lynk-co-07-gt-export-2026/66.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-export-2026/66-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-export-2026/67.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-export-2026/67-360.webp 360w, /photos/catalog/lynk-co-07-gt-export-2026/67-640.webp 640w, /photos/catalog/lynk-co-07-gt-export-2026/67.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-export-2026/67-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-export-2026/68.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-export-2026/68-360.webp 360w, /photos/catalog/lynk-co-07-gt-export-2026/68-640.webp 640w, /photos/catalog/lynk-co-07-gt-export-2026/68.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-export-2026/68-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-export-2026/69.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-export-2026/69-360.webp 360w, /photos/catalog/lynk-co-07-gt-export-2026/69-640.webp 640w, /photos/catalog/lynk-co-07-gt-export-2026/69.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-export-2026/69-360.webp"
+  },
+  "/photos/catalog/zeekr-9x-hyper-2026/73.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/zeekr-9x-hyper-2026/73-360.webp 360w, /photos/catalog/zeekr-9x-hyper-2026/73-640.webp 640w, /photos/catalog/zeekr-9x-hyper-2026/73.webp 1200w",
+    "thumbnail": "/photos/catalog/zeekr-9x-hyper-2026/73-360.webp"
+  },
+  "/photos/catalog/zeekr-9x-hyper-2026/70.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/zeekr-9x-hyper-2026/70-360.webp 360w, /photos/catalog/zeekr-9x-hyper-2026/70-640.webp 640w, /photos/catalog/zeekr-9x-hyper-2026/70.webp 1200w",
+    "thumbnail": "/photos/catalog/zeekr-9x-hyper-2026/70-360.webp"
+  },
+  "/photos/catalog/zeekr-9x-hyper-2026/71.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/zeekr-9x-hyper-2026/71-360.webp 360w, /photos/catalog/zeekr-9x-hyper-2026/71-640.webp 640w, /photos/catalog/zeekr-9x-hyper-2026/71.webp 1200w",
+    "thumbnail": "/photos/catalog/zeekr-9x-hyper-2026/71-360.webp"
+  },
+  "/photos/catalog/zeekr-9x-hyper-2026/72.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/zeekr-9x-hyper-2026/72-360.webp 360w, /photos/catalog/zeekr-9x-hyper-2026/72-640.webp 640w, /photos/catalog/zeekr-9x-hyper-2026/72.webp 1200w",
+    "thumbnail": "/photos/catalog/zeekr-9x-hyper-2026/72-360.webp"
+  },
+  "/photos/catalog/zeekr-9x-hyper-2026/74.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/zeekr-9x-hyper-2026/74-360.webp 360w, /photos/catalog/zeekr-9x-hyper-2026/74-640.webp 640w, /photos/catalog/zeekr-9x-hyper-2026/74.webp 1200w",
+    "thumbnail": "/photos/catalog/zeekr-9x-hyper-2026/74-360.webp"
+  },
+  "/photos/catalog/zeekr-9x-hyper-2026/75.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/zeekr-9x-hyper-2026/75-360.webp 360w, /photos/catalog/zeekr-9x-hyper-2026/75-640.webp 640w, /photos/catalog/zeekr-9x-hyper-2026/75.webp 1200w",
+    "thumbnail": "/photos/catalog/zeekr-9x-hyper-2026/75-360.webp"
+  },
+  "/photos/catalog/zeekr-9x-hyper-2026/76.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/zeekr-9x-hyper-2026/76-360.webp 360w, /photos/catalog/zeekr-9x-hyper-2026/76-640.webp 640w, /photos/catalog/zeekr-9x-hyper-2026/76.webp 1200w",
+    "thumbnail": "/photos/catalog/zeekr-9x-hyper-2026/76-360.webp"
+  },
+  "/photos/catalog/zeekr-9x-hyper-2026/77.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/zeekr-9x-hyper-2026/77-360.webp 360w, /photos/catalog/zeekr-9x-hyper-2026/77-640.webp 640w, /photos/catalog/zeekr-9x-hyper-2026/77.webp 1200w",
+    "thumbnail": "/photos/catalog/zeekr-9x-hyper-2026/77-360.webp"
+  },
+  "/photos/catalog/toyota-land-cruiser-300-2026/78.webp": {
+    "width": 1200,
+    "height": 1200,
+    "srcSet": "/photos/catalog/toyota-land-cruiser-300-2026/78-360.webp 360w, /photos/catalog/toyota-land-cruiser-300-2026/78-640.webp 640w, /photos/catalog/toyota-land-cruiser-300-2026/78.webp 1200w",
+    "thumbnail": "/photos/catalog/toyota-land-cruiser-300-2026/78-360.webp"
+  },
+  "/photos/catalog/gac-trumpchi-s9-2025/79.webp": {
+    "width": 797,
+    "height": 1280,
+    "srcSet": "/photos/catalog/gac-trumpchi-s9-2025/79-360.webp 360w, /photos/catalog/gac-trumpchi-s9-2025/79-640.webp 640w, /photos/catalog/gac-trumpchi-s9-2025/79.webp 797w",
+    "thumbnail": "/photos/catalog/gac-trumpchi-s9-2025/79-360.webp"
+  },
+  "/photos/catalog/gac-trumpchi-s7-2026/80.webp": {
+    "width": 598,
+    "height": 1280,
+    "srcSet": "/photos/catalog/gac-trumpchi-s7-2026/80-360.webp 360w, /photos/catalog/gac-trumpchi-s7-2026/80-640.webp 598w, /photos/catalog/gac-trumpchi-s7-2026/80.webp 598w",
+    "thumbnail": "/photos/catalog/gac-trumpchi-s7-2026/80-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-limited-2026/85.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-limited-2026/85-360.webp 360w, /photos/catalog/lynk-co-07-gt-limited-2026/85-640.webp 640w, /photos/catalog/lynk-co-07-gt-limited-2026/85.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-limited-2026/85-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-limited-2026/81.webp": {
+    "width": 960,
+    "height": 1280,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-limited-2026/81-360.webp 360w, /photos/catalog/lynk-co-07-gt-limited-2026/81-640.webp 640w, /photos/catalog/lynk-co-07-gt-limited-2026/81.webp 960w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-limited-2026/81-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-limited-2026/82.webp": {
+    "width": 960,
+    "height": 1280,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-limited-2026/82-360.webp 360w, /photos/catalog/lynk-co-07-gt-limited-2026/82-640.webp 640w, /photos/catalog/lynk-co-07-gt-limited-2026/82.webp 960w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-limited-2026/82-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-limited-2026/83.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-limited-2026/83-360.webp 360w, /photos/catalog/lynk-co-07-gt-limited-2026/83-640.webp 640w, /photos/catalog/lynk-co-07-gt-limited-2026/83.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-limited-2026/83-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-limited-2026/84.webp": {
+    "width": 960,
+    "height": 1280,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-limited-2026/84-360.webp 360w, /photos/catalog/lynk-co-07-gt-limited-2026/84-640.webp 640w, /photos/catalog/lynk-co-07-gt-limited-2026/84.webp 960w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-limited-2026/84-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-limited-2026/86.webp": {
+    "width": 960,
+    "height": 1280,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-limited-2026/86-360.webp 360w, /photos/catalog/lynk-co-07-gt-limited-2026/86-640.webp 640w, /photos/catalog/lynk-co-07-gt-limited-2026/86.webp 960w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-limited-2026/86-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-limited-matte-2026/84.webp": {
+    "width": 960,
+    "height": 1280,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-limited-matte-2026/84-360.webp 360w, /photos/catalog/lynk-co-07-gt-limited-matte-2026/84-640.webp 640w, /photos/catalog/lynk-co-07-gt-limited-matte-2026/84.webp 960w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-limited-matte-2026/84-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-limited-matte-2026/81.webp": {
+    "width": 960,
+    "height": 1280,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-limited-matte-2026/81-360.webp 360w, /photos/catalog/lynk-co-07-gt-limited-matte-2026/81-640.webp 640w, /photos/catalog/lynk-co-07-gt-limited-matte-2026/81.webp 960w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-limited-matte-2026/81-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-limited-matte-2026/82.webp": {
+    "width": 960,
+    "height": 1280,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-limited-matte-2026/82-360.webp 360w, /photos/catalog/lynk-co-07-gt-limited-matte-2026/82-640.webp 640w, /photos/catalog/lynk-co-07-gt-limited-matte-2026/82.webp 960w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-limited-matte-2026/82-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-limited-matte-2026/83.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-limited-matte-2026/83-360.webp 360w, /photos/catalog/lynk-co-07-gt-limited-matte-2026/83-640.webp 640w, /photos/catalog/lynk-co-07-gt-limited-matte-2026/83.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-limited-matte-2026/83-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-limited-matte-2026/85.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-limited-matte-2026/85-360.webp 360w, /photos/catalog/lynk-co-07-gt-limited-matte-2026/85-640.webp 640w, /photos/catalog/lynk-co-07-gt-limited-matte-2026/85.webp 1200w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-limited-matte-2026/85-360.webp"
+  },
+  "/photos/catalog/lynk-co-07-gt-limited-matte-2026/86.webp": {
+    "width": 960,
+    "height": 1280,
+    "srcSet": "/photos/catalog/lynk-co-07-gt-limited-matte-2026/86-360.webp 360w, /photos/catalog/lynk-co-07-gt-limited-matte-2026/86-640.webp 640w, /photos/catalog/lynk-co-07-gt-limited-matte-2026/86.webp 960w",
+    "thumbnail": "/photos/catalog/lynk-co-07-gt-limited-matte-2026/86-360.webp"
+  },
+  "/photos/catalog/volkswagen-tharu-xr-2026/87.webp": {
+    "width": 1066,
+    "height": 1280,
+    "srcSet": "/photos/catalog/volkswagen-tharu-xr-2026/87-360.webp 360w, /photos/catalog/volkswagen-tharu-xr-2026/87-640.webp 640w, /photos/catalog/volkswagen-tharu-xr-2026/87.webp 1066w",
+    "thumbnail": "/photos/catalog/volkswagen-tharu-xr-2026/87-360.webp"
+  },
+  "/photos/catalog/mercedes-benz-g63-amg-2026/88.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/mercedes-benz-g63-amg-2026/88-360.webp 360w, /photos/catalog/mercedes-benz-g63-amg-2026/88-640.webp 640w, /photos/catalog/mercedes-benz-g63-amg-2026/88.webp 1200w",
+    "thumbnail": "/photos/catalog/mercedes-benz-g63-amg-2026/88-360.webp"
+  },
+  "/photos/catalog/mercedes-benz-g63-amg-2026/89.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/mercedes-benz-g63-amg-2026/89-360.webp 360w, /photos/catalog/mercedes-benz-g63-amg-2026/89-640.webp 640w, /photos/catalog/mercedes-benz-g63-amg-2026/89.webp 1200w",
+    "thumbnail": "/photos/catalog/mercedes-benz-g63-amg-2026/89-360.webp"
+  },
+  "/photos/catalog/mercedes-benz-g63-amg-2026/90.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/mercedes-benz-g63-amg-2026/90-360.webp 360w, /photos/catalog/mercedes-benz-g63-amg-2026/90-640.webp 640w, /photos/catalog/mercedes-benz-g63-amg-2026/90.webp 1200w",
+    "thumbnail": "/photos/catalog/mercedes-benz-g63-amg-2026/90-360.webp"
+  },
+  "/photos/catalog/mercedes-benz-g63-amg-2026/91.webp": {
+    "width": 1200,
+    "height": 900,
+    "srcSet": "/photos/catalog/mercedes-benz-g63-amg-2026/91-360.webp 360w, /photos/catalog/mercedes-benz-g63-amg-2026/91-640.webp 640w, /photos/catalog/mercedes-benz-g63-amg-2026/91.webp 1200w",
+    "thumbnail": "/photos/catalog/mercedes-benz-g63-amg-2026/91-360.webp"
+  },
+  "/photos/catalog/toyota-camry-85-2026/96.webp": {
+    "width": 1080,
+    "height": 767,
+    "srcSet": "/photos/catalog/toyota-camry-85-2026/96-360.webp 360w, /photos/catalog/toyota-camry-85-2026/96-640.webp 640w, /photos/catalog/toyota-camry-85-2026/96.webp 1080w",
+    "thumbnail": "/photos/catalog/toyota-camry-85-2026/96-360.webp"
+  },
+  "/photos/catalog/toyota-camry-85-2026/94.webp": {
+    "width": 989,
+    "height": 1280,
+    "srcSet": "/photos/catalog/toyota-camry-85-2026/94-360.webp 360w, /photos/catalog/toyota-camry-85-2026/94-640.webp 640w, /photos/catalog/toyota-camry-85-2026/94.webp 989w",
+    "thumbnail": "/photos/catalog/toyota-camry-85-2026/94-360.webp"
+  },
+  "/photos/catalog/toyota-camry-85-2026/95.webp": {
+    "width": 1058,
+    "height": 1280,
+    "srcSet": "/photos/catalog/toyota-camry-85-2026/95-360.webp 360w, /photos/catalog/toyota-camry-85-2026/95-640.webp 640w, /photos/catalog/toyota-camry-85-2026/95.webp 1058w",
+    "thumbnail": "/photos/catalog/toyota-camry-85-2026/95-360.webp"
+  },
+  "/photos/catalog/toyota-camry-85-2026/97.webp": {
+    "width": 1080,
+    "height": 778,
+    "srcSet": "/photos/catalog/toyota-camry-85-2026/97-360.webp 360w, /photos/catalog/toyota-camry-85-2026/97-640.webp 640w, /photos/catalog/toyota-camry-85-2026/97.webp 1080w",
+    "thumbnail": "/photos/catalog/toyota-camry-85-2026/97-360.webp"
+  },
+  "/photos/catalog/toyota-camry-85-2026/98.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/photos/catalog/toyota-camry-85-2026/98-360.webp 360w, /photos/catalog/toyota-camry-85-2026/98-640.webp 640w, /photos/catalog/toyota-camry-85-2026/98.webp 1200w",
+    "thumbnail": "/photos/catalog/toyota-camry-85-2026/98-360.webp"
+  },
+  "/photos/catalog/toyota-camry-85-2026/99.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/photos/catalog/toyota-camry-85-2026/99-360.webp 360w, /photos/catalog/toyota-camry-85-2026/99-640.webp 640w, /photos/catalog/toyota-camry-85-2026/99.webp 1200w",
+    "thumbnail": "/photos/catalog/toyota-camry-85-2026/99-360.webp"
+  },
+  "/photos/catalog/toyota-camry-85-2026/100.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/photos/catalog/toyota-camry-85-2026/100-360.webp 360w, /photos/catalog/toyota-camry-85-2026/100-640.webp 640w, /photos/catalog/toyota-camry-85-2026/100.webp 1200w",
+    "thumbnail": "/photos/catalog/toyota-camry-85-2026/100-360.webp"
+  },
+  "/photos/catalog/toyota-camry-85-2026/101.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/photos/catalog/toyota-camry-85-2026/101-360.webp 360w, /photos/catalog/toyota-camry-85-2026/101-640.webp 640w, /photos/catalog/toyota-camry-85-2026/101.webp 1200w",
+    "thumbnail": "/photos/catalog/toyota-camry-85-2026/101-360.webp"
+  },
+  "/photos/catalog/toyota-camry-85-2026/102.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/photos/catalog/toyota-camry-85-2026/102-360.webp 360w, /photos/catalog/toyota-camry-85-2026/102-640.webp 640w, /photos/catalog/toyota-camry-85-2026/102.webp 1200w",
+    "thumbnail": "/photos/catalog/toyota-camry-85-2026/102-360.webp"
+  },
+  "/photos/catalog/toyota-camry-85-2026/103.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/photos/catalog/toyota-camry-85-2026/103-360.webp 360w, /photos/catalog/toyota-camry-85-2026/103-640.webp 640w, /photos/catalog/toyota-camry-85-2026/103.webp 1200w",
+    "thumbnail": "/photos/catalog/toyota-camry-85-2026/103-360.webp"
+  },
+  "/photos/catalog/toyota-camry-85-2026/104.webp": {
+    "width": 1200,
+    "height": 806,
+    "srcSet": "/photos/catalog/toyota-camry-85-2026/104-360.webp 360w, /photos/catalog/toyota-camry-85-2026/104-640.webp 640w, /photos/catalog/toyota-camry-85-2026/104.webp 1200w",
+    "thumbnail": "/photos/catalog/toyota-camry-85-2026/104-360.webp"
+  },
+  "/photos/catalog/toyota-rav4-2026/109.webp": {
+    "width": 1200,
+    "height": 853,
+    "srcSet": "/photos/catalog/toyota-rav4-2026/109-360.webp 360w, /photos/catalog/toyota-rav4-2026/109-640.webp 640w, /photos/catalog/toyota-rav4-2026/109.webp 1200w",
+    "thumbnail": "/photos/catalog/toyota-rav4-2026/109-360.webp"
+  },
+  "/photos/catalog/toyota-rav4-2026/105.webp": {
+    "width": 1200,
+    "height": 903,
+    "srcSet": "/photos/catalog/toyota-rav4-2026/105-360.webp 360w, /photos/catalog/toyota-rav4-2026/105-640.webp 640w, /photos/catalog/toyota-rav4-2026/105.webp 1200w",
+    "thumbnail": "/photos/catalog/toyota-rav4-2026/105-360.webp"
+  },
+  "/photos/catalog/toyota-rav4-2026/106.webp": {
+    "width": 1200,
+    "height": 903,
+    "srcSet": "/photos/catalog/toyota-rav4-2026/106-360.webp 360w, /photos/catalog/toyota-rav4-2026/106-640.webp 640w, /photos/catalog/toyota-rav4-2026/106.webp 1200w",
+    "thumbnail": "/photos/catalog/toyota-rav4-2026/106-360.webp"
+  },
+  "/photos/catalog/toyota-rav4-2026/107.webp": {
+    "width": 1200,
+    "height": 907,
+    "srcSet": "/photos/catalog/toyota-rav4-2026/107-360.webp 360w, /photos/catalog/toyota-rav4-2026/107-640.webp 640w, /photos/catalog/toyota-rav4-2026/107.webp 1200w",
+    "thumbnail": "/photos/catalog/toyota-rav4-2026/107-360.webp"
+  },
+  "/photos/catalog/toyota-rav4-2026/108.webp": {
+    "width": 1200,
+    "height": 909,
+    "srcSet": "/photos/catalog/toyota-rav4-2026/108-360.webp 360w, /photos/catalog/toyota-rav4-2026/108-640.webp 640w, /photos/catalog/toyota-rav4-2026/108.webp 1200w",
+    "thumbnail": "/photos/catalog/toyota-rav4-2026/108-360.webp"
+  },
+  "/photos/catalog/toyota-rav4-2026/110.webp": {
+    "width": 960,
+    "height": 1280,
+    "srcSet": "/photos/catalog/toyota-rav4-2026/110-360.webp 360w, /photos/catalog/toyota-rav4-2026/110-640.webp 640w, /photos/catalog/toyota-rav4-2026/110.webp 960w",
+    "thumbnail": "/photos/catalog/toyota-rav4-2026/110-360.webp"
+  },
+  "/photos/catalog/toyota-rav4-2026/111.webp": {
+    "width": 960,
+    "height": 1280,
+    "srcSet": "/photos/catalog/toyota-rav4-2026/111-360.webp 360w, /photos/catalog/toyota-rav4-2026/111-640.webp 640w, /photos/catalog/toyota-rav4-2026/111.webp 960w",
+    "thumbnail": "/photos/catalog/toyota-rav4-2026/111-360.webp"
+  },
+  "/photos/catalog/toyota-rav4-2026/112.webp": {
+    "width": 960,
+    "height": 1280,
+    "srcSet": "/photos/catalog/toyota-rav4-2026/112-360.webp 360w, /photos/catalog/toyota-rav4-2026/112-640.webp 640w, /photos/catalog/toyota-rav4-2026/112.webp 960w",
+    "thumbnail": "/photos/catalog/toyota-rav4-2026/112-360.webp"
+  },
+  "/photos/catalog/toyota-rav4-2026/113.webp": {
+    "width": 960,
+    "height": 1280,
+    "srcSet": "/photos/catalog/toyota-rav4-2026/113-360.webp 360w, /photos/catalog/toyota-rav4-2026/113-640.webp 640w, /photos/catalog/toyota-rav4-2026/113.webp 960w",
+    "thumbnail": "/photos/catalog/toyota-rav4-2026/113-360.webp"
+  },
+  "/photos/catalog/toyota-highlander-2026/114.webp": {
+    "width": 1080,
+    "height": 709,
+    "srcSet": "/photos/catalog/toyota-highlander-2026/114-360.webp 360w, /photos/catalog/toyota-highlander-2026/114-640.webp 640w, /photos/catalog/toyota-highlander-2026/114.webp 1080w",
+    "thumbnail": "/photos/catalog/toyota-highlander-2026/114-360.webp"
+  },
+  "/photos/catalog/toyota-highlander-2026/115.webp": {
+    "width": 1080,
+    "height": 677,
+    "srcSet": "/photos/catalog/toyota-highlander-2026/115-360.webp 360w, /photos/catalog/toyota-highlander-2026/115-640.webp 640w, /photos/catalog/toyota-highlander-2026/115.webp 1080w",
+    "thumbnail": "/photos/catalog/toyota-highlander-2026/115-360.webp"
+  },
+  "/photos/catalog/toyota-highlander-2026/116.webp": {
+    "width": 1080,
+    "height": 682,
+    "srcSet": "/photos/catalog/toyota-highlander-2026/116-360.webp 360w, /photos/catalog/toyota-highlander-2026/116-640.webp 640w, /photos/catalog/toyota-highlander-2026/116.webp 1080w",
+    "thumbnail": "/photos/catalog/toyota-highlander-2026/116-360.webp"
+  },
+  "/photos/catalog/toyota-highlander-2026/117.webp": {
+    "width": 1080,
+    "height": 644,
+    "srcSet": "/photos/catalog/toyota-highlander-2026/117-360.webp 360w, /photos/catalog/toyota-highlander-2026/117-640.webp 640w, /photos/catalog/toyota-highlander-2026/117.webp 1080w",
+    "thumbnail": "/photos/catalog/toyota-highlander-2026/117-360.webp"
+  }
+}

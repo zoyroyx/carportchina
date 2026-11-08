@@ -1,0 +1,56 @@
+import { readFile, writeFile, mkdir, cp } from 'node:fs/promises';
+import path from 'node:path';
+import { pathToFileURL } from 'node:url';
+import { buildSeo, sitemap, robotsTxt } from '../apps/server/seo';
+import { preloaderHead } from '../apps/server/preloader';
+import { staticPages, services } from '../apps/web/content';
+import { visibleOffers, type Offer } from '../packages/contracts/offers';
+import type { AppProps } from '../apps/web/App';
+
+const root = process.cwd();
+const output = path.join(root, 'dist/static');
+await mkdir(output, { recursive: true });
+await cp(path.join(root, 'dist/client'), output, { recursive: true });
+const template = await readFile(path.join(root, 'dist/client/index.html'), 'utf8');
+const { render } = await import(pathToFileURL(path.join(root, 'dist/server/entry-server.js')).href);
+const offers = visibleOffers(JSON.parse(await readFile('data/offers.json', 'utf8')) as Offer[]);
+const company = JSON.parse(await readFile('data/company.json', 'utf8'));
+company.stories = company.stories.filter((s: { approved: boolean }) => s.approved);
+const common = { offers, company, now: Date.now() };
+const paths = [...Object.keys(staticPages).filter(p => !['/deliveries/', '/order/'].includes(p)), ...services.map(s => `/services/${s.slug}/`), ...offers.map(o => `/cars/${o.slug}/`)];
+for (const url of [...paths, '/not-found/']) {
+  const props: AppProps = { ...common, url };
+  const rendered = render(props);
+  const seo = buildSeo(props, true);
+  const html = template.replace('<!--head-->', seo.head)
+    .replace('<!--preloader-head-->', rendered.status === 200 ? preloaderHead : '')
+    .replace('<!--app-->', rendered.html)
+    .replace('<!--data-->', `<script id="page-data" type="application/json">${JSON.stringify(props).replace(/</g, '\\u003c')}</script>`);
+  const file = rendered.status === 404 ? path.join(output, '404.html') : path.join(output, url.slice(1), 'index.html');
+  await mkdir(path.dirname(file), { recursive: true });
+  await writeFile(file, html);
+}
+await writeFile(path.join(output, 'robots.txt'), robotsTxt(true));
+await writeFile(path.join(output, 'sitemap.xml'), sitemap({ ...common, url: '/' }));
+await writeFile(path.join(output, '.htaccess'), `Options -Indexes -MultiViews
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\\.carportchina\\.ru$ [NC]
+RewriteRule ^ https://carportchina.ru%{REQUEST_URI} [R=301,L]
+RewriteRule ^deliveries/?$ /reviews/ [R=301,L]
+RewriteRule ^order/?$ /cars/ [R=301,L]
+RewriteCond %{QUERY_STRING} (^|&)(q|brand|budget|vat|sort|availability)= [NC]
+RewriteRule ^cars/?$ - [E=filtered_catalog:1]
+</IfModule>
+<IfModule mod_headers.c>
+<FilesMatch "\\.html$">
+Header set Cache-Control "no-cache"
+</FilesMatch>
+Header set X-Content-Type-Options "nosniff"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+Header set X-Robots-Tag "noindex, follow" env=filtered_catalog
+</IfModule>
+`);
+console.log(`Static site: ${paths.length} pages, 404, robots and sitemap in dist/static`);

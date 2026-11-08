@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "source": "video_2026-11-07_23-29-09 (2).mp4",
+    "width": 720,
+    "height": 1280,
+    "fps": 30.0,
+    "duration": 30.433333333333334,
+    "output": "public\\media\\reviews\\review-1.mp4",
+    "audioUnchanged": true,
+    "audioHash": "28b12e334ecb91fce73bbecafddb1fe7859c954bc345a5795f6c70f1e98a3d75",
+    "overlay": {
+      "x": 150,
+      "y": 1080,
+      "width": 420,
+      "height": 150
+    }
+  },
+  {
+    "id": 2,
+    "source": "video_2026-11-07_23-29-09.mp4",
+    "width": 720,
+    "height": 1280,
+    "fps": 30.0,
+    "duration": 29.166666666666668,
+    "output": "public\\media\\reviews\\review-2.mp4",
+    "audioUnchanged": true,
+    "audioHash": "44f7cc54b13888734d421c37dfafbab1309df70c065774507b21e4682ddaf7ba",
+    "overlay": {
+      "x": 150,
+      "y": 1080,
+      "width": 420,
+      "height": 150
+    }
+  }
+]

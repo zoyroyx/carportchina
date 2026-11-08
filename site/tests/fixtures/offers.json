@@ -1,0 +1,134 @@
+[
+  {
+    "id": "qa-vehicle",
+    "slug": "qa-vehicle",
+    "title": "Тестовый автомобиль · не предложение продажи",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "fixed_total",
+    "amountMinor": "450000000",
+    "currency": "RUB",
+    "validUntil": "2099-01-01T00:00:00Z",
+    "fullCostsConfirmed": true,
+    "termsApproved": true,
+    "estimateBasis": null,
+    "vatConfirmed": true,
+    "image": "/photos/hero-suv-street-960.webp",
+    "brand": "Тестовая марка",
+    "model": "Модель для проверки",
+    "year": 2026,
+    "mileageKm": 0,
+    "trim": "Тестовая комплектация",
+    "description": "Синтетическая запись для проверки интерфейса. Не является автомобилем из каталога CarPort China.",
+    "gallery": [
+      {
+        "src": "/photos/hero-suv-street-960.webp",
+        "alt": "Тестовый кадр 1"
+      },
+      {
+        "src": "/photos/hero-suv-showroom-480.webp",
+        "alt": "Тестовый кадр 2"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "Тестовый параметр"
+      },
+      {
+        "label": "Привод",
+        "value": "Тестовый параметр"
+      }
+    ],
+    "priceIncludes": ["Тестовая строка состава стоимости"],
+    "documents": ["Тестовая строка комплекта документов"]
+  },
+  {
+    "id": "qa-second",
+    "slug": "qa-second",
+    "title": "Другой тестовый автомобиль",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "fixed_total",
+    "amountMinor": "650000000",
+    "currency": "RUB",
+    "validUntil": "2099-01-01T00:00:00Z",
+    "fullCostsConfirmed": true,
+    "termsApproved": true,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/hero-suv-street-960.webp",
+    "brand": "Другая марка",
+    "model": "Модель для проверки",
+    "year": 2026,
+    "mileageKm": 0,
+    "trim": "Тестовая комплектация",
+    "description": "Синтетическая запись для проверки интерфейса. Не является автомобилем из каталога CarPort China.",
+    "gallery": [
+      {
+        "src": "/photos/hero-suv-street-960.webp",
+        "alt": "Тестовый кадр 1"
+      },
+      {
+        "src": "/photos/hero-suv-showroom-480.webp",
+        "alt": "Тестовый кадр 2"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "Тестовый параметр"
+      },
+      {
+        "label": "Привод",
+        "value": "Тестовый параметр"
+      }
+    ],
+    "priceIncludes": ["Тестовая строка состава стоимости"],
+    "documents": ["Тестовая строка комплекта документов"]
+  },
+  {
+    "id": "qa-draft",
+    "slug": "qa-draft",
+    "title": "Тестовый автомобиль · не предложение продажи",
+    "publication": "draft",
+    "registrationMarket": "RF",
+    "priceKind": "fixed_total",
+    "amountMinor": "450000000",
+    "currency": "RUB",
+    "validUntil": "2099-01-01T00:00:00Z",
+    "fullCostsConfirmed": true,
+    "termsApproved": true,
+    "estimateBasis": null,
+    "vatConfirmed": true,
+    "image": "/photos/hero-suv-street-960.webp",
+    "brand": "Тестовая марка",
+    "model": "Модель для проверки",
+    "year": 2026,
+    "mileageKm": 0,
+    "trim": "Тестовая комплектация",
+    "description": "Синтетическая запись для проверки интерфейса. Не является автомобилем из каталога CarPort China.",
+    "gallery": [
+      {
+        "src": "/photos/hero-suv-street-960.webp",
+        "alt": "Тестовый кадр 1"
+      },
+      {
+        "src": "/photos/hero-suv-showroom-480.webp",
+        "alt": "Тестовый кадр 2"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "Тестовый параметр"
+      },
+      {
+        "label": "Привод",
+        "value": "Тестовый параметр"
+      }
+    ],
+    "priceIncludes": ["Тестовая строка состава стоимости"],
+    "documents": ["Тестовая строка комплекта документов"]
+  }
+]

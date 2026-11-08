@@ -1,0 +1,38 @@
+{
+  "name": "carport-china",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "tsx watch apps/server/index.ts",
+    "build": "vite build && vite build --ssr apps/web/entry-server.tsx --outDir dist/server",
+    "build:static": "pnpm build && tsx scripts/build-static.ts",
+    "start": "tsx apps/server/index.ts --production",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@fastify/compress": "^9.3.0",
+    "@fastify/middie": "9.3.6",
+    "@fastify/static": "10.1.8",
+    "@fontsource-variable/golos-text": "5.3.0",
+    "@sinclair/typebox": "0.34.52",
+    "fastify": "5.12.7",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "prettier": "3.9.10",
+    "sharp": "^0.35.5",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
+  }
+}
