@@ -11,6 +11,7 @@ const root = process.cwd();
 const output = path.join(root, 'dist/static');
 await mkdir(output, { recursive: true });
 await cp(path.join(root, 'dist/client'), output, { recursive: true });
+await cp(path.join(root, 'backend'), path.join(output, 'api'), { recursive: true });
 const template = await readFile(path.join(root, 'dist/client/index.html'), 'utf8');
 const { render } = await import(pathToFileURL(path.join(root, 'dist/server/entry-server.js')).href);
 const offers = visibleOffers(JSON.parse(await readFile('data/offers.json', 'utf8')) as Offer[]);

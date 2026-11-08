@@ -25,6 +25,10 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm typecheck
       - run: pnpm test
+      - name: Check PHP request handler
+        run: |
+          find backend -name '*.php' -print0 | xargs -0 -n1 php -l
+          php tests/requests.php
       - run: pnpm build:static
       - name: Upload build artifact
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -39,6 +43,8 @@ jobs:
           FTP_PORT: ${{ secrets.FTP_PORT }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          REQUEST_SIGNING_KEY: ${{ secrets.REQUEST_SIGNING_KEY }}
         run: python3 scripts/deploy-ftp.py
       - name: Preserve previous entry files
         if: always()

@@ -3850,3 +3850,19 @@ textarea:user-invalid {
   .review-deliveries { margin-top: 40px; }
   .review-photos img { height: auto; max-height: 460px; object-position: left center; }
 }
+
+/* Request forms: shared by the catalogue, services and contacts. */
+.request-trap { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.request .request-consent { display: flex; align-items: flex-start; gap: 12px; margin: 20px 0; font-size: 13px; line-height: 1.55; font-weight: 400; }
+.request-consent input[type="checkbox"] { flex: 0 0 20px; width: 20px; height: 20px; min-height: 20px; margin: 2px 0 0; padding: 0; accent-color: #e74335; }
+.request-consent a { text-decoration: underline; text-underline-offset: 3px; }
+.request-result { margin-top: 20px; padding: 18px 20px; border-left: 3px solid #e74335; background: color-mix(in srgb, currentColor 5%, transparent); line-height: 1.65; }
+.request-result.sent { border-color: #63a783; }
+.request-result.error { border-color: #e74335; }
+.request-result p { margin-bottom: 0; }
+.request fieldset:disabled { opacity: .65; }
+.contact-email { display: grid; gap: 12px; padding: 28px 0; }
+.contact-email > span { font-size: 14px; opacity: .65; }
+.contact-email > a { font-size: clamp(20px, 3.5vw, 42px); font-weight: 600; letter-spacing: -.035em; overflow-wrap: anywhere; }
+.data-notice { max-width: 760px; line-height: 1.75; }
+.data-notice h2 { margin-top: 32px; }

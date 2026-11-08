@@ -140,6 +140,7 @@ export function buildSeo(props: AppProps, publicSite = false) {
   if (props.company?.contacts) {
     org.legalName = props.company.contacts.legalName;
     org.telephone = props.company.contacts.phone;
+      org.email = props.company.contacts.email;
     if (props.company.contacts.address)
       org.address = props.company.contacts.address;
   }

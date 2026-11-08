@@ -3,8 +3,7 @@ export type JourneyEvent =
   | "catalog_view"
   | "car_view"
   | "gallery_change"
-  | "brief_preview"
-  | "brief_download"
+  | "request_sent"
   | "catalog_filter";
 export function trackJourney(
   name: JourneyEvent,

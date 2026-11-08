@@ -1,3 +1,5 @@
+import { DataNotice } from "./DataNotice";
+import { Request } from "./Request";
 import { ClientReviews } from "./ClientReviews";
 import { serviceSelling } from "./service-selling";
 import { ServicePhoto } from "./ServicePhoto";
@@ -17,7 +19,6 @@ import {
 import { trackJourney } from "./analytics";
 import { useState, useEffect, useRef, useId } from "react";
 import {
-  requestCopy,
   serviceGuidance,
   serviceAgreements,
 } from "./request-copy";
@@ -196,7 +197,7 @@ function Header({ path }: { path: string }) {
         К содержанию
       </a>
       <div className="preview-bar">
-        Рабочая версия · каталог и материалы готовятся · заявки не отправляются
+        Подбор автомобилей и сопровождение сделки · заявки принимаем онлайн
       </div>
       <header
         className="site-header wrap"
@@ -368,20 +369,21 @@ function Footer({ company }: { company?: CompanyContent }) {
           <h2>Документы</h2>
           <a href="/privacy/">Политика обработки данных</a>
           <a href="/consent/">Согласие на обработку данных</a>
-          {company?.contacts && (
+          {company?.contacts?.phone && (
             <a href={`tel:${company.contacts.phone}`}>
               {company.contacts.phone}
             </a>
           )}
+          {company?.contacts?.email && <a href={`mailto:${company.contacts.email}`}>{company.contacts.email}</a>}
         </nav>
         <div className="footer-meta">
           <span>© 2026 CarPort China</span>
           <p>
-            Рабочая версия для согласования. Коммерческие условия уточняются.
+            Стоимость и условия уточняются по выбранному автомобилю.
           </p>
           <p>
             {company?.contacts?.legalName ??
-              "Реквизиты и контакты ожидают подтверждения."}
+              "По вопросам сотрудничества — corp@carportchina.ru."}
           </p>
         </div>
       </div>
@@ -420,138 +422,6 @@ function FAQ({ items }: { items: [string, string][] }) {
         </details>
       ))}
     </div>
-  );
-}
-function Request({
-  title = "Обсудим ваш автомобиль",
-  type = "general_selection",
-  fields = ["Модель или пожелания", "Бюджет, если определились"],
-  country,
-  requestId = "request",
-  offer,
-}: {
-  title?: string;
-  type?: string;
-  fields?: string[];
-  country?: string;
-  requestId?: string;
-  offer?: Offer;
-}) {
-  const copy = requestCopy[type] ?? requestCopy.general_selection!;
-  const [review, setReview] = useState<string | null>(null);
-  const [downloaded, setDownloaded] = useState(false);
-  const [ready, setReady] = useState(false);
-  useEffect(() => setReady(true), []);
-  return (
-    <section className="request section" id={requestId}>
-      <div>
-        <h2>{title}</h2>
-        <p>{copy[0]}</p>
-        <p className="notice">
-          Предпросмотр формы. Данные остаются на этой странице и не
-          отправляются. Приём заявок подключим после подтверждения контактов и
-          документов.
-        </p>
-      </div>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          const data = new FormData(e.currentTarget);
-          setDownloaded(false);
-          trackJourney("brief_preview", { offerId: offer?.id, service: type });
-          setReview(
-            Array.from(data.entries())
-              .filter(([k, v]) => k !== "type" && String(v).trim())
-              .map(([k, v]) => `${k}: ${v}`)
-              .join(" · ") || "Пожелания пока не указаны.",
-          );
-        }}
-      >
-        <fieldset disabled={!ready}>
-          <legend className="sr-only">Пожелания к обращению</legend>
-          <input type="hidden" name="type" value={type} />
-          {offer && (
-            <>
-              <input type="hidden" name="Автомобиль" value={offer.title} />
-              <input type="hidden" name="Код предложения" value={offer.id} />
-              <p className="request-context">
-                Автомобиль: <strong>{offer.title}</strong>
-              </p>
-            </>
-          )}
-          {country && <input type="hidden" name="Страна" value={country} />}
-          <div className="form-grid">
-            {fields.map((f, i) => (
-              <label key={f}>
-                {f}
-                <input
-                  name={f}
-                  maxLength={200}
-                  placeholder={
-                    i === 0 ? "Укажите, если знаете" : "Необязательно"
-                  }
-                />
-              </label>
-            ))}
-          </div>
-          <label>
-            Комментарий
-            <textarea
-              name="Комментарий"
-              maxLength={2000}
-              rows={3}
-              placeholder={copy[1]}
-            />
-          </label>
-          <button className="button" type="submit">
-            Подготовить обращение <Arrow />
-          </button>
-          <p className="form-note">
-            Контактные данные в этой версии не запрашиваем.
-          </p>
-          {review !== null && (
-            <div role="status" className="notice">
-              <strong>Текст обращения готов</strong>
-              <p>{review}</p>
-              <p>
-                Ничего не отправлено. Сохраните текст или измените поля и
-                подготовьте обращение ещё раз.
-              </p>
-              <button
-                className="button secondary"
-                type="button"
-                onClick={() => {
-                  const blob = new Blob(
-                    [
-                      `CarPort China\n${title}\n\n${review}\n\nЭто подготовленный текст. Обращение не отправлено.`,
-                    ],
-                    { type: "text/plain;charset=utf-8" },
-                  );
-                  const url = URL.createObjectURL(blob);
-                  const a = document.createElement("a");
-                  a.href = url;
-                  a.download = "carport-request.txt";
-                  a.click();
-                  setTimeout(() => URL.revokeObjectURL(url), 1000);
-                  setDownloaded(true);
-                  trackJourney("brief_download", {
-                    offerId: offer?.id,
-                    service: type,
-                  });
-                }}
-              >
-                Сохранить текст
-              </button>
-              {downloaded && <p>Текст подготовлен для скачивания.</p>}
-            </div>
-          )}
-        </fieldset>
-        <noscript>
-          Для предпросмотра формы включите JavaScript. Заявки пока не
-          принимаются.
-        </noscript>
-      </form>
-    </section>
   );
 }
 function Documents() {
@@ -1140,9 +1010,8 @@ function Other({ path, company }: { path: string; company?: CompanyContent }) {
           Выберите удобный способ связи.
         </Intro>
         <div className="contact-details">
-          <a className="contact-phone" href={`tel:${c.phone}`}>
-            {c.phone}
-          </a>
+          {c.phone && <a className="contact-phone" href={`tel:${c.phone}`}>{c.phone}</a>}
+          {c.email && <div className="contact-email"><span>Почта для заявок и вопросов</span><a href={`mailto:${c.email}`}>{c.email} ↗</a></div>}
           {c.hours && <p>{c.hours}</p>}
           {c.address && <p>{c.address}</p>}
           {c.messenger && (
@@ -1150,8 +1019,8 @@ function Other({ path, company }: { path: string; company?: CompanyContent }) {
               Написать
             </a>
           )}
-          <h2>{c.legalName}</h2>
-          <p>{c.requisites}</p>
+          {c.legalName && <h2>{c.legalName}</h2>}
+          {c.requisites && <p>{c.requisites}</p>}
         </div>
         <Request
           title="О чём хотите поговорить?"
@@ -1186,6 +1055,7 @@ function Other({ path, company }: { path: string; company?: CompanyContent }) {
         />
       </>
     );
+  if (path === "/privacy/" || path === "/consent/") return <><Intro eyebrow="Документы" title={titleFor(path)!} /><DataNotice consent={path === "/consent/"} /></>;
   return (
     <>
       <Intro
@@ -1195,9 +1065,7 @@ function Other({ path, company }: { path: string; company?: CompanyContent }) {
       <div className="empty-state">
         <h2>Документ готовится</h2>
         <p>
-          Финальная редакция, реквизиты оператора и порядок обработки данных
-          будут добавлены перед подключением заявок. В текущей версии формы
-          ничего не отправляют.
+          Информация готовится к публикации. По вопросам обращайтесь на corp@carportchina.ru.
         </p>
         <a className="text-link" href="/">
           На главную

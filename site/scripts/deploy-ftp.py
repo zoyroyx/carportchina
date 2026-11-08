@@ -31,12 +31,33 @@ def upload(ftp, relative, content):
     ftp.storbinary('STOR ' + temporary, io.BytesIO(content), blocksize=262144)
     ftp.rename(temporary, destination)
 
+def configure_mail(ftp):
+    # Fixed sibling of the document root. Never put credentials in build artifacts.
+    private = '/carportchina-private'
+    try:
+        ftp.mkd(private)
+    except ftplib.error_perm:
+        ftp.cwd(private)
+        ftp.cwd(BASE)
+    password = os.environ['SMTP_PASSWORD']
+    signing_key = os.environ['REQUEST_SIGNING_KEY']
+    if not password or len(signing_key) < 32:
+        raise RuntimeError('Mail secrets are not configured')
+    import base64
+    encoded = base64.b64encode(json.dumps({'host': 's139.webhost1.ru', 'password': password, 'signing_key': signing_key}).encode()).decode()
+    config = ("<?php return json_decode(base64_decode('" + encoded + "'), true);\n").encode()
+    ftp.storbinary('STOR ' + private + '/config.next.php', io.BytesIO(config))
+    ftp.rename(private + '/config.next.php', private + '/config.php')
+    ftp.sendcmd('SITE CHMOD 700 ' + private)
+    ftp.sendcmd('SITE CHMOD 600 ' + private + '/config.php')
+
 if __name__ == '__main__':
     if not (BUILD / 'reviews/index.html').is_file() or not (BUILD / 'sitemap.xml').is_file():
         raise RuntimeError('Complete static build is required')
     files = {p.relative_to(BUILD).as_posix(): p for p in BUILD.rglob('*') if p.is_file()}
     hashes = {name: hashlib.sha256(p.read_bytes()).hexdigest() for name, p in files.items()}
     ftp = connect()
+    configure_mail(ftp)
     previous = {}
     try:
         buffer = io.BytesIO()
