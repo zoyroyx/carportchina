@@ -3,8 +3,8 @@
 export const clientReviews = [
   {
     id: "video-1",
-    title: "Выдача тёмного кроссовера",
-    description: "Встреча с новой машиной: клиенты и автомобиль в день выдачи. Короткое видео от CarPort China.",
+    title: "Выдача клиенту — Игорь",
+    description: "Выдача автомобиля клиенту Игорю. В видео он делится впечатлениями о покупке и сопровождении сделки.",
     durationLabel: "0:30",
     duration: "PT30.433S",
     uploadDate: "2026-11-07",
@@ -13,8 +13,8 @@ export const clientReviews = [
   },
   {
     id: "video-2",
-    title: "Выдача белого кроссовера",
-    description: "Белый кроссовер с красным бантом в день выдачи. Видео с передачи автомобиля клиентам CarPort China.",
+    title: "Выдача клиенту — Сергей",
+    description: "Выдача автомобиля клиенту Сергею. В видео он рассказывает о поддержке и консультациях на каждом этапе покупки.",
     durationLabel: "0:29",
     duration: "PT29.167S",
     uploadDate: "2026-11-07",
@@ -24,6 +24,6 @@ export const clientReviews = [
 ] as const;
 
 export const deliveryPhotos = [
-  { id: "delivery-nissan", title: "Nissan · день выдачи", width: 640, height: 721 },
-  { id: "delivery-volkswagen", title: "Volkswagen · день выдачи", width: 640, height: 389 },
+  { id: "delivery-nissan", title: "Nissan · выдача клиенту", width: 640, height: 721 },
+  { id: "delivery-volkswagen", title: "Volkswagen · выдача клиенту", width: 640, height: 389 },
 ] as const;
