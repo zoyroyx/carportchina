@@ -19,3 +19,11 @@ Actions требует `SMTP_PASSWORD` и `REQUEST_SIGNING_KEY` (случайн�
 ## Совместимость хостинга
 
 На действующем shared-hosting PHP stream_select отклоняет файловые дескрипторы выше скомпилированного FD_SETSIZE=1024. HostingSMTP наследует PHPMailer SMTP и читает ответы блокирующим fgets с ограниченным таймаутом, без stream_select. Проверка TLS и авторизация не меняются. Тесты покрывают многострочный ответ и неполный ответ по таймауту; исходники PHPMailer не изменены.
+
+Основание совместимости: https://github.com/PHPMailer/PHPMailer/issues/1631 и https://www.php.net/stream-set-timeout.
+
+## Проверено 08.11.2026
+
+Actions: https://github.com/zoyroyx/carportchina/actions/runs/42484771852 — success, исходный commit d97fb01459a6e25c3324d28a2f2d221044df1c5b. Typecheck, 65 Vitest tests, 25 PHP checks, build passed. Публичные 36 страниц, редиректы, 404, sitemap/robots, noindex фильтров, VideoObject только на /reviews/ и Range-видео проверены после обновления.
+
+Форма на /contacts/ проверена при ширине 390 px и на ПК: после отправки показан номер 43F20B6D62. IMAP read-only поиск только этого тестового письма подтвердил один экземпляр во Входящих corp@carportchina.ru, корректные контекст страницы и Reply-To. Отвергаются неверный origin, токен, контакт, отсутствие согласия и заполненный honeypot. Первая попытка выявила FD_SETSIZE ограничение хостинга; исправление HostingSMTP подтверждено повторной успешной доставкой. Скриншоты и безопасный отчёт: output/mail-2026-11-08/.

@@ -27,3 +27,9 @@ Use `python scripts/verify-deployment.py` from the original workspace after buil
 ## Verified release — 8 November 2026
 
 Actions run: https://github.com/zoyroyx/carportchina/actions/runs/42482215174 (success). Deployed source commit: `75c465d9707ba14b7c655103f93371e2ab7d21d8`. 490 files uploaded, no remote files deleted. Typecheck, 62 tests and static build passed in Actions. Live HTTP verification passed for all 36 pages, redirects, 404, filtered catalogue noindex, robots/sitemap, MP4 Range 206 and the commit manifest. Browser query restoration and live filtering passed; homepage has two preview links and no players, reviews has two video players. Results: `output/deployment-2026-11-08/` in the original workspace.
+
+## Проверено 08.11.2026
+
+Actions: https://github.com/zoyroyx/carportchina/actions/runs/42484771852 — success, исходный commit d97fb01459a6e25c3324d28a2f2d221044df1c5b. Typecheck, 65 Vitest tests, 25 PHP checks, build passed. Публичные 36 страниц, редиректы, 404, sitemap/robots, noindex фильтров, VideoObject только на /reviews/ и Range-видео проверены после обновления.
+
+Форма на /contacts/ проверена при ширине 390 px и на ПК: после отправки показан номер 43F20B6D62. IMAP read-only поиск только этого тестового письма подтвердил один экземпляр во Входящих corp@carportchina.ru, корректные контекст страницы и Reply-To. Отвергаются неверный origin, токен, контакт, отсутствие согласия и заполненный honeypot. Первая попытка выявила FD_SETSIZE ограничение хостинга; исправление HostingSMTP подтверждено повторной успешной доставкой. Скриншоты и безопасный отчёт: output/mail-2026-11-08/.
