@@ -70,7 +70,7 @@ if __name__ == '__main__':
     backup = Path('deploy-backup')
     backup.mkdir(exist_ok=True)
     for name in files:
-        if name.endswith('.html') or name in ['robots.txt', 'sitemap.xml', '.htaccess']:
+        if name.endswith('.html') or name in ['robots.txt', 'sitemap.xml', 'llms.txt', 'llms-full.txt', '.htaccess']:
             data = io.BytesIO()
             try:
                 ftp.retrbinary('RETR ' + remote(name), data.write)

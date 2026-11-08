@@ -1,7 +1,7 @@
 import { readFile, writeFile, mkdir, cp } from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { buildSeo, sitemap, robotsTxt, llmsTxt } from '../apps/server/seo';
+import { buildSeo, sitemap, robotsTxt, llmsTxt, llmsFullTxt } from '../apps/server/seo';
 import { pageProps } from '../apps/server/page-props';
 import { preloaderHead } from '../apps/server/preloader';
 import { withMetrika } from '../apps/server/metrika';
@@ -36,6 +36,7 @@ for (const url of [...paths, '/not-found/']) {
 await writeFile(path.join(output, 'robots.txt'), robotsTxt(true));
 await writeFile(path.join(output, 'sitemap.xml'), sitemap({ ...common, url: '/' }));
 await writeFile(path.join(output, 'llms.txt'), llmsTxt({ ...common, url: '/' }));
+await writeFile(path.join(output, 'llms-full.txt'), llmsFullTxt({ ...common, url: '/' }));
 await writeFile(path.join(output, '.htaccess'), `Options -Indexes -MultiViews
 DirectoryIndex index.html
 ErrorDocument 404 /404.html

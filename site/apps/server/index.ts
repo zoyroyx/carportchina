@@ -1,6 +1,6 @@
 import { preloaderHead } from "./preloader";
 import { withMetrika } from "./metrika";
-import { buildSeo, robotsTxt, sitemap, llmsTxt, SITE_ORIGIN } from "./seo";
+import { buildSeo, robotsTxt, sitemap, llmsTxt, llmsFullTxt, SITE_ORIGIN } from "./seo";
 import { pageProps } from "./page-props";
 import { CompanySchema } from "../../packages/contracts/company";
 import { Type } from "@sinclair/typebox";
@@ -79,6 +79,9 @@ app.get("/sitemap.xml", async (_req, reply) =>
 );
 app.get("/llms.txt", async (_req, reply) =>
   reply.type("text/plain; charset=utf-8").send(llmsTxt({ url: "/", offers: published(), company, now: Date.now() })),
+);
+app.get("/llms-full.txt", async (_req, reply) =>
+  reply.type("text/plain; charset=utf-8").send(llmsFullTxt({ url: "/", offers: published(), company, now: Date.now() })),
 );
 app.get("/api/v1/public/offers", async (req) => {
   const items = catalogQuery(

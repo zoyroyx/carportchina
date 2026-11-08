@@ -1,6 +1,6 @@
 import type { AppProps } from "../web/App";
-import { services, staticPages, titleFor } from "../web/content";
-import { clientReviews } from "../web/reviews";
+import { services, staticPages, titleFor, purchaseQuestions } from "../web/content";
+import { clientReviews, deliveryPhotos } from "../web/reviews";
 import { legalOperator } from "../web/legal-content";
 import {
   catalogQuery,
@@ -105,18 +105,23 @@ export function llmsTxt(props: AppProps): string {
 > Подбор и доставка автомобилей из Китая, Кореи, ОАЭ и Европы, сопровождение покупки и обслуживание.
 
 Оператор сайта: ${legalOperator.shortName}, ИНН ${legalOperator.inn}, ОГРН ${legalOperator.ogrn}. Контакт: ${legalOperator.email}.
+Официальный сайт: ${SITE_ORIGIN}/. Язык: русский. Компания входит в ${legalOperator.group}.
 Актуальные цены, комплектации и условия уточняются по конкретному предложению. Каталог регулярно пополняется.
 
+## Текстовый справочник
+- [Расширенный справочник CarPort China](${absolute('/llms-full.txt')}): компания, контакты, отзывы, услуги, ответы на вопросы и опубликованные автомобили в одном текстовом документе.
+
 ## Основные страницы
+- [Главная](${absolute('/')}): подбор, доставка, оформление и собственный сервис.
 - [Каталог автомобилей](${absolute('/cars/')}): наличие, заказ, фотографии и характеристики.
-- [Отзывы клиентов](${absolute('/reviews/')}): видеоотзывы и фотографии клиентов.
+- [Отзывы клиентов](${absolute('/reviews/')}): ${clientReviews.map(r => r.title).join('; ')}; фотографии: ${deliveryPhotos.map(p => p.title).join('; ')}.
 - [О компании](${absolute('/about/')})
 - [Контакты](${absolute('/contacts/')})
 - [Автомобили для бизнеса](${absolute('/business/')})
 - [Ferrari 849 Testarossa Spider](${absolute('/ferrari-849-testarossa-spider/')}): индивидуальная конфигурация, квота на поставку летом 2027 года.
 
 ## Услуги
-${services.map(s => `- [${s.title}](${absolute(`/services/${s.slug}/`)})`).join('\n')}
+${services.map(s => `- [${s.title}](${absolute(`/services/${s.slug}/`)}): ${s.short}.`).join('\n')}
 
 ## Автомобили
 ${visibleOffers(props.offers).map(o => `- [${o.title}${o.trim ? ' · ' + o.trim : ''}](${absolute(`/cars/${o.slug}/`)})`).join('\n')}
@@ -124,6 +129,69 @@ ${visibleOffers(props.offers).map(o => `- [${o.title}${o.trim ? ' · ' + o.trim 
 ## Дополнительно
 - [Карта сайта](${absolute('/sitemap.xml')})
 - [Политика обработки персональных данных](${absolute('/privacy/')})
+- [Согласие на обработку персональных данных](${absolute('/consent/')})
+`;
+}
+
+// A consolidated text companion, generated from the same public content as HTML.
+// Never include draft offers, submitted leads or private source/import metadata.
+export function llmsFullTxt(props: AppProps): string {
+  const availability: Record<string, string> = { in_stock: "В наличии", to_order: "Под заказ", in_transit: "В пути", unknown: "Уточняется" };
+  return `# CarPort China — расширенный справочник
+
+> Подбор, доставка и обслуживание автомобилей из Китая, Кореи, ОАЭ и Европы.
+
+Официальный сайт: ${SITE_ORIGIN}/
+Справочник сформирован: ${new Date(props.now).toISOString().slice(0, 10)}. Содержит опубликованные сведения сайта на момент сборки. Цены и наличие проверяются в карточках автомобилей и подтверждаются при обращении.
+
+## Компания и контакты
+
+Источник: ${absolute('/contacts/')}
+Бренд: CarPort China.
+Оператор сайта: ${legalOperator.name}, ${legalOperator.group}.
+ИНН: ${legalOperator.inn}. КПП: ${legalOperator.kpp}. ОГРН: ${legalOperator.ogrn}.
+Юридический адрес: ${legalOperator.address}.
+Почта: ${legalOperator.email}.
+Заявки принимаются через формы на страницах сайта и по электронной почте.
+
+## Покупка автомобиля
+
+Источник: ${absolute('/cars/')}
+Каталог содержит автомобили в наличии и под заказ. В карточках доступны фотографии, комплектация, характеристики и условия предложения. Каталог постоянно пополняется.
+${purchaseQuestions.map(([q, a]) => `\n### ${q}\n\n${a}`).join('\n')}
+
+## Автомобили для бизнеса
+
+Источник: ${absolute('/business/')}
+${pageCopy['/business/'][1]}
+
+## Ferrari 849 Testarossa Spider
+
+Источник: ${absolute('/ferrari-849-testarossa-spider/')}
+${pageCopy['/ferrari-849-testarossa-spider/'][1]}
+
+## Отзывы клиентов
+
+Источник: ${absolute('/reviews/')}
+Видео доступны на странице отзывов; на главной размещены ссылки-превью.
+${clientReviews.map(r => `\n### ${r.title}\n\n${r.description}\nСтраница видео: ${absolute(`/reviews/#${r.id}`)}\nПродолжительность: ${r.durationLabel}.`).join('\n')}
+
+### Фотографии довольных клиентов
+
+${deliveryPhotos.map(p => `- ${p.title}: ${absolute(`/media/reviews/${p.id}-1200.webp`)}`).join('\n')}
+
+## Услуги
+${services.map(s => `\n### ${s.title}\n\nИсточник: ${absolute(`/services/${s.slug}/`)}\n${s.intro}\n${s.questions.map(([q, a]) => `\n**${q}**\n\n${a}`).join('\n')}`).join('\n')}
+
+## Опубликованные автомобили
+${visibleOffers(props.offers).map(o => `\n### ${o.title}${o.trim ? ' · ' + o.trim : ''}${o.year ? ' · ' + o.year : ''}\n\nИсточник: ${absolute(`/cars/${o.slug}/`)}\nСтатус предложения: ${availability[o.availability ?? 'unknown']}.\n${o.updatedAt ? 'Обновление карточки: ' + o.updatedAt + '.\n' : ''}${(o.specifications ?? []).map(s => `- ${s.label}: ${s.value}`).join('\n')}`).join('\n')}
+
+## Документы и навигация
+
+- [Краткая навигация для AI](${absolute('/llms.txt')})
+- [Карта сайта](${absolute('/sitemap.xml')})
+- [Политика обработки персональных данных](${absolute('/privacy/')})
+- [Согласие на обработку персональных данных](${absolute('/consent/')})
 `;
 }
 export function buildSeo(props: AppProps, publicSite = false) {
@@ -348,6 +416,7 @@ export function buildSeo(props: AppProps, publicSite = false) {
     meta("description", description),
     meta("robots", robots),
     canonical ? `<link rel="canonical" href="${escapeHtml(canonical)}"/>` : "",
+    publicSite && known ? `<link rel="describedby" type="text/plain" href="${absolute('/llms.txt')}"/>` : "",
     '<link rel="icon" type="image/png" href="/favicon.png"/>',
     meta("og:type", "website", true),
     meta("og:locale", "ru_RU", true),
