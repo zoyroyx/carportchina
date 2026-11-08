@@ -3869,3 +3869,72 @@ textarea:user-invalid {
 .data-notice a, .request-policy a { text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
 .request .request-policy { margin: -10px 0 20px; font-size: 12px; line-height: 1.6; color: var(--secondary); }
 @media (max-width: 520px) { .legal-requisites > div { grid-template-columns: 1fr; gap: 3px; } }
+
+/* Compact contact header: one slim glass layer, always reachable while scrolling. */
+html { scroll-padding-top: 88px; }
+.site-header-shell {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: color-mix(in srgb, var(--canvas) 38%, transparent);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+.site-header-shell .site-header {
+  min-height: 76px;
+  height: 76px;
+  gap: 16px;
+  border-bottom-color: color-mix(in srgb, var(--border) 45%, transparent);
+}
+.site-header .logo { width: auto; height: 48px; gap: 8px; }
+.site-header .brand-name { font-size: 21px; }
+.site-header .brand-symbol { width: 40px; height: 40px; flex-basis: 40px; }
+.header-phone {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid color-mix(in srgb, var(--primary) 40%, transparent);
+  border-radius: 6px;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--canvas) 30%, transparent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.header-phone svg { width: 19px; height: 19px; flex: 0 0 19px; color: var(--primary); }
+.header-phone:hover { background: var(--primary); color: var(--button-ink); }
+.header-phone:hover svg { color: inherit; }
+.navigation-phone { font-size: 1.125rem; font-weight: 600; color: var(--primary); min-height: 44px; display: inline-flex; align-items: center; gap: 16px; }
+.site-header .navigation-panel { top: calc(100% + 8px); max-height: calc(100dvh - 96px); }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .header-phone span { display: none; }
+  .site-header-shell .site-header { gap: 12px; }
+  .site-header .brand-name { font-size: 20px; }
+  .site-header .desktop-navigation { gap: 12px; }
+  .site-header .desktop-navigation a, .site-header .desktop-disclosure-trigger { font-size: 0.875rem; }
+}
+@media (max-width: 767px) {
+  html { scroll-padding-top: 76px; }
+  .site-header-shell .site-header { min-height: 64px; height: 64px; gap: 4px; }
+  .site-header .logo { gap: 6px; }
+  .site-header .brand-name { font-size: 18px; }
+  .site-header .brand-symbol { width: 30px; height: 32px; flex-basis: 30px; }
+  .header-phone { width: 44px; padding: 10px; }
+  .header-phone span { display: none; }
+  .site-header .car-menu-button { width: 52px; min-height: 44px; flex: 0 0 52px; padding: 4px 0; }
+  .site-header .car-menu-icon { width: 52px; height: 36px; }
+  .site-header .navigation-panel { max-height: calc(100dvh - 80px); }
+}
+@media (max-width: 359px) {
+  .site-header .brand-symbol { display: none; }
+  .site-header .brand-name { font-size: 17px; }
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .site-header-shell { background: color-mix(in srgb, var(--canvas) 92%, transparent); }
+}

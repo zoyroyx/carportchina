@@ -11,6 +11,7 @@ import { RouteBackground } from "./RouteBackground";
 import { HeroSlideshow } from "./HeroSlideshow";
 import { FleetActivity } from "./FleetActivity";
 import type { CompanyContent } from "../../packages/contracts/company";
+import { formatPhone } from "../../packages/contracts/company";
 import { HomeBenefits, HomeServices } from "./home-sections";
 import {
   CompanyProof,
@@ -156,7 +157,7 @@ function ServicesNavigation({ path }: { path: string }) {
     </div>
   );
 }
-function Header({ path }: { path: string }) {
+function Header({ path, phone }: { path: string; phone?: string }) {
   const carMaskId = useId();
   const [open, setOpen] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
@@ -199,6 +200,7 @@ function Header({ path }: { path: string }) {
       <a className="skip" href="#main">
         К содержанию
       </a>
+      <div className="site-header-shell">
       <header
         className="site-header wrap"
         ref={headerRef}
@@ -236,10 +238,11 @@ function Header({ path }: { path: string }) {
             ),
           )}
         </nav>
+        {phone && <a className="header-phone" href={`tel:${phone}`} aria-label={`Позвонить: ${formatPhone(phone)}`} title={formatPhone(phone)}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2.1Z" /></svg>
+          <span>{formatPhone(phone)}</span>
+        </a>}
         <ThemeToggle />
-        <a className="header-order text-link" href="/cars/#request">
-          Подобрать авто <Arrow />
-        </a>
         <button
           ref={menuButton}
           className="car-menu-button"
@@ -319,12 +322,14 @@ function Header({ path }: { path: string }) {
             ))}
           </nav>
           <div className="navigation-bottom">
+            {phone && <a className="navigation-phone" href={`tel:${phone}`}>{formatPhone(phone)} <Arrow /></a>}
             <a href="/reviews/" className="text-link">
               Отзывы довольных клиентов <Arrow />
             </a>
           </div>
         </div>
       </header>
+      </div>
     </>
   );
 }
@@ -371,7 +376,7 @@ function Footer({ company }: { company?: CompanyContent }) {
           <a href="/consent/">Согласие на обработку персональных данных</a>
           {company?.contacts?.phone && (
             <a href={`tel:${company.contacts.phone}`}>
-              {company.contacts.phone}
+              {formatPhone(company.contacts.phone)}
             </a>
           )}
           {company?.contacts?.email && <a href={`mailto:${company.contacts.email}`}>{company.contacts.email}</a>}
@@ -1010,7 +1015,7 @@ function Other({ path, company }: { path: string; company?: CompanyContent }) {
           Выберите удобный способ связи.
         </Intro>
         <div className="contact-details">
-          {c.phone && <a className="contact-phone" href={`tel:${c.phone}`}>{c.phone}</a>}
+          {c.phone && <a className="contact-phone" href={`tel:${c.phone}`}>{formatPhone(c.phone)}</a>}
           {c.email && <div className="contact-email"><span>Почта для заявок и вопросов</span><a href={`mailto:${c.email}`}>{c.email} ↗</a></div>}
           {c.hours && <p>{c.hours}</p>}
           {c.address && <p>{c.address}</p>}
@@ -1092,7 +1097,7 @@ export function App(props: AppProps) {
   return (
     <>
       <RouteBackground key={path} />
-      <Header path={path} />
+      <Header path={path} phone={props.company?.contacts?.phone} />
       <main className="wrap" id="main">
         {known && !["/privacy/", "/consent/", "/ferrari-849-testarossa-spider/"].includes(path) && <PromoBanners />}
         {path !== "/" && (

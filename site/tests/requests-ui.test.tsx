@@ -17,16 +17,16 @@ describe("live requests", () => {
     expect(html).toContain('mailto:corp@carportchina.ru');
     expect(html).not.toContain('Предпросмотр формы');
   });
-  it("accepts a verified email without inventing a phone or legal identity", () => {
+  it("accepts the supplied company contacts and rejects invalid email", () => {
     expect(Value.Check(CompanySchema, company)).toBe(true);
     expect(Value.Check(CompanySchema, { contacts: { email: "invalid" }, stories: [] })).toBe(false);
   });
-  it("publishes the contact email once in the existing Organization graph", () => {
+  it("publishes email and phone in the single existing Organization graph", () => {
     const seo = buildSeo({ url: "/contacts/", offers: [], now: Date.now(), company }, true);
     const orgs = seo.graph.filter(node => node["@type"] === "Organization");
     expect(orgs).toHaveLength(1);
     expect(orgs[0]?.email).toBe("corp@carportchina.ru");
-    expect(orgs[0]?.telephone).toBeUndefined();
+    expect(orgs[0]?.telephone).toBe("+79265916556");
     expect(seo.indexable).toBe(true);
   });
 });

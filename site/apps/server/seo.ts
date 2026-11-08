@@ -104,7 +104,7 @@ export function llmsTxt(props: AppProps): string {
 
 > Подбор и доставка автомобилей из Китая, Кореи, ОАЭ и Европы, сопровождение покупки и обслуживание.
 
-Оператор сайта: ${legalOperator.shortName}, ИНН ${legalOperator.inn}, ОГРН ${legalOperator.ogrn}. Контакт: ${legalOperator.email}.
+Оператор сайта: ${legalOperator.shortName}, ИНН ${legalOperator.inn}, ОГРН ${legalOperator.ogrn}. Контакт: ${legalOperator.email}.${props.company?.contacts?.phone ? ` Телефон: ${props.company.contacts.phone}.` : ''}
 Официальный сайт: ${SITE_ORIGIN}/. Язык: русский. Компания входит в ${legalOperator.group}.
 Актуальные цены, комплектации и условия уточняются по конкретному предложению. Каталог регулярно пополняется.
 
@@ -151,8 +151,8 @@ export function llmsFullTxt(props: AppProps): string {
 Оператор сайта: ${legalOperator.name}, ${legalOperator.group}.
 ИНН: ${legalOperator.inn}. КПП: ${legalOperator.kpp}. ОГРН: ${legalOperator.ogrn}.
 Юридический адрес: ${legalOperator.address}.
-Почта: ${legalOperator.email}.
-Заявки принимаются через формы на страницах сайта и по электронной почте.
+Почта: ${legalOperator.email}.${props.company?.contacts?.phone ? `\nТелефон: ${props.company.contacts.phone}.` : ''}
+Заявки принимаются через формы на страницах сайта, по телефону и электронной почте.
 
 ## Покупка автомобиля
 
