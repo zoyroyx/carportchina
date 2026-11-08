@@ -308,8 +308,8 @@ export const staticPages: Record<string, string> = {
   "/reviews/": "Отзывы довольных клиентов",
   "/about/": "Выбор, покупка и обслуживание",
   "/contacts/": "Контакты",
-  "/privacy/": "Политика обработки данных",
-  "/consent/": "Согласие на обработку данных",
+  "/privacy/": "Политика обработки персональных данных",
+  "/consent/": "Согласие на обработку персональных данных",
 };
 export function titleFor(path: string): string | undefined {
   return (

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import type { Offer } from "../../packages/contracts/offers";
 import { requestCopy } from "./request-copy";
 import { trackJourney } from "./analytics";
+import { consentVersion } from "./legal-content";
 
 export function Request({ title = "Обсудим ваш автомобиль", type = "general_selection", fields = ["Модель или пожелания", "Бюджет, если определились"], country, requestId = "request", offer }: {
   title?: string; type?: string; fields?: string[]; country?: string; requestId?: string; offer?: Offer;
@@ -34,7 +35,7 @@ export function Request({ title = "Обсудим ваш автомобиль", 
         }
         const response = await fetch("/api/request.php", {
           method: "POST", credentials: "same-origin", headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ token: token.current, name: data.get("name"), contact: data.get("contact"), consent: data.get("consent") === "on", website: data.get("website"), type, page: window.location.pathname, details: Object.fromEntries([...data.entries()].filter(([key]) => !["name", "contact", "consent", "website"].includes(key))) }),
+          body: JSON.stringify({ token: token.current, name: data.get("name"), contact: data.get("contact"), consent: data.get("consent") === "on", consentVersion, website: data.get("website"), type, page: window.location.pathname, details: Object.fromEntries([...data.entries()].filter(([key]) => !["name", "contact", "consent", "website"].includes(key))) }),
         });
         const result = await response.json();
         if (!response.ok || !result.ok) {
@@ -58,7 +59,8 @@ export function Request({ title = "Обсудим ваш автомобиль", 
         </div>
         <label>Комментарий<textarea name="Комментарий" maxLength={2000} rows={3} placeholder={copy[1]} /></label>
         <div className="request-trap" aria-hidden="true"><label>Ваш сайт<input name="website" tabIndex={-1} autoComplete="off" /></label></div>
-        <label className="request-consent"><input type="checkbox" name="consent" required /><span>Даю <a href="/consent/" target="_blank" rel="noreferrer">согласие на обработку данных</a> для ответа на заявку и ознакомлен(а) с <a href="/privacy/" target="_blank" rel="noreferrer">политикой обработки данных</a>.</span></label>
+        <label className="request-consent"><input type="checkbox" name="consent" required /><span>Даю <a href="/consent/" target="_blank" rel="noreferrer">согласие на обработку персональных данных</a> для рассмотрения обращения и подготовки ответа.</span></label>
+        <p className="request-policy">Порядок обработки и ваши права — в <a href="/privacy/" target="_blank" rel="noreferrer">Политике обработки персональных данных</a>.</p>
         <button className="button" type="submit">{status === "sending" ? "Отправляем…" : status === "sent" ? "Заявка отправлена ✓" : "Отправить заявку ↗"}</button>
       </fieldset>
       {message && <div className={`request-result ${status}`} role={status === "error" ? "alert" : "status"}>{message}{status === "error" && <p><a href="mailto:corp@carportchina.ru">Написать на почту ↗</a></p>}</div>}

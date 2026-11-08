@@ -19,9 +19,10 @@ def call(payload=None, origin='https://carportchina.ru'):
 code, result, headers = call()
 assert code == 200 and isinstance(result.get('token'), str), code
 assert 'no-store' in headers and 'noindex' in headers
-request = {'token': result['token'], 'name': 'Автоматическая проверка без отправки', 'contact': 'corp@carportchina.ru', 'consent': False, 'website': '', 'type': 'contact', 'page': '/contacts/', 'details': {}}
+request = {'token': result['token'], 'name': 'Автоматическая проверка без отправки', 'contact': 'corp@carportchina.ru', 'consent': False, 'consentVersion': '2026-11-08.2', 'website': '', 'type': 'contact', 'page': '/contacts/', 'details': {}}
 checks = [
     ('consent required', request, 'https://carportchina.ru', 422),
+    ('old consent rejected', {**request, 'consent': True, 'consentVersion': '2026-11-08.1'}, 'https://carportchina.ru', 422),
     ('foreign origin blocked', request, 'https://example.org', 403),
     ('invalid token blocked', {**request, 'token': 'invalid'}, 'https://carportchina.ru', 403),
     ('invalid contact blocked', {**request, 'consent': True, 'contact': 'invalid'}, 'https://carportchina.ru', 422),

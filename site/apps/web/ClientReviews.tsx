@@ -48,7 +48,7 @@ export function ClientReviews({ full = false }: { full?: boolean }) {
       </div>
       {full && (
         <div className="review-deliveries">
-          <h2>Выдача автомобилей клиентам</h2>
+          <h2>Фотографии довольных клиентов</h2>
           <div className="review-photos">
             {deliveryPhotos.map(({ id, title, width, height }) => (
               <figure key={id}>

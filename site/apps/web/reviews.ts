@@ -24,6 +24,6 @@ export const clientReviews = [
 ] as const;
 
 export const deliveryPhotos = [
-  { id: "delivery-nissan", title: "Nissan · выдача клиенту", width: 640, height: 721 },
-  { id: "delivery-volkswagen", title: "Volkswagen · выдача клиенту", width: 640, height: 389 },
+  { id: "delivery-nissan", title: "Николай · Nissan", width: 640, height: 721 },
+  { id: "delivery-volkswagen", title: "Дарья · Volkswagen", width: 640, height: 389 },
 ] as const;

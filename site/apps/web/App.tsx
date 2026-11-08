@@ -198,9 +198,6 @@ function Header({ path }: { path: string }) {
       <a className="skip" href="#main">
         К содержанию
       </a>
-      <div className="preview-bar">
-        Подбор автомобилей и сопровождение сделки · заявки принимаем онлайн
-      </div>
       <header
         className="site-header wrap"
         ref={headerRef}
@@ -369,8 +366,8 @@ function Footer({ company }: { company?: CompanyContent }) {
           aria-label="Документы в подвале"
         >
           <h2>Документы</h2>
-          <a href="/privacy/">Политика обработки данных</a>
-          <a href="/consent/">Согласие на обработку данных</a>
+          <a href="/privacy/">Политика обработки персональных данных</a>
+          <a href="/consent/">Согласие на обработку персональных данных</a>
           {company?.contacts?.phone && (
             <a href={`tel:${company.contacts.phone}`}>
               {company.contacts.phone}
