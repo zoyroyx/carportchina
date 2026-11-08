@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState } from "react";
+import { useDeferredImages } from "./useDeferredImages";
 
 const groups: [string, string, number][][] = [
   [
@@ -32,6 +33,7 @@ export function HeroSlideshow() {
   const root = useRef<HTMLDivElement>(null);
   const loaded = useRef(new Set<string>());
   const turn = useRef(0);
+  const secondaryImages = useDeferredImages(!reduced && visible && pageVisible);
 
   useEffect(() => {
     root.current
@@ -109,7 +111,7 @@ export function HeroSlideshow() {
                   height={slot === 0 ? 520 : 640}
                   clipPath={`url(#${frameId}-${name})`}
                 >
-                  <img
+                  {(index === 0 || secondaryImages) && <img
                     key={name}
                     data-photo={name}
                     src={`/photos/${name}-960.webp`}
@@ -128,7 +130,7 @@ export function HeroSlideshow() {
                     loading={index === 0 ? "eager" : "lazy"}
                     decoding="async"
                     onLoad={() => loaded.current.add(name)}
-                  />
+                  />}
                 </foreignObject>
                 <rect className="hero-frame-outline" x="7" y="7" width="946" height={slot === 0 ? 506 : 626} rx="38" />
                 <path className="hero-frame-accent" d="M7 112V45Q7 7 45 7H156" />

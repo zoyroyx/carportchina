@@ -1,7 +1,8 @@
 import { readFile, writeFile, mkdir, cp } from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { buildSeo, sitemap, robotsTxt } from '../apps/server/seo';
+import { buildSeo, sitemap, robotsTxt, llmsTxt } from '../apps/server/seo';
+import { pageProps } from '../apps/server/page-props';
 import { preloaderHead } from '../apps/server/preloader';
 import { staticPages, services } from '../apps/web/content';
 import { visibleOffers, type Offer } from '../packages/contracts/offers';
@@ -20,7 +21,7 @@ company.stories = company.stories.filter((s: { approved: boolean }) => s.approve
 const common = { offers, company, now: Date.now() };
 const paths = [...Object.keys(staticPages).filter(p => !['/deliveries/', '/order/'].includes(p)), ...services.map(s => `/services/${s.slug}/`), ...offers.map(o => `/cars/${o.slug}/`)];
 for (const url of [...paths, '/not-found/']) {
-  const props: AppProps = { ...common, url };
+  const props: AppProps = pageProps({ ...common, url });
   const rendered = render(props);
   const seo = buildSeo(props, true);
   const html = template.replace('<!--head-->', seo.head)
@@ -33,11 +34,14 @@ for (const url of [...paths, '/not-found/']) {
 }
 await writeFile(path.join(output, 'robots.txt'), robotsTxt(true));
 await writeFile(path.join(output, 'sitemap.xml'), sitemap({ ...common, url: '/' }));
+await writeFile(path.join(output, 'llms.txt'), llmsTxt({ ...common, url: '/' }));
 await writeFile(path.join(output, '.htaccess'), `Options -Indexes -MultiViews
 DirectoryIndex index.html
 ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
 RewriteEngine On
+RewriteCond %{THE_REQUEST} \\s/+(.*/)?index\\.html(?:[?\\s]) [NC]
+RewriteRule ^(.*)index\\.html$ https://carportchina.ru/$1 [R=301,L]
 RewriteCond %{HTTP_HOST} ^www\\.carportchina\\.ru$ [NC]
 RewriteRule ^ https://carportchina.ru%{REQUEST_URI} [R=301,L]
 RewriteRule ^deliveries/?$ /reviews/ [R=301,L]
@@ -51,7 +55,13 @@ Header set Cache-Control "no-cache"
 </FilesMatch>
 Header set X-Content-Type-Options "nosniff"
 Header set Referrer-Policy "strict-origin-when-cross-origin"
+<FilesMatch "-[A-Za-z0-9_-]{8,}\\.(?:js|css|woff2)$">
+Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
 Header set X-Robots-Tag "noindex, follow" env=filtered_catalog
+</IfModule>
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css text/plain application/javascript application/json application/xml image/svg+xml
 </IfModule>
 `);
 console.log(`Static site: ${paths.length} pages, 404, robots and sitemap in dist/static`);

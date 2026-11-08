@@ -1,6 +1,7 @@
 import type { AppProps } from "../web/App";
 import { services, staticPages, titleFor } from "../web/content";
 import { clientReviews } from "../web/reviews";
+import { legalOperator } from "../web/legal-content";
 import {
   catalogQuery,
   imageSource,
@@ -97,6 +98,34 @@ export function robotsTxt(publicSite: boolean): string {
     ? `User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /health\nSitemap: ${SITE_ORIGIN}/sitemap.xml\n`
     : "User-agent: *\nDisallow: /\n";
 }
+// Optional machine-readable guide, not a replacement for HTML or a sitemap.
+export function llmsTxt(props: AppProps): string {
+  return `# CarPort China
+
+> Подбор и доставка автомобилей из Китая, Кореи, ОАЭ и Европы, сопровождение покупки и обслуживание.
+
+Оператор сайта: ${legalOperator.shortName}, ИНН ${legalOperator.inn}, ОГРН ${legalOperator.ogrn}. Контакт: ${legalOperator.email}.
+Актуальные цены, комплектации и условия уточняются по конкретному предложению. Каталог регулярно пополняется.
+
+## Основные страницы
+- [Каталог автомобилей](${absolute('/cars/')}): наличие, заказ, фотографии и характеристики.
+- [Отзывы клиентов](${absolute('/reviews/')}): видеоотзывы и фотографии клиентов.
+- [О компании](${absolute('/about/')})
+- [Контакты](${absolute('/contacts/')})
+- [Автомобили для бизнеса](${absolute('/business/')})
+- [Ferrari 849 Testarossa Spider](${absolute('/ferrari-849-testarossa-spider/')}): индивидуальная конфигурация, квота на поставку летом 2027 года.
+
+## Услуги
+${services.map(s => `- [${s.title}](${absolute(`/services/${s.slug}/`)})`).join('\n')}
+
+## Автомобили
+${visibleOffers(props.offers).map(o => `- [${o.title}${o.trim ? ' · ' + o.trim : ''}](${absolute(`/cars/${o.slug}/`)})`).join('\n')}
+
+## Дополнительно
+- [Карта сайта](${absolute('/sitemap.xml')})
+- [Политика обработки персональных данных](${absolute('/privacy/')})
+`;
+}
 export function buildSeo(props: AppProps, publicSite = false) {
   const url = new URL(props.url, SITE_ORIGIN),
     path = url.pathname;
@@ -137,9 +166,18 @@ export function buildSeo(props: AppProps, publicSite = false) {
     name: "CarPort China",
     url: SITE_ORIGIN + "/",
     logo: absolute("/brand/logo.png"),
+    legalName: legalOperator.name,
+    taxID: legalOperator.inn,
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "RU",
+      postalCode: "111024",
+      addressLocality: "Москва",
+      streetAddress: "ул. Авиамоторная, д. 50, стр. 2, помещ. 49/2",
+    },
   };
   if (props.company?.contacts) {
-    org.legalName = props.company.contacts.legalName;
+    if (props.company.contacts.legalName) org.legalName = props.company.contacts.legalName;
     org.telephone = props.company.contacts.phone;
       org.email = props.company.contacts.email;
     if (props.company.contacts.address)

@@ -3,7 +3,7 @@ import { ServicePhoto } from "./ServicePhoto";
 const benefits = [
   [
     "Собственный сервис",
-    "ТО и поддержка. Отдельная гарантия готовится.",
+    "ТО, диагностика и поддержка после покупки.",
     "/services/service-warranty/",
   ],
   [

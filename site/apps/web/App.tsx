@@ -1,6 +1,7 @@
 import { FerrariPage } from "./FerrariPage";
 import { PromoBanners } from "./PromoBanners";
 import { DataNotice } from "./DataNotice";
+import { legalOperator } from "./legal-content";
 import { Request } from "./Request";
 import { ClientReviews } from "./ClientReviews";
 import { serviceSelling } from "./service-selling";
@@ -1021,6 +1022,15 @@ function Other({ path, company }: { path: string; company?: CompanyContent }) {
           {c.legalName && <h2>{c.legalName}</h2>}
           {c.requisites && <p>{c.requisites}</p>}
         </div>
+        <section className="section data-notice" aria-labelledby="company-details-title">
+          <h2 id="company-details-title">Реквизиты компании</h2>
+          <dl className="legal-requisites">
+            <div><dt>Оператор сайта</dt><dd>{legalOperator.name} · {legalOperator.group}</dd></div>
+            <div><dt>ИНН / КПП</dt><dd>{legalOperator.inn} / {legalOperator.kpp}</dd></div>
+            <div><dt>ОГРН</dt><dd>{legalOperator.ogrn}</dd></div>
+            <div><dt>Юридический адрес</dt><dd>{legalOperator.address}</dd></div>
+          </dl>
+        </section>
         <Request
           title="О чём хотите поговорить?"
           type="contact"

@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState } from "react";
+import { useDeferredImages } from "./useDeferredImages";
 
 export const promos = [
   {
@@ -39,6 +40,7 @@ export function PromoBanners() {
   const [visible, setVisible] = useState(true);
   const [pageVisible, setPageVisible] = useState(true);
   const running = !paused && !hovered && !focused && !reduced && visible && pageVisible;
+  const secondaryImages = useDeferredImages(running);
 
   useEffect(() => {
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -64,7 +66,7 @@ export function PromoBanners() {
     onFocusCapture={() => setFocused(true)} onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false); }}>
     <div className="promo-stage" id={`${id}-slides`}>
       {promos.map((promo, index) => <article key={promo.id} className={`promo-slide promo-${promo.id}${active === index ? " is-active" : ""}`} inert={active !== index} aria-hidden={active !== index} aria-label={`${index + 1} из ${promos.length}: ${promo.label}`} aria-roledescription="слайд">
-        <img className="promo-photo" src={`/photos/promos/${promo.image}-1920.webp`} srcSet={`/photos/promos/${promo.image}-960.webp 960w, /photos/promos/${promo.image}-1920.webp 1920w`} sizes="(max-width: 640px) 100vw, 80vw" width={2172} height={724} alt={promo.alt} fetchPriority={index === 0 ? "high" : "low"} decoding="async" />
+        {(index === 0 || index === active || secondaryImages) && <img className="promo-photo" src={`/photos/promos/${promo.image}-1920.webp`} srcSet={`/photos/promos/${promo.image}-960.webp 960w, /photos/promos/${promo.image}-1920.webp 1920w`} sizes="(max-width: 640px) 100vw, 80vw" width={2172} height={724} alt={promo.alt} fetchPriority={index === 0 ? "auto" : "low"} loading={index === active ? "eager" : "lazy"} decoding="async" />}
         <div className="promo-shade" aria-hidden="true" />
         <div className="promo-copy"><span className="promo-kicker">{promo.kicker}</span><h2>{promo.title}</h2><p className="promo-description">{promo.description}</p><p className="promo-compact">{promo.compact}</p>
           <div className="promo-links">{promo.links.map(link => <a key={link.href} href={link.href}>{link.label}<span aria-hidden="true">↗</span></a>)}</div>

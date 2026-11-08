@@ -1,5 +1,6 @@
 import { preloaderHead } from "./preloader";
-import { buildSeo, robotsTxt, sitemap, SITE_ORIGIN } from "./seo";
+import { buildSeo, robotsTxt, sitemap, llmsTxt, SITE_ORIGIN } from "./seo";
+import { pageProps } from "./page-props";
 import { CompanySchema } from "../../packages/contracts/company";
 import { Type } from "@sinclair/typebox";
 import { Value } from "@sinclair/typebox/value";
@@ -74,6 +75,9 @@ app.get("/sitemap.xml", async (_req, reply) =>
   reply
     .type("application/xml; charset=utf-8")
     .send(sitemap({ url: "/", offers: published(), company, now: Date.now() })),
+);
+app.get("/llms.txt", async (_req, reply) =>
+  reply.type("text/plain; charset=utf-8").send(llmsTxt({ url: "/", offers: published(), company, now: Date.now() })),
 );
 app.get("/api/v1/public/offers", async (req) => {
   const items = catalogQuery(
@@ -159,12 +163,12 @@ const renderPage: RouteHandlerMethod = async (req, reply) => {
           pathToFileURL(path.join(root, "dist/server/entry-server.js")).href
         )
       : await vite!.ssrLoadModule("/apps/web/entry-server.tsx");
-    const props: AppProps = {
+    const props: AppProps = pageProps({
       url: req.url,
       offers: published(),
       company,
       now: Date.now(),
-    };
+    });
     const result = mod.render(props) as {
       html: string;
       title: string;
