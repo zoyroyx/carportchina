@@ -23,3 +23,7 @@ Publication does not implement CMS, database or lead delivery. Existing forms re
 ## Verification
 
 Use `python scripts/verify-deployment.py` from the original workspace after building locally. It checks every page, graph IDs, video placement, redirects, real 404, robots/sitemap, filtered noindex, MP4 Range support, and the published commit manifest. Browser checks additionally verify hydration and query restoration.
+
+## Verified release — 8 November 2026
+
+Actions run: https://github.com/zoyroyx/carportchina/actions/runs/42482215174 (success). Deployed source commit: `75c465d9707ba14b7c655103f93371e2ab7d21d8`. 490 files uploaded, no remote files deleted. Typecheck, 62 tests and static build passed in Actions. Live HTTP verification passed for all 36 pages, redirects, 404, filtered catalogue noindex, robots/sitemap, MP4 Range 206 and the commit manifest. Browser query restoration and live filtering passed; homepage has two preview links and no players, reviews has two video players. Results: `output/deployment-2026-11-08/` in the original workspace.
