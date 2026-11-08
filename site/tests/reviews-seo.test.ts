@@ -42,7 +42,7 @@ describe("Reviews share the site's structured-data graph", () => {
           name: review.title, description: review.description,
           thumbnailUrl: [`${SITE_ORIGIN}${review.poster}`],
           contentUrl: `${SITE_ORIGIN}${review.src}`,
-          uploadDate: "2026-11-07", duration: review.duration,
+          uploadDate: "2026-11-08T15:56:17+03:00", duration: review.duration,
           publisher: { "@id": `${SITE_ORIGIN}/#organization` },
         });
         expect(videos[index].embedUrl).toBeUndefined();
