@@ -1,4 +1,5 @@
 import { preloaderHead } from "./preloader";
+import { withMetrika } from "./metrika";
 import { buildSeo, robotsTxt, sitemap, llmsTxt, SITE_ORIGIN } from "./seo";
 import { pageProps } from "./page-props";
 import { CompanySchema } from "../../packages/contracts/company";
@@ -177,7 +178,7 @@ const renderPage: RouteHandlerMethod = async (req, reply) => {
     const data = JSON.stringify(props).replace(/</g, "\\u003c");
     const seo = buildSeo(props, publicSite);
     reply.header("X-Robots-Tag", seo.robots);
-    const html = template
+    const html = withMetrika(template, publicSite)
       .replace("<!--head-->", seo.head)
       .replace("<!--preloader-head-->", result.status === 200 ? preloaderHead : "")
       .replace("<!--app-->", result.html)

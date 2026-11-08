@@ -53,17 +53,17 @@ export function Request({ title = "Обсудим ваш автомобиль", 
         {offer && <><input type="hidden" name="Автомобиль" value={offer.title} /><input type="hidden" name="Код предложения" value={offer.id} /><p className="request-context">Автомобиль: <strong>{offer.title}</strong></p></>}
         {country && <input type="hidden" name="Страна" value={country} />}
         <div className="form-grid">
-          <label>Ваше имя<input name="name" autoComplete="name" maxLength={80} required placeholder="Как к вам обращаться" /></label>
-          <label>Телефон или email<input name="contact" autoComplete="on" maxLength={120} required minLength={5} placeholder="+7 … или name@example.ru" /></label>
-          {fields.map((field, index) => <label key={field}>{field}<input name={field} defaultValue={field === "Тема обращения" ? topic : undefined} type={field === "Ссылка на вашу конфигурацию" ? "url" : "text"} maxLength={field === "Ссылка на вашу конфигурацию" ? 2000 : 200} placeholder={field === "Ссылка на вашу конфигурацию" ? "https://carconfigurator.ferrari.com/…" : index === 0 ? "Укажите, если знаете" : "Необязательно"} /></label>)}
+          <label>Ваше имя<input className="ym-disable-keys" name="name" autoComplete="name" maxLength={80} required placeholder="Как к вам обращаться" /></label>
+          <label>Телефон или email<input className="ym-disable-keys" name="contact" autoComplete="on" maxLength={120} required minLength={5} placeholder="+7 … или name@example.ru" /></label>
+          {fields.map((field, index) => <label key={field}>{field}<input className="ym-disable-keys" name={field} defaultValue={field === "Тема обращения" ? topic : undefined} type={field === "Ссылка на вашу конфигурацию" ? "url" : "text"} maxLength={field === "Ссылка на вашу конфигурацию" ? 2000 : 200} placeholder={field === "Ссылка на вашу конфигурацию" ? "https://carconfigurator.ferrari.com/…" : index === 0 ? "Укажите, если знаете" : "Необязательно"} /></label>)}
         </div>
-        <label>Комментарий<textarea name="Комментарий" maxLength={2000} rows={3} placeholder={copy[1]} /></label>
-        <div className="request-trap" aria-hidden="true"><label>Ваш сайт<input name="website" tabIndex={-1} autoComplete="off" /></label></div>
+        <label>Комментарий<textarea className="ym-disable-keys" name="Комментарий" maxLength={2000} rows={3} placeholder={copy[1]} /></label>
+        <div className="request-trap" aria-hidden="true"><label>Ваш сайт<input className="ym-disable-keys" name="website" tabIndex={-1} autoComplete="off" /></label></div>
         <label className="request-consent"><input type="checkbox" name="consent" required /><span>Даю <a href="/consent/" target="_blank" rel="noreferrer">согласие на обработку персональных данных</a> для рассмотрения обращения и подготовки ответа.</span></label>
         <p className="request-policy">Порядок обработки и ваши права — в <a href="/privacy/" target="_blank" rel="noreferrer">Политике обработки персональных данных</a>.</p>
         <button className="button" type="submit">{status === "sending" ? "Отправляем…" : status === "sent" ? "Заявка отправлена ✓" : "Отправить заявку ↗"}</button>
       </fieldset>
-      {message && <div className={`request-result ${status}`} role={status === "error" ? "alert" : "status"}>{message}{status === "error" && <p><a href="mailto:corp@carportchina.ru">Написать на почту ↗</a></p>}</div>}
+      {message && <div className={`request-result ym-hide-content ${status}`} role={status === "error" ? "alert" : "status"}>{message}{status === "error" && <p><a href="mailto:corp@carportchina.ru">Написать на почту ↗</a></p>}</div>}
       <noscript>Для отправки формы включите JavaScript или напишите на <a href="mailto:corp@carportchina.ru">corp@carportchina.ru</a>.</noscript>
     </form>
   </section>;

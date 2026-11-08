@@ -4,6 +4,7 @@ import { pathToFileURL } from 'node:url';
 import { buildSeo, sitemap, robotsTxt, llmsTxt } from '../apps/server/seo';
 import { pageProps } from '../apps/server/page-props';
 import { preloaderHead } from '../apps/server/preloader';
+import { withMetrika } from '../apps/server/metrika';
 import { staticPages, services } from '../apps/web/content';
 import { visibleOffers, type Offer } from '../packages/contracts/offers';
 import type { AppProps } from '../apps/web/App';
@@ -24,7 +25,7 @@ for (const url of [...paths, '/not-found/']) {
   const props: AppProps = pageProps({ ...common, url });
   const rendered = render(props);
   const seo = buildSeo(props, true);
-  const html = template.replace('<!--head-->', seo.head)
+  const html = withMetrika(template, true).replace('<!--head-->', seo.head)
     .replace('<!--preloader-head-->', rendered.status === 200 ? preloaderHead : '')
     .replace('<!--app-->', rendered.html)
     .replace('<!--data-->', `<script id="page-data" type="application/json">${JSON.stringify(props).replace(/</g, '\\u003c')}</script>`);
