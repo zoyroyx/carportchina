@@ -10,4 +10,4 @@ Credentials are repository Actions Secrets: FTP_HOST, FTP_PORT, FTP_USERNAME, FT
 
 The shared hosting receives pre-rendered HTML, assets, robots.txt, sitemap.xml and Apache redirect/404 rules. Client filtering restores query parameters after hydration. Node.js is used during the Actions build, not required on the hosting server.
 
-Lead submission and CMS remain unimplemented; forms retain their existing preview behavior.
+Lead submission is live through the PHP endpoint and SMTP configured by Actions Secrets. The CMS remains a separate planned task. The latest technical and marketing audit is in site/docs/seo-technical-marketing-audit-2026-11-08.md.

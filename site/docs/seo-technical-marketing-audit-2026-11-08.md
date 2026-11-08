@@ -95,3 +95,13 @@ Google Rich Results Test успешно просканировал опубли�
 
 
 Для повторной локальной проверки словаря предварительно скачайте https://schema.org/version/latest/schemaorg-current-https.jsonld в output/seo-audit-2026-11-08/schemaorg-vocabulary.jsonld (или передайте путь через --vocabulary).
+
+### Финальный результат
+
+Дата видео исправлена и опубликована в 2262c75, [Actions 42500163074 — success](https://github.com/zoyroyx/carportchina/actions/runs/42500163074). Повторный тест Google от 08.11.2026 19:33:19: **четыре корректных элемента, оба видео без ошибок и предупреждений**. [Финальный результат отзывов](https://search.google.com/test/rich-results/result?id=SJ1Nj8KXy2v8TFWYk6WVig).
+
+[Главная](https://search.google.com/test/rich-results/result?id=qmNI6Wuy6WNaYlLJuIUDBQ) — одна корректная Organization, видео отсутствуют. [Toyota RAV4](https://search.google.com/test/rich-results/result?id=sXsUWY3-FiMscIu8yHGjtA) — корректные Organization и BreadcrumbList; товарный сниппет не заявлен. Остальные страницы проверены локальным словарём и HTTP-проходом, а не выданы за 37 отдельных внешних тестов.
+
+Проверки: 76 Vitest, 29 PHP, typecheck, сборка, 37 опубликованных страниц и конечный SHA, редиректы/404/robots/sitemap, отсутствие VideoObject вне отзывов, Range 206 для MP4. Финальный HTTP-отчёт — output/seo-audit-2026-11-08/final.json; внешние результаты — google-results.json. Скриншот изменённых контактов — contacts-mobile.png, адаптивные замеры — layouts.json. Обновления данных, проверки и публикация не включали отправку новых писем.
+
+Не выполнено вне сайта: исправление DNS www, подтверждение доступа реальных AI-ботов в WAF, настройка кеша фронтового сервера, подключение кабинетов поисковиков и полевые метрики скорости. Требуется доступ к соответствующим панелям. Предложения по доказательной базе перечислены выше, новая статистика/кейсы/телефон не выдумывались.
