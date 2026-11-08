@@ -7,8 +7,8 @@ import { render } from '../apps/web/entry-server';
 import { buildSeo } from '../apps/server/seo';
 const offers=records as Offer[], now=Date.parse('2026-11-07');
 describe('November catalog import',()=>{
- it('publishes 19 unique valid offers with local photos',()=>{
-  expect(offers).toHaveLength(19);expect(new Set(offers.map(o=>o.slug)).size).toBe(19);
+ it('publishes unique valid offers with local photos when available',()=>{
+  expect(offers).toHaveLength(42);expect(new Set(offers.map(o=>o.slug)).size).toBe(offers.length);
   for(const o of offers){expect(Value.Check(OfferSchema,o)).toBe(true);expect(publicationIssues(o)).toEqual([]);for(const p of o.gallery??[])expect(existsSync('public'+p.src)).toBe(true);}
  });
  it('prioritizes available cars on catalog and homepage',()=>{
@@ -26,7 +26,7 @@ describe('November catalog import',()=>{
   const result=catalogQuery(offers,new URLSearchParams('availability=to_order'),now);
   expect(result.some(o=>o.model==='Camry 85')).toBe(true);
   expect(result.some(o=>o.model==='Trumpchi S9')).toBe(false);
-  expect(catalogQuery(offers,new URLSearchParams('availability=in_transit'),now).map(o=>o.model)).toEqual(['Land Cruiser 300']);
+  expect(catalogQuery(offers,new URLSearchParams('availability=in_transit'),now).map(o=>o.model)).toEqual(['Land Cruiser 300','X5']);
  });
  it('uses the later ZEEKR quote and preserves both purchase prices',()=>{
   const o=offers.find(o=>o.model==='8X')!;

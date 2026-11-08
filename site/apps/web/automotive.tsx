@@ -58,8 +58,8 @@ export function VehicleCard({ offer, now, purchaseMode = "" }: { offer: Offer; n
   return (
     <a className="vehicle-card" href={`/cars/${offer.slug}/`}>
       <div className="vehicle-card-media">
-        {src ? <img src={src} alt={offer.title} loading="lazy" width={cover?.width ?? 640} height={cover?.height ?? 400} srcSet={cover?.srcSet} sizes="(max-width: 639px) calc((100vw - 44px) / 2), (max-width: 1023px) calc((100vw - 80px) / 3), (max-width: 1519px) calc((100vw - 140px) / 4), 345px" decoding="async" /> : <span>Фотографии готовятся</span>}
-        <span className="vehicle-photo-count" aria-label={`Фотографий: ${offer.gallery?.length ?? 0}`}>▧ {offer.gallery?.length ?? 0}</span>
+        {src ? <img src={src} alt={offer.title} loading="lazy" width={cover?.width ?? 640} height={cover?.height ?? 400} srcSet={cover?.srcSet} sizes="(max-width: 639px) calc((100vw - 44px) / 2), (max-width: 1023px) calc((100vw - 80px) / 3), (max-width: 1519px) calc((100vw - 140px) / 4), 345px" decoding="async" /> : <span>Фотографии по запросу</span>}
+        {!!offer.gallery?.length && <span className="vehicle-photo-count" aria-label={`Фотографий: ${offer.gallery.length}`}>▧ {offer.gallery.length}</span>}
       </div>
       <div className="vehicle-card-copy">
         <Availability offer={offer} />
@@ -116,7 +116,7 @@ export function VehicleDetails({ offer, now }: { offer: Offer; now: number }) {
                 fetchPriority="high"
               />
             ) : (
-              <p>Фотографии автомобиля готовятся</p>
+              <p>Фотографии автомобиля предоставим по запросу</p>
             )}
           </div>
           {photos.length > 0 && (

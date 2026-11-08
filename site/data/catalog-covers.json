@@ -131,5 +131,159 @@
     "source": "/photos/catalog/toyota-highlander-2026/114.webp",
     "width": 640,
     "height": 400
+  },
+  "ram-1500-rebel-2026": {
+    "src": "/photos/catalog/covers/ram-1500-rebel-2026-640.webp",
+    "srcSet": "/photos/catalog/covers/ram-1500-rebel-2026-360.webp 360w, /photos/catalog/covers/ram-1500-rebel-2026-640.webp 640w, /photos/catalog/covers/ram-1500-rebel-2026-960.webp 960w",
+    "source": "/photos/catalog/ram-1500-rebel-2026/122.webp",
+    "width": 640,
+    "height": 400
+  },
+  "audi-q2-35-tfsi-2026": {
+    "src": "/photos/catalog/covers/audi-q2-35-tfsi-2026-640.webp",
+    "srcSet": "/photos/catalog/covers/audi-q2-35-tfsi-2026-360.webp 360w, /photos/catalog/covers/audi-q2-35-tfsi-2026-640.webp 640w, /photos/catalog/covers/audi-q2-35-tfsi-2026-960.webp 960w",
+    "source": "/photos/catalog/audi-q2-35-tfsi-2026/124.webp",
+    "width": 640,
+    "height": 400
+  },
+  "bmw-x1-25li-2026": {
+    "src": "/photos/catalog/covers/bmw-x1-25li-2026-640.webp",
+    "srcSet": "/photos/catalog/covers/bmw-x1-25li-2026-360.webp 360w, /photos/catalog/covers/bmw-x1-25li-2026-640.webp 640w, /photos/catalog/covers/bmw-x1-25li-2026-960.webp 960w",
+    "source": "/photos/catalog/bmw-x1-25li-2026/131.webp",
+    "width": 640,
+    "height": 400
+  },
+  "audi-q5l-2026": {
+    "src": "/photos/catalog/covers/audi-q5l-2026-640.webp",
+    "srcSet": "/photos/catalog/covers/audi-q5l-2026-360.webp 360w, /photos/catalog/covers/audi-q5l-2026-640.webp 640w, /photos/catalog/covers/audi-q5l-2026-960.webp 960w",
+    "source": "/photos/catalog/audi-q5l-2026/132.webp",
+    "width": 640,
+    "height": 400
+  },
+  "honda-civic-fun-2026": {
+    "src": "/photos/catalog/covers/honda-civic-fun-2026-640.webp",
+    "srcSet": "/photos/catalog/covers/honda-civic-fun-2026-360.webp 360w, /photos/catalog/covers/honda-civic-fun-2026-640.webp 640w, /photos/catalog/covers/honda-civic-fun-2026-960.webp 960w",
+    "source": "/photos/catalog/honda-civic-fun-2026/133.webp",
+    "width": 640,
+    "height": 400
+  },
+  "mazda-cx-5-zhishang-pro-2026": {
+    "src": "/photos/catalog/covers/mazda-cx-5-zhishang-pro-2026-640.webp",
+    "srcSet": "/photos/catalog/covers/mazda-cx-5-zhishang-pro-2026-360.webp 360w, /photos/catalog/covers/mazda-cx-5-zhishang-pro-2026-640.webp 640w, /photos/catalog/covers/mazda-cx-5-zhishang-pro-2026-960.webp 960w",
+    "source": "/photos/catalog/mazda-cx-5-zhishang-pro-2026/134.webp",
+    "width": 640,
+    "height": 400
+  },
+  "bmw-x3-xdrive30l-2025": {
+    "src": "/photos/catalog/covers/bmw-x3-xdrive30l-2025-640.webp",
+    "srcSet": "/photos/catalog/covers/bmw-x3-xdrive30l-2025-360.webp 360w, /photos/catalog/covers/bmw-x3-xdrive30l-2025-640.webp 640w, /photos/catalog/covers/bmw-x3-xdrive30l-2025-960.webp 960w",
+    "source": "/photos/catalog/bmw-x3-xdrive30l-2025/137.webp",
+    "width": 640,
+    "height": 400
+  },
+  "xiaomi-yu7-max-2026": {
+    "src": "/photos/catalog/covers/xiaomi-yu7-max-2026-640.webp",
+    "srcSet": "/photos/catalog/covers/xiaomi-yu7-max-2026-360.webp 360w, /photos/catalog/covers/xiaomi-yu7-max-2026-640.webp 640w, /photos/catalog/covers/xiaomi-yu7-max-2026-960.webp 960w",
+    "source": "/photos/catalog/xiaomi-yu7-max-2026/139.webp",
+    "width": 640,
+    "height": 400
+  },
+  "denza-n9-black-knight-2025": {
+    "src": "/photos/catalog/covers/denza-n9-black-knight-2025-640.webp",
+    "srcSet": "/photos/catalog/covers/denza-n9-black-knight-2025-360.webp 360w, /photos/catalog/covers/denza-n9-black-knight-2025-640.webp 640w, /photos/catalog/covers/denza-n9-black-knight-2025-960.webp 960w",
+    "source": "/photos/catalog/denza-n9-black-knight-2025/154.webp",
+    "width": 640,
+    "height": 400
+  },
+  "denza-n9-black-knight-2026": {
+    "src": "/photos/catalog/covers/denza-n9-black-knight-2026-640.webp",
+    "srcSet": "/photos/catalog/covers/denza-n9-black-knight-2026-360.webp 360w, /photos/catalog/covers/denza-n9-black-knight-2026-640.webp 640w, /photos/catalog/covers/denza-n9-black-knight-2026-960.webp 960w",
+    "source": "/photos/catalog/denza-n9-black-knight-2026/154.webp",
+    "width": 640,
+    "height": 400
+  },
+  "byd-leopard-8-2025": {
+    "src": "/photos/catalog/covers/byd-leopard-8-2025-640.webp",
+    "srcSet": "/photos/catalog/covers/byd-leopard-8-2025-360.webp 360w, /photos/catalog/covers/byd-leopard-8-2025-640.webp 640w, /photos/catalog/covers/byd-leopard-8-2025-960.webp 960w",
+    "source": "/photos/catalog/byd-leopard-8-2025/161.webp",
+    "width": 640,
+    "height": 400
+  },
+  "byd-leopard-5-2025": {
+    "src": "/photos/catalog/covers/byd-leopard-5-2025-640.webp",
+    "srcSet": "/photos/catalog/covers/byd-leopard-5-2025-360.webp 360w, /photos/catalog/covers/byd-leopard-5-2025-640.webp 640w, /photos/catalog/covers/byd-leopard-5-2025-960.webp 960w",
+    "source": "/photos/catalog/byd-leopard-5-2025/169.webp",
+    "width": 640,
+    "height": 400
+  },
+  "byd-leopard-5-2026": {
+    "src": "/photos/catalog/covers/byd-leopard-5-2026-640.webp",
+    "srcSet": "/photos/catalog/covers/byd-leopard-5-2026-360.webp 360w, /photos/catalog/covers/byd-leopard-5-2026-640.webp 640w, /photos/catalog/covers/byd-leopard-5-2026-960.webp 960w",
+    "source": "/photos/catalog/byd-leopard-5-2026/169.webp",
+    "width": 640,
+    "height": 400
+  },
+  "byd-tang-l-lidar-flagship-2025": {
+    "src": "/photos/catalog/covers/byd-tang-l-lidar-flagship-2025-640.webp",
+    "srcSet": "/photos/catalog/covers/byd-tang-l-lidar-flagship-2025-360.webp 360w, /photos/catalog/covers/byd-tang-l-lidar-flagship-2025-640.webp 640w, /photos/catalog/covers/byd-tang-l-lidar-flagship-2025-960.webp 960w",
+    "source": "/photos/catalog/byd-tang-l-lidar-flagship-2025/178.webp",
+    "width": 640,
+    "height": 400
+  },
+  "byd-titanium-7-2025": {
+    "src": "/photos/catalog/covers/byd-titanium-7-2025-640.webp",
+    "srcSet": "/photos/catalog/covers/byd-titanium-7-2025-360.webp 360w, /photos/catalog/covers/byd-titanium-7-2025-640.webp 640w, /photos/catalog/covers/byd-titanium-7-2025-960.webp 960w",
+    "source": "/photos/catalog/byd-titanium-7-2025/180.webp",
+    "width": 640,
+    "height": 400
+  },
+  "byd-titanium-7-2026": {
+    "src": "/photos/catalog/covers/byd-titanium-7-2026-640.webp",
+    "srcSet": "/photos/catalog/covers/byd-titanium-7-2026-360.webp 360w, /photos/catalog/covers/byd-titanium-7-2026-640.webp 640w, /photos/catalog/covers/byd-titanium-7-2026-960.webp 960w",
+    "source": "/photos/catalog/byd-titanium-7-2026/180.webp",
+    "width": 640,
+    "height": 400
+  },
+  "xiaomi-skynomad-n90-max-2026": {
+    "src": "/photos/catalog/covers/xiaomi-skynomad-n90-max-2026-640.webp",
+    "srcSet": "/photos/catalog/covers/xiaomi-skynomad-n90-max-2026-360.webp 360w, /photos/catalog/covers/xiaomi-skynomad-n90-max-2026-640.webp 640w, /photos/catalog/covers/xiaomi-skynomad-n90-max-2026-960.webp 960w",
+    "source": "/photos/catalog/xiaomi-skynomad-n90-max-2026/182.webp",
+    "width": 640,
+    "height": 400
+  },
+  "mercedes-benz-gls-450-2026": {
+    "src": "/photos/catalog/covers/mercedes-benz-gls-450-2026-640.webp",
+    "srcSet": "/photos/catalog/covers/mercedes-benz-gls-450-2026-360.webp 360w, /photos/catalog/covers/mercedes-benz-gls-450-2026-640.webp 640w, /photos/catalog/covers/mercedes-benz-gls-450-2026-960.webp 960w",
+    "source": "/photos/catalog/mercedes-benz-gls-450-2026/188.webp",
+    "width": 640,
+    "height": 400
+  },
+  "rolls-royce-cullinan-2021": {
+    "src": "/photos/catalog/covers/rolls-royce-cullinan-2021-640.webp",
+    "srcSet": "/photos/catalog/covers/rolls-royce-cullinan-2021-360.webp 360w, /photos/catalog/covers/rolls-royce-cullinan-2021-640.webp 640w, /photos/catalog/covers/rolls-royce-cullinan-2021-960.webp 960w",
+    "source": "/photos/catalog/rolls-royce-cullinan-2021/198.webp",
+    "width": 640,
+    "height": 400
+  },
+  "rolls-royce-cullinan-black-badge-2025": {
+    "src": "/photos/catalog/covers/rolls-royce-cullinan-black-badge-2025-640.webp",
+    "srcSet": "/photos/catalog/covers/rolls-royce-cullinan-black-badge-2025-360.webp 360w, /photos/catalog/covers/rolls-royce-cullinan-black-badge-2025-640.webp 640w, /photos/catalog/covers/rolls-royce-cullinan-black-badge-2025-960.webp 960w",
+    "source": "/photos/catalog/rolls-royce-cullinan-black-badge-2025/199.webp",
+    "width": 640,
+    "height": 400
+  },
+  "land-rover-range-rover-velar-2025": {
+    "src": "/photos/catalog/covers/land-rover-range-rover-velar-2025-640.webp",
+    "srcSet": "/photos/catalog/covers/land-rover-range-rover-velar-2025-360.webp 360w, /photos/catalog/covers/land-rover-range-rover-velar-2025-640.webp 640w, /photos/catalog/covers/land-rover-range-rover-velar-2025-960.webp 960w",
+    "source": "/photos/catalog/land-rover-range-rover-velar-2025/205.webp",
+    "width": 640,
+    "height": 400
+  },
+  "porsche-cayenne-2025": {
+    "src": "/photos/catalog/covers/porsche-cayenne-2025-640.webp",
+    "srcSet": "/photos/catalog/covers/porsche-cayenne-2025-360.webp 360w, /photos/catalog/covers/porsche-cayenne-2025-640.webp 640w, /photos/catalog/covers/porsche-cayenne-2025-960.webp 960w",
+    "source": "/photos/catalog/porsche-cayenne-2025/206.webp",
+    "width": 640,
+    "height": 400
   }
 }

@@ -1293,5 +1293,1643 @@
     "updatedAt": "2026-11-07",
     "stockPriceRub": 5100000,
     "orderPriceRub": 5000000
+  },
+  {
+    "id": "ram-1500-rebel-2026",
+    "slug": "ram-1500-rebel-2026",
+    "title": "RAM 1500 Rebel",
+    "brand": "RAM",
+    "model": "1500 Rebel",
+    "year": 2026,
+    "trim": "Rebel-GT Package",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/ram-1500-rebel-2026/122.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/ram-1500-rebel-2026/122.webp",
+        "alt": "RAM 1500 Rebel — фото 1"
+      },
+      {
+        "src": "/photos/catalog/ram-1500-rebel-2026/121.webp",
+        "alt": "RAM 1500 Rebel — фото 2"
+      },
+      {
+        "src": "/photos/catalog/ram-1500-rebel-2026/120.webp",
+        "alt": "RAM 1500 Rebel — фото 3"
+      },
+      {
+        "src": "/photos/catalog/ram-1500-rebel-2026/119.webp",
+        "alt": "RAM 1500 Rebel — фото 4"
+      },
+      {
+        "src": "/photos/catalog/ram-1500-rebel-2026/118.webp",
+        "alt": "RAM 1500 Rebel — фото 5"
+      }
+    ],
+    "description": "RAM 1500 Rebel с пакетом Rebel-GT. Пневмоподвеска, панорамная крыша и аудиосистема Harman Kardon. В наличии в Москве; доступен также привоз под заказ.",
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 8800000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "3,0 л · бензин"
+      },
+      {
+        "label": "Мощность",
+        "value": "420 л.с."
+      }
+    ],
+    "highlights": [
+      "3,0 л · бензин",
+      "420 л.с."
+    ],
+    "updatedAt": "2026-11-09",
+    "stockPriceRub": 8800000,
+    "orderPriceRub": 8500000,
+    "equipment": [
+      {
+        "title": "Оснащение",
+        "items": [
+          "Пневмоподвеска",
+          "Панорамная крыша и люк",
+          "Внедорожный круиз-контроль",
+          "Подрулевые переключатели",
+          "Harman Kardon",
+          "Экран для пассажира",
+          "Apple CarPlay и Android Auto",
+          "Беспроводная зарядка двух телефонов",
+          "Подогрев передних и задних сидений",
+          "Подогрев руля"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "audi-q2-35-tfsi-2026",
+    "slug": "audi-q2-35-tfsi-2026",
+    "title": "Audi Q2",
+    "brand": "Audi",
+    "model": "Q2",
+    "year": 2026,
+    "trim": "35 TFSI S tronic Luxury",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/audi-q2-35-tfsi-2026/124.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/audi-q2-35-tfsi-2026/124.webp",
+        "alt": "Audi Q2 — фото 1"
+      },
+      {
+        "src": "/photos/catalog/audi-q2-35-tfsi-2026/123.webp",
+        "alt": "Audi Q2 — фото 2"
+      },
+      {
+        "src": "/photos/catalog/audi-q2-35-tfsi-2026/125.webp",
+        "alt": "Audi Q2 — фото 3"
+      }
+    ],
+    "description": "Компактный Audi Q2 в комплектации Luxury с коробкой S tronic. Серый кузов и чёрный салон. Доступны покупка из наличия и заказ автомобиля. Статус активации ЭПТС подтвердим перед покупкой.",
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 3500000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [],
+    "highlights": [
+      "35 TFSI S tronic Luxury"
+    ],
+    "updatedAt": "2026-11-09",
+    "stockPriceRub": 3500000,
+    "orderPriceRub": 3200000
+  },
+  {
+    "id": "bmw-x1-25li-2026",
+    "slug": "bmw-x1-25li-2026",
+    "title": "BMW X1",
+    "brand": "BMW",
+    "model": "X1",
+    "year": 2026,
+    "trim": "25Li M Sport Shadow Edition",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/bmw-x1-25li-2026/131.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/bmw-x1-25li-2026/131.webp",
+        "alt": "BMW X1 — фото 1"
+      },
+      {
+        "src": "/photos/catalog/bmw-x1-25li-2026/127.webp",
+        "alt": "BMW X1 — фото 2"
+      }
+    ],
+    "description": "BMW X1 25Li в исполнении M Sport Shadow Edition. Белый кузов, чёрный салон. По предложению документы готовы, ЭПТС действующий, утильсбор списан.",
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 5700000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Цвет кузова",
+        "value": "Белый"
+      },
+      {
+        "label": "Цвет салона",
+        "value": "Чёрный"
+      }
+    ],
+    "highlights": [
+      "Белый",
+      "Чёрный"
+    ],
+    "updatedAt": "2026-11-09",
+    "stockPriceRub": 5700000,
+    "orderPriceRub": 5300000
+  },
+  {
+    "id": "audi-q5l-2026",
+    "slug": "audi-q5l-2026",
+    "title": "Audi Q5L",
+    "brand": "Audi",
+    "model": "Q5L",
+    "year": 2026,
+    "trim": "Предмаксимальная комплектация",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/audi-q5l-2026/132.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/audi-q5l-2026/132.webp",
+        "alt": "Audi Q5L — фото 1"
+      }
+    ],
+    "description": "Audi Q5L с зелёным кузовом и чёрным салоном. Пневмоподвеска, аудиосистема Bang & Olufsen и колёсные диски R21.",
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 6700000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "Бензин"
+      },
+      {
+        "label": "Цвет кузова",
+        "value": "Зелёный"
+      },
+      {
+        "label": "Цвет салона",
+        "value": "Чёрный"
+      }
+    ],
+    "highlights": [
+      "Бензин",
+      "Зелёный",
+      "Чёрный"
+    ],
+    "updatedAt": "2026-11-09",
+    "stockPriceRub": 6700000,
+    "orderPriceRub": 6300000,
+    "equipment": [
+      {
+        "title": "Оснащение",
+        "items": [
+          "Пневмоподвеска",
+          "Bang & Olufsen",
+          "Колёсные диски R21"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "honda-civic-fun-2026",
+    "slug": "honda-civic-fun-2026",
+    "title": "Honda Civic",
+    "brand": "Honda",
+    "model": "Civic",
+    "year": 2026,
+    "trim": "Fun · 180 Turbo",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/honda-civic-fun-2026/133.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/honda-civic-fun-2026/133.webp",
+        "alt": "Honda Civic — фото 1"
+      }
+    ],
+    "description": "Honda Civic Fun с турбированным бензиновым двигателем и вариатором. Белый кузов, чёрный салон.",
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 3030000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "1,5 л · бензин"
+      },
+      {
+        "label": "Коробка передач",
+        "value": "CVT"
+      },
+      {
+        "label": "Цвет кузова",
+        "value": "Белый"
+      },
+      {
+        "label": "Цвет салона",
+        "value": "Чёрный"
+      }
+    ],
+    "highlights": [
+      "1,5 л · бензин",
+      "CVT",
+      "Белый"
+    ],
+    "updatedAt": "2026-11-09",
+    "stockPriceRub": 3030000,
+    "orderPriceRub": 2700000
+  },
+  {
+    "id": "mazda-cx-5-zhishang-pro-2026",
+    "slug": "mazda-cx-5-zhishang-pro-2026",
+    "title": "Mazda CX-5",
+    "brand": "Mazda",
+    "model": "CX-5",
+    "year": 2026,
+    "trim": "Zhishang Pro",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/mazda-cx-5-zhishang-pro-2026/134.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/mazda-cx-5-zhishang-pro-2026/134.webp",
+        "alt": "Mazda CX-5 — фото 1"
+      }
+    ],
+    "description": "Mazda CX-5 в комплектации Zhishang Pro. Синий кузов, чёрный тканевый салон и бензиновый двигатель.",
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 3200000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "Бензин"
+      },
+      {
+        "label": "Цвет кузова",
+        "value": "Синий"
+      },
+      {
+        "label": "Салон",
+        "value": "Чёрный · ткань"
+      }
+    ],
+    "highlights": [
+      "Бензин",
+      "Синий",
+      "Чёрный · ткань"
+    ],
+    "updatedAt": "2026-11-09",
+    "stockPriceRub": 3200000,
+    "orderPriceRub": 2800000
+  },
+  {
+    "id": "bmw-x3-xdrive30l-2025",
+    "slug": "bmw-x3-xdrive30l-2025",
+    "title": "BMW X3",
+    "brand": "BMW",
+    "model": "X3",
+    "year": 2025,
+    "trim": "xDrive30L Leading M Sport",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/bmw-x3-xdrive30l-2025/137.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/bmw-x3-xdrive30l-2025/137.webp",
+        "alt": "BMW X3 — фото 1"
+      },
+      {
+        "src": "/photos/catalog/bmw-x3-xdrive30l-2025/136.webp",
+        "alt": "BMW X3 — фото 2"
+      }
+    ],
+    "description": "BMW X3 xDrive30L в комплектации Leading M Sport. Чёрный кузов и салон, бензиновый двигатель, полный привод.",
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 6700000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "Бензин"
+      },
+      {
+        "label": "Привод",
+        "value": "Полный"
+      },
+      {
+        "label": "Цвет кузова",
+        "value": "Чёрный"
+      },
+      {
+        "label": "Цвет салона",
+        "value": "Чёрный"
+      }
+    ],
+    "highlights": [
+      "Бензин",
+      "Полный",
+      "Чёрный"
+    ],
+    "updatedAt": "2026-11-09",
+    "stockPriceRub": 6700000,
+    "orderPriceRub": 6500000
+  },
+  {
+    "id": "xiaomi-yu7-max-2026",
+    "slug": "xiaomi-yu7-max-2026",
+    "title": "Xiaomi YU7",
+    "brand": "Xiaomi",
+    "model": "YU7",
+    "year": 2026,
+    "trim": "Max",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/xiaomi-yu7-max-2026/139.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/xiaomi-yu7-max-2026/139.webp",
+        "alt": "Xiaomi YU7 — фото 1"
+      },
+      {
+        "src": "/photos/catalog/xiaomi-yu7-max-2026/138.webp",
+        "alt": "Xiaomi YU7 — фото 2"
+      },
+      {
+        "src": "/photos/catalog/xiaomi-yu7-max-2026/140.webp",
+        "alt": "Xiaomi YU7 — фото 3"
+      },
+      {
+        "src": "/photos/catalog/xiaomi-yu7-max-2026/141.webp",
+        "alt": "Xiaomi YU7 — фото 4"
+      },
+      {
+        "src": "/photos/catalog/xiaomi-yu7-max-2026/142.webp",
+        "alt": "Xiaomi YU7 — фото 5"
+      },
+      {
+        "src": "/photos/catalog/xiaomi-yu7-max-2026/143.webp",
+        "alt": "Xiaomi YU7 — фото 6"
+      },
+      {
+        "src": "/photos/catalog/xiaomi-yu7-max-2026/144.webp",
+        "alt": "Xiaomi YU7 — фото 7"
+      },
+      {
+        "src": "/photos/catalog/xiaomi-yu7-max-2026/150.webp",
+        "alt": "Xiaomi YU7 — фото 8"
+      },
+      {
+        "src": "/photos/catalog/xiaomi-yu7-max-2026/145.webp",
+        "alt": "Xiaomi YU7 — фото 9"
+      },
+      {
+        "src": "/photos/catalog/xiaomi-yu7-max-2026/146.webp",
+        "alt": "Xiaomi YU7 — фото 10"
+      },
+      {
+        "src": "/photos/catalog/xiaomi-yu7-max-2026/147.webp",
+        "alt": "Xiaomi YU7 — фото 11"
+      },
+      {
+        "src": "/photos/catalog/xiaomi-yu7-max-2026/148.webp",
+        "alt": "Xiaomi YU7 — фото 12"
+      },
+      {
+        "src": "/photos/catalog/xiaomi-yu7-max-2026/149.webp",
+        "alt": "Xiaomi YU7 — фото 13"
+      },
+      {
+        "src": "/photos/catalog/xiaomi-yu7-max-2026/151.webp",
+        "alt": "Xiaomi YU7 — фото 14"
+      },
+      {
+        "src": "/photos/catalog/xiaomi-yu7-max-2026/152.webp",
+        "alt": "Xiaomi YU7 — фото 15"
+      }
+    ],
+    "description": "Новый электрический Xiaomi YU7 Max с полным приводом. В подборке представлены оранжевое и зелёное исполнения. В наличии в Москве; доступен привоз под заказ.",
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 10500000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Силовая установка",
+        "value": "Электрическая"
+      },
+      {
+        "label": "Привод",
+        "value": "Полный"
+      }
+    ],
+    "highlights": [
+      "Электрическая",
+      "Полный"
+    ],
+    "updatedAt": "2026-11-09",
+    "stockPriceRub": 10500000,
+    "orderPriceRub": 10300000,
+    "mileageKm": 0
+  },
+  {
+    "id": "denza-n9-black-knight-2025",
+    "slug": "denza-n9-black-knight-2025",
+    "title": "Denza N9",
+    "brand": "Denza",
+    "model": "N9",
+    "year": 2025,
+    "trim": "Black Knight",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/denza-n9-black-knight-2025/154.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/denza-n9-black-knight-2025/154.webp",
+        "alt": "Denza N9 — фото 1"
+      },
+      {
+        "src": "/photos/catalog/denza-n9-black-knight-2025/153.webp",
+        "alt": "Denza N9 — фото 2"
+      },
+      {
+        "src": "/photos/catalog/denza-n9-black-knight-2025/156.webp",
+        "alt": "Denza N9 — фото 3"
+      },
+      {
+        "src": "/photos/catalog/denza-n9-black-knight-2025/157.webp",
+        "alt": "Denza N9 — фото 4"
+      },
+      {
+        "src": "/photos/catalog/denza-n9-black-knight-2025/155.webp",
+        "alt": "Denza N9 — фото 5"
+      },
+      {
+        "src": "/photos/catalog/denza-n9-black-knight-2025/158.webp",
+        "alt": "Denza N9 — фото 6"
+      },
+      {
+        "src": "/photos/catalog/denza-n9-black-knight-2025/159.webp",
+        "alt": "Denza N9 — фото 7"
+      }
+    ],
+    "description": "Denza N9 в исполнении Black Knight. Чёрный кузов, просторный светлый салон и отдельные кресла второго ряда. Автомобиль 2025 года из наличия.",
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 8500000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Цвет кузова",
+        "value": "Чёрный"
+      }
+    ],
+    "highlights": [
+      "Чёрный"
+    ],
+    "updatedAt": "2026-11-09",
+    "stockPriceRub": 8500000
+  },
+  {
+    "id": "denza-n9-black-knight-2026",
+    "slug": "denza-n9-black-knight-2026",
+    "title": "Denza N9",
+    "brand": "Denza",
+    "model": "N9",
+    "year": 2026,
+    "trim": "Black Knight",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/denza-n9-black-knight-2026/154.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/denza-n9-black-knight-2026/154.webp",
+        "alt": "Denza N9 — фото 1"
+      },
+      {
+        "src": "/photos/catalog/denza-n9-black-knight-2026/153.webp",
+        "alt": "Denza N9 — фото 2"
+      },
+      {
+        "src": "/photos/catalog/denza-n9-black-knight-2026/156.webp",
+        "alt": "Denza N9 — фото 3"
+      },
+      {
+        "src": "/photos/catalog/denza-n9-black-knight-2026/157.webp",
+        "alt": "Denza N9 — фото 4"
+      },
+      {
+        "src": "/photos/catalog/denza-n9-black-knight-2026/155.webp",
+        "alt": "Denza N9 — фото 5"
+      },
+      {
+        "src": "/photos/catalog/denza-n9-black-knight-2026/158.webp",
+        "alt": "Denza N9 — фото 6"
+      },
+      {
+        "src": "/photos/catalog/denza-n9-black-knight-2026/159.webp",
+        "alt": "Denza N9 — фото 7"
+      }
+    ],
+    "description": "Denza N9 в исполнении Black Knight. Чёрный кузов, просторный светлый салон и отдельные кресла второго ряда. Автомобиль 2026 года под заказ.",
+    "availability": "to_order",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 9800000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Цвет кузова",
+        "value": "Чёрный"
+      }
+    ],
+    "highlights": [
+      "Чёрный"
+    ],
+    "updatedAt": "2026-11-09",
+    "orderPriceRub": 9800000
+  },
+  {
+    "id": "byd-leopard-8-2025",
+    "slug": "byd-leopard-8-2025",
+    "title": "BYD Leopard 8",
+    "brand": "BYD",
+    "model": "Leopard 8",
+    "year": 2025,
+    "trim": "2.0 Hybrid",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/byd-leopard-8-2025/161.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/byd-leopard-8-2025/161.webp",
+        "alt": "BYD Leopard 8 — фото 1"
+      },
+      {
+        "src": "/photos/catalog/byd-leopard-8-2025/162.webp",
+        "alt": "BYD Leopard 8 — фото 2"
+      },
+      {
+        "src": "/photos/catalog/byd-leopard-8-2025/163.webp",
+        "alt": "BYD Leopard 8 — фото 3"
+      },
+      {
+        "src": "/photos/catalog/byd-leopard-8-2025/164.webp",
+        "alt": "BYD Leopard 8 — фото 4"
+      },
+      {
+        "src": "/photos/catalog/byd-leopard-8-2025/160.webp",
+        "alt": "BYD Leopard 8 — фото 5"
+      }
+    ],
+    "description": "Новый BYD Leopard 8 — внедорожник с гибридной силовой установкой. Поставка автомобиля из Китая под заказ.",
+    "availability": "to_order",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 8280000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "2,0 л · гибрид"
+      },
+      {
+        "label": "Мощность",
+        "value": "700 л.с."
+      }
+    ],
+    "highlights": [
+      "2,0 л · гибрид",
+      "700 л.с."
+    ],
+    "updatedAt": "2026-11-09",
+    "orderPriceRub": 8280000,
+    "mileageKm": 0
+  },
+  {
+    "id": "byd-leopard-5-2025",
+    "slug": "byd-leopard-5-2025",
+    "title": "BYD Leopard 5",
+    "brand": "BYD",
+    "model": "Leopard 5",
+    "year": 2025,
+    "trim": "1.5 Hybrid · AWD",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/byd-leopard-5-2025/169.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/byd-leopard-5-2025/169.webp",
+        "alt": "BYD Leopard 5 — фото 1"
+      },
+      {
+        "src": "/photos/catalog/byd-leopard-5-2025/168.webp",
+        "alt": "BYD Leopard 5 — фото 2"
+      },
+      {
+        "src": "/photos/catalog/byd-leopard-5-2025/166.webp",
+        "alt": "BYD Leopard 5 — фото 3"
+      },
+      {
+        "src": "/photos/catalog/byd-leopard-5-2025/165.webp",
+        "alt": "BYD Leopard 5 — фото 4"
+      },
+      {
+        "src": "/photos/catalog/byd-leopard-5-2025/167.webp",
+        "alt": "BYD Leopard 5 — фото 5"
+      }
+    ],
+    "description": "Гибридный BYD Leopard 5 с полным приводом. Новый автомобиль без пробега. Автомобиль 2025 года в наличии, документы подготовлены.",
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 6000000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "1,5 л · гибрид"
+      },
+      {
+        "label": "Мощность",
+        "value": "687 л.с."
+      },
+      {
+        "label": "Привод",
+        "value": "Полный"
+      }
+    ],
+    "highlights": [
+      "1,5 л · гибрид",
+      "687 л.с.",
+      "Полный"
+    ],
+    "updatedAt": "2026-11-09",
+    "stockPriceRub": 6000000,
+    "mileageKm": 0
+  },
+  {
+    "id": "byd-leopard-5-2026",
+    "slug": "byd-leopard-5-2026",
+    "title": "BYD Leopard 5",
+    "brand": "BYD",
+    "model": "Leopard 5",
+    "year": 2026,
+    "trim": "1.5 Hybrid · AWD",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/byd-leopard-5-2026/169.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/byd-leopard-5-2026/169.webp",
+        "alt": "BYD Leopard 5 — фото 1"
+      },
+      {
+        "src": "/photos/catalog/byd-leopard-5-2026/168.webp",
+        "alt": "BYD Leopard 5 — фото 2"
+      },
+      {
+        "src": "/photos/catalog/byd-leopard-5-2026/166.webp",
+        "alt": "BYD Leopard 5 — фото 3"
+      },
+      {
+        "src": "/photos/catalog/byd-leopard-5-2026/165.webp",
+        "alt": "BYD Leopard 5 — фото 4"
+      },
+      {
+        "src": "/photos/catalog/byd-leopard-5-2026/167.webp",
+        "alt": "BYD Leopard 5 — фото 5"
+      }
+    ],
+    "description": "Гибридный BYD Leopard 5 с полным приводом. Новый автомобиль без пробега. Автомобиль 2026 года под заказ.",
+    "availability": "to_order",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 7800000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "1,5 л · гибрид"
+      },
+      {
+        "label": "Мощность",
+        "value": "687 л.с."
+      },
+      {
+        "label": "Привод",
+        "value": "Полный"
+      }
+    ],
+    "highlights": [
+      "1,5 л · гибрид",
+      "687 л.с.",
+      "Полный"
+    ],
+    "updatedAt": "2026-11-09",
+    "orderPriceRub": 7800000,
+    "mileageKm": 0
+  },
+  {
+    "id": "byd-tang-l-lidar-flagship-2025",
+    "slug": "byd-tang-l-lidar-flagship-2025",
+    "title": "BYD Tang L",
+    "brand": "BYD",
+    "model": "Tang L",
+    "year": 2025,
+    "trim": "LiDAR Flagship",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": true,
+    "image": "/photos/catalog/byd-tang-l-lidar-flagship-2025/178.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/byd-tang-l-lidar-flagship-2025/178.webp",
+        "alt": "BYD Tang L — фото 1"
+      },
+      {
+        "src": "/photos/catalog/byd-tang-l-lidar-flagship-2025/176.webp",
+        "alt": "BYD Tang L — фото 2"
+      },
+      {
+        "src": "/photos/catalog/byd-tang-l-lidar-flagship-2025/175.webp",
+        "alt": "BYD Tang L — фото 3"
+      },
+      {
+        "src": "/photos/catalog/byd-tang-l-lidar-flagship-2025/177.webp",
+        "alt": "BYD Tang L — фото 4"
+      },
+      {
+        "src": "/photos/catalog/byd-tang-l-lidar-flagship-2025/174.webp",
+        "alt": "BYD Tang L — фото 5"
+      },
+      {
+        "src": "/photos/catalog/byd-tang-l-lidar-flagship-2025/171.webp",
+        "alt": "BYD Tang L — фото 6"
+      },
+      {
+        "src": "/photos/catalog/byd-tang-l-lidar-flagship-2025/170.webp",
+        "alt": "BYD Tang L — фото 7"
+      },
+      {
+        "src": "/photos/catalog/byd-tang-l-lidar-flagship-2025/172.webp",
+        "alt": "BYD Tang L — фото 8"
+      },
+      {
+        "src": "/photos/catalog/byd-tang-l-lidar-flagship-2025/173.webp",
+        "alt": "BYD Tang L — фото 9"
+      }
+    ],
+    "description": "BYD Tang L LiDAR Flagship с кожаным салоном. Цена в предложении указана без НДС; доступен вариант покупки с НДС по отдельному расчёту.",
+    "availability": "unknown",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 5100000,
+      "date": "2026-11-08",
+      "note": "Цена от 5 100 000 ₽ без НДС. Вариант покупки с НДС рассчитывается отдельно."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "1,5 л"
+      },
+      {
+        "label": "Коробка передач",
+        "value": "Автоматическая"
+      },
+      {
+        "label": "Салон",
+        "value": "Кожа"
+      }
+    ],
+    "highlights": [
+      "1,5 л",
+      "Автоматическая",
+      "Кожа"
+    ],
+    "updatedAt": "2026-11-09"
+  },
+  {
+    "id": "byd-titanium-7-2025",
+    "slug": "byd-titanium-7-2025",
+    "title": "BYD Titanium 7",
+    "brand": "BYD",
+    "model": "Titanium 7",
+    "year": 2025,
+    "trim": "1.5 Hybrid · AWD",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/byd-titanium-7-2025/180.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/byd-titanium-7-2025/180.webp",
+        "alt": "BYD Titanium 7 — фото 1"
+      },
+      {
+        "src": "/photos/catalog/byd-titanium-7-2025/179.webp",
+        "alt": "BYD Titanium 7 — фото 2"
+      },
+      {
+        "src": "/photos/catalog/byd-titanium-7-2025/181.webp",
+        "alt": "BYD Titanium 7 — фото 3"
+      }
+    ],
+    "description": "Новый BYD Titanium 7 с гибридной силовой установкой и полным приводом. Автомобиль 2025 года в наличии, документы подготовлены.",
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 6000000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "1,5 л · гибрид"
+      },
+      {
+        "label": "Мощность",
+        "value": "687 л.с."
+      },
+      {
+        "label": "Привод",
+        "value": "Полный"
+      }
+    ],
+    "highlights": [
+      "1,5 л · гибрид",
+      "687 л.с.",
+      "Полный"
+    ],
+    "updatedAt": "2026-11-09",
+    "stockPriceRub": 6000000,
+    "mileageKm": 0
+  },
+  {
+    "id": "byd-titanium-7-2026",
+    "slug": "byd-titanium-7-2026",
+    "title": "BYD Titanium 7",
+    "brand": "BYD",
+    "model": "Titanium 7",
+    "year": 2026,
+    "trim": "1.5 Hybrid · AWD",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/byd-titanium-7-2026/180.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/byd-titanium-7-2026/180.webp",
+        "alt": "BYD Titanium 7 — фото 1"
+      },
+      {
+        "src": "/photos/catalog/byd-titanium-7-2026/179.webp",
+        "alt": "BYD Titanium 7 — фото 2"
+      },
+      {
+        "src": "/photos/catalog/byd-titanium-7-2026/181.webp",
+        "alt": "BYD Titanium 7 — фото 3"
+      }
+    ],
+    "description": "Новый BYD Titanium 7 с гибридной силовой установкой и полным приводом. Поставка автомобиля 2026 года под заказ.",
+    "availability": "to_order",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 7500000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "1,5 л · гибрид"
+      },
+      {
+        "label": "Мощность",
+        "value": "687 л.с."
+      },
+      {
+        "label": "Привод",
+        "value": "Полный"
+      }
+    ],
+    "highlights": [
+      "1,5 л · гибрид",
+      "687 л.с.",
+      "Полный"
+    ],
+    "updatedAt": "2026-11-09",
+    "orderPriceRub": 7500000,
+    "mileageKm": 0
+  },
+  {
+    "id": "xiaomi-skynomad-n90-max-2026",
+    "slug": "xiaomi-skynomad-n90-max-2026",
+    "title": "Xiaomi SkyNomad N90",
+    "brand": "Xiaomi",
+    "model": "SkyNomad N90",
+    "year": 2026,
+    "trim": "Max · 7 мест",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/xiaomi-skynomad-n90-max-2026/182.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/xiaomi-skynomad-n90-max-2026/182.webp",
+        "alt": "Xiaomi SkyNomad N90 — фото 1"
+      }
+    ],
+    "description": "Семиместный Xiaomi SkyNomad N90 Max с гибридной силовой установкой, полным приводом и пневмоподвеской. Просторный трансформируемый салон для дальних поездок.",
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 10600000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "1,5 л · турбо · гибрид"
+      },
+      {
+        "label": "Мощность",
+        "value": "422 л.с."
+      },
+      {
+        "label": "Привод",
+        "value": "Полный"
+      },
+      {
+        "label": "Мест",
+        "value": "7"
+      },
+      {
+        "label": "Батарея",
+        "value": "76 кВт·ч"
+      },
+      {
+        "label": "Общий запас хода",
+        "value": "До 1 705 км · CLTC"
+      },
+      {
+        "label": "Электрический запас хода",
+        "value": "До 464 км · CLTC"
+      },
+      {
+        "label": "Разгон 0–100 км/ч",
+        "value": "5,9 с"
+      }
+    ],
+    "highlights": [
+      "1,5 л · турбо · гибрид",
+      "422 л.с.",
+      "Полный"
+    ],
+    "updatedAt": "2026-11-09",
+    "stockPriceRub": 10600000,
+    "equipment": [
+      {
+        "title": "Оснащение",
+        "items": [
+          "Пневмоподвеска",
+          "Панорамная крыша",
+          "Подогрев, вентиляция и массаж сидений",
+          "Мультимедиа 16,1″",
+          "Проекционный дисплей HUD",
+          "Экран для задних пассажиров 21,4″",
+          "Встроенный холодильник",
+          "Камеры кругового обзора",
+          "LiDAR и ассистенты водителя"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmw-x5-xdrive40d-2026",
+    "slug": "bmw-x5-xdrive40d-2026",
+    "title": "BMW X5",
+    "brand": "BMW",
+    "model": "X5",
+    "year": 2026,
+    "trim": "xDrive40d · Европа",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": null,
+    "gallery": [],
+    "description": "Европейский BMW X5 xDrive40d в пути в Москву и доступен к бронированию. По предложению ожидается в конце ноября 2026 года; дату прибытия подтвердим при обращении.",
+    "availability": "in_transit",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 18500000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии выбранного автомобиля предоставим по запросу.",
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "Дизель"
+      },
+      {
+        "label": "Привод",
+        "value": "Полный"
+      }
+    ],
+    "highlights": [
+      "Дизель",
+      "Полный"
+    ],
+    "updatedAt": "2026-11-09"
+  },
+  {
+    "id": "mercedes-benz-gls-450-2026",
+    "slug": "mercedes-benz-gls-450-2026",
+    "title": "Mercedes-Benz GLS 450",
+    "brand": "Mercedes-Benz",
+    "model": "GLS 450",
+    "year": 2026,
+    "trim": "Европейская версия",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/mercedes-benz-gls-450-2026/188.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/mercedes-benz-gls-450-2026/188.webp",
+        "alt": "Mercedes-Benz GLS 450 — фото 1"
+      },
+      {
+        "src": "/photos/catalog/mercedes-benz-gls-450-2026/187.webp",
+        "alt": "Mercedes-Benz GLS 450 — фото 2"
+      },
+      {
+        "src": "/photos/catalog/mercedes-benz-gls-450-2026/184.webp",
+        "alt": "Mercedes-Benz GLS 450 — фото 3"
+      },
+      {
+        "src": "/photos/catalog/mercedes-benz-gls-450-2026/185.webp",
+        "alt": "Mercedes-Benz GLS 450 — фото 4"
+      },
+      {
+        "src": "/photos/catalog/mercedes-benz-gls-450-2026/186.webp",
+        "alt": "Mercedes-Benz GLS 450 — фото 5"
+      }
+    ],
+    "description": "Mercedes-Benz GLS 450 европейской версии. Зелёный кузов, чёрный салон. В наличии в Москве с документами.",
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 18890000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "Бензин"
+      },
+      {
+        "label": "Цвет кузова",
+        "value": "Зелёный"
+      },
+      {
+        "label": "Цвет салона",
+        "value": "Чёрный"
+      }
+    ],
+    "highlights": [
+      "Бензин",
+      "Зелёный",
+      "Чёрный"
+    ],
+    "updatedAt": "2026-11-09",
+    "stockPriceRub": 18890000
+  },
+  {
+    "id": "rolls-royce-cullinan-2021",
+    "slug": "rolls-royce-cullinan-2021",
+    "title": "Rolls-Royce Cullinan",
+    "brand": "Rolls-Royce",
+    "model": "Cullinan",
+    "year": 2021,
+    "trim": "Дилерский РФ",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": true,
+    "image": "/photos/catalog/rolls-royce-cullinan-2021/198.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/rolls-royce-cullinan-2021/198.webp",
+        "alt": "Rolls-Royce Cullinan — фото 1"
+      },
+      {
+        "src": "/photos/catalog/rolls-royce-cullinan-2021/197.webp",
+        "alt": "Rolls-Royce Cullinan — фото 2"
+      },
+      {
+        "src": "/photos/catalog/rolls-royce-cullinan-2021/196.webp",
+        "alt": "Rolls-Royce Cullinan — фото 3"
+      },
+      {
+        "src": "/photos/catalog/rolls-royce-cullinan-2021/190.webp",
+        "alt": "Rolls-Royce Cullinan — фото 4"
+      },
+      {
+        "src": "/photos/catalog/rolls-royce-cullinan-2021/191.webp",
+        "alt": "Rolls-Royce Cullinan — фото 5"
+      },
+      {
+        "src": "/photos/catalog/rolls-royce-cullinan-2021/189.webp",
+        "alt": "Rolls-Royce Cullinan — фото 6"
+      },
+      {
+        "src": "/photos/catalog/rolls-royce-cullinan-2021/192.webp",
+        "alt": "Rolls-Royce Cullinan — фото 7"
+      },
+      {
+        "src": "/photos/catalog/rolls-royce-cullinan-2021/193.webp",
+        "alt": "Rolls-Royce Cullinan — фото 8"
+      },
+      {
+        "src": "/photos/catalog/rolls-royce-cullinan-2021/194.webp",
+        "alt": "Rolls-Royce Cullinan — фото 9"
+      },
+      {
+        "src": "/photos/catalog/rolls-royce-cullinan-2021/195.webp",
+        "alt": "Rolls-Royce Cullinan — фото 10"
+      }
+    ],
+    "description": "Rolls-Royce Cullinan дилерской поставки в РФ. Один владелец, без окрасов по предложению. Пробег 21 500 км. Цена при наличной оплате — от 29 млн ₽; вариант с НДС — от 33,6 млн ₽.",
+    "availability": "unknown",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 29000000,
+      "date": "2026-11-08",
+      "note": "При наличной оплате — от 29 000 000 ₽. Вариант с НДС — от 33 600 000 ₽."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Владельцев",
+        "value": "1"
+      },
+      {
+        "label": "Исполнение",
+        "value": "Дилерский РФ"
+      }
+    ],
+    "highlights": [
+      "1",
+      "Дилерский РФ"
+    ],
+    "updatedAt": "2026-11-09",
+    "mileageKm": 21500
+  },
+  {
+    "id": "rolls-royce-cullinan-black-badge-2025",
+    "slug": "rolls-royce-cullinan-black-badge-2025",
+    "title": "Rolls-Royce Cullinan",
+    "brand": "Rolls-Royce",
+    "model": "Cullinan",
+    "year": 2025,
+    "trim": "Black Badge",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/rolls-royce-cullinan-black-badge-2025/199.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/rolls-royce-cullinan-black-badge-2025/199.webp",
+        "alt": "Rolls-Royce Cullinan — фото 1"
+      },
+      {
+        "src": "/photos/catalog/rolls-royce-cullinan-black-badge-2025/201.webp",
+        "alt": "Rolls-Royce Cullinan — фото 2"
+      },
+      {
+        "src": "/photos/catalog/rolls-royce-cullinan-black-badge-2025/200.webp",
+        "alt": "Rolls-Royce Cullinan — фото 3"
+      },
+      {
+        "src": "/photos/catalog/rolls-royce-cullinan-black-badge-2025/202.webp",
+        "alt": "Rolls-Royce Cullinan — фото 4"
+      },
+      {
+        "src": "/photos/catalog/rolls-royce-cullinan-black-badge-2025/203.webp",
+        "alt": "Rolls-Royce Cullinan — фото 5"
+      },
+      {
+        "src": "/photos/catalog/rolls-royce-cullinan-black-badge-2025/204.webp",
+        "alt": "Rolls-Royce Cullinan — фото 6"
+      }
+    ],
+    "description": "Rolls-Royce Cullinan Black Badge европейской версии. Тёмно-синий кузов и небесно-голубой салон. Пробег 700 км; защитная плёнка снаружи и внутри.",
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 68000000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "6,8 л · бензин"
+      },
+      {
+        "label": "Мощность",
+        "value": "600 л.с."
+      },
+      {
+        "label": "Цвет кузова",
+        "value": "Тёмно-синий"
+      },
+      {
+        "label": "Цвет салона",
+        "value": "Небесно-голубой"
+      }
+    ],
+    "highlights": [
+      "6,8 л · бензин",
+      "600 л.с.",
+      "Тёмно-синий"
+    ],
+    "updatedAt": "2026-11-09",
+    "stockPriceRub": 68000000,
+    "mileageKm": 700,
+    "equipment": [
+      {
+        "title": "Оснащение",
+        "items": [
+          "Black Badge",
+          "Защитная плёнка кузова и салона"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "land-rover-range-rover-velar-2025",
+    "slug": "land-rover-range-rover-velar-2025",
+    "title": "Land Rover Range Rover Velar",
+    "brand": "Land Rover",
+    "model": "Range Rover Velar",
+    "year": 2025,
+    "trim": "Dynamic SE",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/land-rover-range-rover-velar-2025/205.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/land-rover-range-rover-velar-2025/205.webp",
+        "alt": "Land Rover Range Rover Velar — фото 1"
+      }
+    ],
+    "description": "Range Rover Velar Dynamic SE с бензиновым двигателем. Белый кузов и чёрный салон.",
+    "availability": "unknown",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 8650000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Двигатель",
+        "value": "Бензин"
+      },
+      {
+        "label": "Цвет кузова",
+        "value": "Белый"
+      },
+      {
+        "label": "Цвет салона",
+        "value": "Чёрный"
+      }
+    ],
+    "highlights": [
+      "Бензин",
+      "Белый",
+      "Чёрный"
+    ],
+    "updatedAt": "2026-11-09"
+  },
+  {
+    "id": "porsche-cayenne-2025",
+    "slug": "porsche-cayenne-2025",
+    "title": "Porsche Cayenne",
+    "brand": "Porsche",
+    "model": "Cayenne",
+    "year": 2025,
+    "trim": "SportDesign",
+    "publication": "published",
+    "registrationMarket": "RF",
+    "priceKind": "on_request",
+    "amountMinor": null,
+    "currency": "RUB",
+    "validUntil": null,
+    "fullCostsConfirmed": false,
+    "termsApproved": false,
+    "estimateBasis": null,
+    "vatConfirmed": false,
+    "image": "/photos/catalog/porsche-cayenne-2025/206.webp",
+    "gallery": [
+      {
+        "src": "/photos/catalog/porsche-cayenne-2025/206.webp",
+        "alt": "Porsche Cayenne — фото 1"
+      }
+    ],
+    "description": "Porsche Cayenne с пакетом SportDesign. Чёрный кузов и салон, выпуск июль 2025 года. В наличии в Москве; по предложению ЭПТС действующий, утильсбор списан.",
+    "availability": "in_stock",
+    "availabilityNote": "Статус по предложению от 08.11.2026. Доступность выбранного автомобиля подтвердим при обращении.",
+    "sourcePrice": {
+      "fromRub": 14900000,
+      "date": "2026-11-08",
+      "note": "Цена по предложению. Итоговая стоимость и условия покупки подтверждаются индивидуально."
+    },
+    "photoNote": "Фотографии из предложения. Цвет и оснащение выбранного автомобиля уточняются при обращении.",
+    "specifications": [
+      {
+        "label": "Выпуск",
+        "value": "Июль 2025"
+      },
+      {
+        "label": "Цвет кузова",
+        "value": "Чёрный"
+      },
+      {
+        "label": "Цвет салона",
+        "value": "Чёрный"
+      }
+    ],
+    "highlights": [
+      "Июль 2025",
+      "Чёрный",
+      "Чёрный"
+    ],
+    "updatedAt": "2026-11-09",
+    "stockPriceRub": 14900000,
+    "equipment": [
+      {
+        "title": "Оснащение",
+        "items": [
+          "SportDesign",
+          "Колёсные диски R22, стиль 911",
+          "Пневмоподвеска",
+          "Матричная LED-оптика",
+          "Проекционный дисплей HUD",
+          "Адаптивный круиз-контроль",
+          "Руль GT с подогревом",
+          "Комфортные сиденья: 14 регулировок и память",
+          "Подогрев и вентиляция передних и задних сидений",
+          "Камеры и видеорегистраторы спереди и сзади",
+          "BOSE",
+          "Четырёхзонный климат-контроль",
+          "Доводчики дверей"
+        ]
+      }
+    ]
   }
 ]
