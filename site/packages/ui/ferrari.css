@@ -1,0 +1,88 @@
+.ferrari-page { --ferrari-night: oklch(0.19 0.019 242); --ferrari-white: oklch(0.97 0.006 230); }
+.ferrari-hero { display: grid; grid-template-columns: 1.12fr 1fr; min-height: 560px; overflow: hidden; background: var(--ferrari-night); color: var(--ferrari-white); border-radius: 6px; }
+.ferrari-hero-copy { padding: clamp(28px, 4vw, 56px); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+.ferrari-eyebrow { color: oklch(0.79 0.11 32); font-size: 12px; font-weight: 500; margin-bottom: 24px; }
+.ferrari-hero h1 { margin: 0; font-size: clamp(37px, 4.9vw, 65px); font-weight: 600; line-height: 1.02; letter-spacing: -.055em; }
+.ferrari-hero h1 > span { display: block; font-size: .39em; letter-spacing: -.015em; margin-bottom: 10px; font-weight: 450; }
+.ferrari-hero h1 em { display: block; font-style: normal; color: oklch(0.78 0.018 235); font-weight: 350; }
+.ferrari-hero-lead { font-size: 20px; line-height: 1.45; margin: 28px 0 12px; }
+.ferrari-hero-description { max-width: 40ch; font-size: 14px; line-height: 1.65; color: oklch(0.77 0.018 235); margin: 0 0 28px; }
+.ferrari-hero-actions { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.ferrari-hero-actions .button { color: var(--ferrari-white); background: oklch(0.54 0.17 31); font-size: 13px; }
+.ferrari-config-link { font-size: 12px; padding: 10px 0; border-bottom: 1px solid oklch(0.5 0.025 235); }
+.ferrari-hero-photo { margin: 0; position: relative; min-width: 0; }
+.ferrari-hero-photo > img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 71%; position: absolute; inset: 0; }
+.ferrari-hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, oklch(0.15 0.015 240 / .75), transparent 28%); pointer-events: none; }
+.ferrari-hero-photo figcaption { position: absolute; bottom: 24px; left: 24px; right: 24px; z-index: 1; font-size: 11px; letter-spacing: .035em; }
+.ferrari-section-label { display: block; font-size: 12px; line-height: 1.5; color: var(--secondary); margin-bottom: 18px; }
+.ferrari-page h2 { font-size: clamp(28px, 3.3vw, 43px); line-height: 1.13; letter-spacing: -.04em; font-weight: 550; }
+.ferrari-allocation { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(25px, 7vw, 100px); align-items: start; }
+.ferrari-allocation h2 { margin: 0; }
+.ferrari-allocation p { font-size: 15px; line-height: 1.75; margin-top: 0; max-width: 60ch; }
+.ferrari-allocation .ferrari-large-copy { font-size: 22px; line-height: 1.5; letter-spacing: -.02em; }
+.ferrari-allocation .text-link { display: inline-block; margin-top: 10px; }
+.ferrari-design-story { display: grid; grid-template-columns: 1fr 1fr; background: var(--muted); border-radius: 6px; overflow: hidden; }
+.ferrari-design-story figure { margin: 0; height: 430px; }
+.ferrari-design-story figure img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
+.ferrari-design-story > div { align-self: center; padding: clamp(25px, 4vw, 58px); }
+.ferrari-design-story h2 { margin: 0 0 24px; }
+.ferrari-design-story p { font-size: 15px; line-height: 1.75; }
+.ferrari-source { font-size: 11px; color: var(--secondary); text-decoration: underline; text-underline-offset: 3px; }
+.ferrari-section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
+.ferrari-section-heading h2 { margin: 0; }
+.ferrari-section-heading > span { font-size: 12px; font-variant-numeric: tabular-nums; color: var(--secondary); white-space: nowrap; }
+.ferrari-gallery-stage { position: relative; height: min(610px, 65vw); min-height: 350px; background: var(--ferrari-night); border-radius: 5px; overflow: hidden; }
+.ferrari-gallery-stage > img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.ferrari-gallery-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border: 1px solid oklch(0.62 0.025 235); border-radius: 50%; background: oklch(0.2 0.017 240 / .86); color: var(--ferrari-white); font-size: 23px; }
+.ferrari-gallery-arrow:hover { background: var(--primary); }
+.ferrari-gallery-arrow.previous { left: 18px; }
+.ferrari-gallery-arrow.next { right: 18px; }
+.ferrari-gallery-caption { margin: 12px 0 20px; font-size: 13px; line-height: 1.5; color: var(--secondary); }
+.ferrari-thumbnails { display: flex; gap: 10px; overflow-x: auto; padding: 3px 3px 9px; scrollbar-width: thin; }
+.ferrari-thumbnails button { flex: 1 0 78px; max-width: 140px; padding: 0; height: 84px; background: var(--muted); border: 2px solid transparent; border-radius: 3px; overflow: hidden; opacity: .65; }
+.ferrari-thumbnails button[aria-pressed="true"] { opacity: 1; border-color: var(--primary); }
+.ferrari-thumbnails button img { width: 100%; height: 100%; object-fit: cover; }
+.ferrari-configurator { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(24px, 7vw, 90px); align-items: center; }
+.ferrari-configurator h2 { margin: 0 0 24px; max-width: 17ch; }
+.ferrari-configurator p { font-size: 16px; line-height: 1.75; margin-bottom: 25px; max-width: 45ch; }
+.ferrari-configurator figure { margin: 0; height: 450px; border-radius: 5px; overflow: hidden; }
+.ferrari-configurator figure img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 48%; }
+.ferrari-external-note { display: block; color: var(--secondary); font-size: 11px; margin-top: 12px; }
+.ferrari-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; padding: 28px 0; margin: 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); list-style: none; }
+.ferrari-steps li { display: flex; gap: 16px; align-items: baseline; }
+.ferrari-steps li > span { color: var(--primary); font-size: 12px; font-variant-numeric: tabular-nums; }
+.ferrari-steps h3 { font-size: 15px; line-height: 1.4; margin: 0 0 10px; }
+.ferrari-steps p { font-size: 13px; line-height: 1.6; color: var(--secondary); margin: 0; }
+@media (max-width: 900px) {
+  .ferrari-hero { min-height: 530px; }
+  .ferrari-hero-copy { padding: 28px; }
+  .ferrari-hero-lead { font-size: 18px; }
+  .ferrari-hero-actions { gap: 10px; }
+  .ferrari-hero h1 { font-size: 43px; }
+  .ferrari-allocation { gap: 30px; }
+  .ferrari-design-story figure { height: 440px; }
+  .ferrari-steps { gap: 18px; }
+}
+@media (max-width: 640px) {
+  .ferrari-hero { grid-template-columns: 1fr; }
+  .ferrari-hero-copy { padding: 28px 22px; }
+  .ferrari-eyebrow { font-size: 11px; margin-bottom: 22px; }
+  .ferrari-hero h1 { font-size: clamp(38px, 10.5vw, 56px); }
+  .ferrari-hero-lead { margin-top: 22px; }
+  .ferrari-hero-description { font-size: 13px; }
+  .ferrari-hero-photo { min-height: 320px; }
+  .ferrari-hero-photo > img { object-position: 50% 75%; }
+  .ferrari-hero-actions { gap: 12px 18px; }
+  .ferrari-allocation, .ferrari-design-story, .ferrari-configurator { grid-template-columns: 1fr; }
+  .ferrari-allocation .ferrari-large-copy { font-size: 20px; }
+  .ferrari-design-story figure { height: 300px; }
+  .ferrari-design-story > div { padding: 28px 22px; }
+  .ferrari-gallery-stage { height: 440px; min-height: 0; }
+  .ferrari-gallery-arrow.previous { left: 10px; }
+  .ferrari-gallery-arrow.next { right: 10px; }
+  .ferrari-thumbnails { gap: 7px; }
+  .ferrari-thumbnails button { height: 64px; flex-basis: 65px; }
+  .ferrari-configurator figure { height: 340px; }
+  .ferrari-configurator .button { font-size: 12px; padding-inline: 19px; }
+  .ferrari-steps { grid-template-columns: 1fr; gap: 22px; }
+}

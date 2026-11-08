@@ -8,11 +8,15 @@ export function Request({ title = "Обсудим ваш автомобиль", 
 }) {
   const copy = requestCopy[type] ?? requestCopy.general_selection!;
   const [ready, setReady] = useState(false);
+  const [topic, setTopic] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [message, setMessage] = useState("");
   const token = useRef<string | null>(null);
   const busy = useRef(false);
-  useEffect(() => setReady(true), []);
+  useEffect(() => {
+    setReady(true);
+    if (type === "contact" && new URLSearchParams(window.location.search).get("topic") === "ferrari") setTopic("Квота на Ferrari");
+  }, [type]);
   return <section className="request section" id={requestId}>
     <div><h2>{title}</h2><p>{copy[0]}</p><p className="form-note">Оставьте телефон или почту — свяжемся с вами и уточним детали.</p></div>
     <form aria-label={title} onSubmit={async (event) => {
@@ -50,7 +54,7 @@ export function Request({ title = "Обсудим ваш автомобиль", 
         <div className="form-grid">
           <label>Ваше имя<input name="name" autoComplete="name" maxLength={80} required placeholder="Как к вам обращаться" /></label>
           <label>Телефон или email<input name="contact" autoComplete="on" maxLength={120} required minLength={5} placeholder="+7 … или name@example.ru" /></label>
-          {fields.map((field, index) => <label key={field}>{field}<input name={field} maxLength={200} placeholder={index === 0 ? "Укажите, если знаете" : "Необязательно"} /></label>)}
+          {fields.map((field, index) => <label key={field}>{field}<input name={field} defaultValue={field === "Тема обращения" ? topic : undefined} type={field === "Ссылка на вашу конфигурацию" ? "url" : "text"} maxLength={field === "Ссылка на вашу конфигурацию" ? 2000 : 200} placeholder={field === "Ссылка на вашу конфигурацию" ? "https://carconfigurator.ferrari.com/…" : index === 0 ? "Укажите, если знаете" : "Необязательно"} /></label>)}
         </div>
         <label>Комментарий<textarea name="Комментарий" maxLength={2000} rows={3} placeholder={copy[1]} /></label>
         <div className="request-trap" aria-hidden="true"><label>Ваш сайт<input name="website" tabIndex={-1} autoComplete="off" /></label></div>

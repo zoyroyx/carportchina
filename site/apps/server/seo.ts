@@ -20,6 +20,7 @@ export const escapeHtml = (value: string) =>
       ]!,
   );
 const pageCopy: Record<string, [string, string]> = {
+  "/ferrari-849-testarossa-spider/": ["Ferrari 849 Testarossa Spider 2027: одна квота | CarPort China", "Эксклюзивная квота CarPort China на Ferrari 849 Testarossa Spider. Индивидуальная конфигурация и поставка летом 2027 года. Фотографии, конфигуратор Ferrari и персональное предложение."],
   "/": [
     "Автомобили из Китая, Кореи и Европы | CarPort China",
     "Подбор и доставка автомобилей из Китая, Кореи, ОАЭ и Европы. Каталог, оформление для России, сервис и поддержка после покупки в CarPort China.",
@@ -126,7 +127,7 @@ export function buildSeo(props: AppProps, publicSite = false) {
       : "noindex, follow";
   const canonical = known ? absolute(path) : undefined;
   const image = absolute(
-    imageSource(car?.gallery?.[0]?.src ?? car?.image) ?? "/brand/social.jpg",
+    path === "/ferrari-849-testarossa-spider/" ? "/photos/promos/ferrari-849-1920.webp" : imageSource(car?.gallery?.[0]?.src ?? car?.image) ?? "/brand/social.jpg",
   );
   const orgId = SITE_ORIGIN + "/#organization",
     siteId = SITE_ORIGIN + "/#website";

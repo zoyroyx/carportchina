@@ -299,6 +299,7 @@ export const services: Service[] = [
   },
 ];
 export const staticPages: Record<string, string> = {
+  "/ferrari-849-testarossa-spider/": "Ferrari 849 Testarossa Spider",
   "/": "Подбор, доставка и обслуживание автомобилей",
   "/cars/": "Автомобили",
   "/business/": "Автомобили для бизнеса",

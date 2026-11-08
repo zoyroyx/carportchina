@@ -12,6 +12,8 @@ check(!verifyRequestToken($token, $key, $now - 1), 'Future token');
 check(!verifyRequestToken($token . 'x', $key, $now), 'Tampered token');
 $data = ['name'=>'Тест', 'contact'=>'test@example.com', 'consent'=>true, 'type'=>'parts', 'page'=>'/services/parts/', 'website'=>'', 'details'=>['Автомобиль'=>'Toyota', 'Комментарий'=>"Первая строка\nВторая строка"]];
 $valid = validateRequest($data);
+$ferrari = validateRequest(array_replace($data, ['type'=>'ferrari_allocation', 'page'=>'/ferrari-849-testarossa-spider/', 'details'=>['Ссылка на вашу конфигурацию'=>'https://carconfigurator.ferrari.com/?configuration=' . str_repeat('a', 300)]]));
+check(str_contains(requestBody($ferrari, 'FERRARI'), 'Квота Ferrari 849 Testarossa Spider') && str_contains(requestBody($ferrari, 'FERRARI'), str_repeat('a', 300)), 'Ferrari request preserves long configurator link and direction');
 check($valid['contact'] === 'test@example.com', 'Email accepted');
 check(validateRequest(array_replace($data, ['contact'=>'+7 (999) 123-45-67']))['contact'] === '+7 (999) 123-45-67', 'Phone accepted');
 foreach ([['contact'=>"test@example.com\r\nBcc: victim@example.com"], ['name'=>"Test\r\nInjected"], ['contact'=>'wrong'], ['consent'=>false], ['type'=>'unknown'], ['page'=>'//evil.test'], ['details'=>['Комментарий'=>str_repeat('x', 8001)]], ['details'=>['Nested'=>['array']]]] as $bad) check(rejects(array_replace($data, $bad)), 'Reject invalid request');

@@ -1,3 +1,5 @@
+import { FerrariPage } from "./FerrariPage";
+import { PromoBanners } from "./PromoBanners";
 import { DataNotice } from "./DataNotice";
 import { Request } from "./Request";
 import { ClientReviews } from "./ClientReviews";
@@ -1085,6 +1087,7 @@ export function App(props: AppProps) {
       <RouteBackground key={path} />
       <Header path={path} />
       <main className="wrap" id="main">
+        {known && !["/privacy/", "/consent/", "/ferrari-849-testarossa-spider/"].includes(path) && <PromoBanners />}
         {path !== "/" && (
           <nav aria-label="Хлебные крошки" className="breadcrumbs">
             <ol>
@@ -1129,6 +1132,8 @@ export function App(props: AppProps) {
           <Home {...props} />
         ) : path === "/cars/" ? (
           <Catalog {...props} />
+        ) : path === "/ferrari-849-testarossa-spider/" ? (
+          <FerrariPage />
         ) : vehicle ? (
           <>
             <VehicleDetails offer={vehicle} now={props.now} />
