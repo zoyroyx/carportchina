@@ -157,7 +157,36 @@ function ServicesNavigation({ path }: { path: string }) {
     </div>
   );
 }
-function Header({ path, phone }: { path: string; phone?: string }) {
+function HeaderContact({ phone, messenger }: { phone: string; messenger?: string }) {
+  const [expanded, setExpanded] = useState(false);
+  const root = useRef<HTMLDivElement>(null);
+  const trigger = useRef<HTMLButtonElement>(null);
+  const panelId = useId();
+  useEffect(() => {
+    if (!expanded) return;
+    const outside = (event: PointerEvent) => {
+      if (!root.current?.contains(event.target as Node)) setExpanded(false);
+    };
+    const layout = window.matchMedia("(min-width: 1024px)");
+    const resize = () => { if (!layout.matches) setExpanded(false); };
+    document.addEventListener("pointerdown", outside);
+    layout.addEventListener("change", resize);
+    return () => { document.removeEventListener("pointerdown", outside); layout.removeEventListener("change", resize); };
+  }, [expanded]);
+  const icon = <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2.1Z" /></svg>;
+  return <div className="header-contact" ref={root}
+    onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget as Node)) setExpanded(false); }}
+    onKeyDown={event => { if (event.key === "Escape" && expanded) { setExpanded(false); trigger.current?.focus(); } }}>
+    <a className="header-phone mobile-contact" href={`tel:${phone}`} aria-label={`Позвонить: ${formatPhone(phone)}`}>{icon}<span>{formatPhone(phone)}</span></a>
+    <button className="header-phone desktop-contact" ref={trigger} type="button" aria-label="Связаться с нами" aria-expanded={expanded} aria-controls={panelId} onClick={() => setExpanded(!expanded)}>{icon}<span>{formatPhone(phone)}</span></button>
+    <div id={panelId} className="header-contact-panel" hidden={!expanded}>
+      <a href={`tel:${phone}`}><small>Позвонить</small><strong>{formatPhone(phone)}</strong></a>
+      {messenger && <a href={messenger} target="_blank" rel="noopener noreferrer"><small>Написать в Telegram</small><strong>@leons8888 <Arrow /></strong></a>}
+    </div>
+  </div>;
+}
+
+function Header({ path, phone, messenger }: { path: string; phone?: string; messenger?: string }) {
   const carMaskId = useId();
   const [open, setOpen] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
@@ -238,10 +267,7 @@ function Header({ path, phone }: { path: string; phone?: string }) {
             ),
           )}
         </nav>
-        {phone && <a className="header-phone" href={`tel:${phone}`} aria-label={`Позвонить: ${formatPhone(phone)}`} title={formatPhone(phone)}>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2.1Z" /></svg>
-          <span>{formatPhone(phone)}</span>
-        </a>}
+        {phone && <HeaderContact phone={phone} messenger={messenger} />}
         <ThemeToggle />
         <button
           ref={menuButton}
@@ -322,6 +348,7 @@ function Header({ path, phone }: { path: string; phone?: string }) {
             ))}
           </nav>
           <div className="navigation-bottom">
+            {messenger && <a href={messenger} target="_blank" rel="noopener noreferrer">Telegram · @leons8888 <Arrow /></a>}
             {phone && <a className="navigation-phone" href={`tel:${phone}`}>{formatPhone(phone)} <Arrow /></a>}
             <a href="/reviews/" className="text-link">
               Отзывы довольных клиентов <Arrow />
@@ -379,6 +406,8 @@ function Footer({ company }: { company?: CompanyContent }) {
               {formatPhone(company.contacts.phone)}
             </a>
           )}
+          {company?.contacts?.messenger && <a href={company.contacts.messenger} target="_blank" rel="noopener noreferrer">Telegram · @leons8888</a>}
+          {company?.contacts?.telegramGroup && <a href={company.contacts.telegramGroup} target="_blank" rel="noopener noreferrer">Наша группа в Telegram ↗</a>}
           {company?.contacts?.email && <a href={`mailto:${company.contacts.email}`}>{company.contacts.email}</a>}
         </nav>
         <div className="footer-meta">
@@ -1018,12 +1047,14 @@ function Other({ path, company }: { path: string; company?: CompanyContent }) {
           {c.phone && <a className="contact-phone" href={`tel:${c.phone}`}>{formatPhone(c.phone)}</a>}
           {c.email && <div className="contact-email"><span>Почта для заявок и вопросов</span><a href={`mailto:${c.email}`}>{c.email} ↗</a></div>}
           {c.hours && <p>{c.hours}</p>}
+          {c.officeAddress && <div className="contact-office"><h2>Наш офис</h2><p>{c.officeAddress}</p><p>{c.officeDirections}</p></div>}
           {c.address && <p>{c.address}</p>}
           {c.messenger && (
             <a className="button" href={c.messenger}>
-              Написать
+              Telegram · @leons8888
             </a>
           )}
+          {c.telegramGroup && <a className="contact-group text-link" href={c.telegramGroup} target="_blank" rel="noopener noreferrer">Наша группа в Telegram <Arrow /></a>}
           {c.legalName && <h2>{c.legalName}</h2>}
           {c.requisites && <p>{c.requisites}</p>}
         </div>
@@ -1097,7 +1128,7 @@ export function App(props: AppProps) {
   return (
     <>
       <RouteBackground key={path} />
-      <Header path={path} phone={props.company?.contacts?.phone} />
+      <Header path={path} phone={props.company?.contacts?.phone} messenger={props.company?.contacts?.messenger} />
       <main className="wrap" id="main">
         {known && !["/privacy/", "/consent/", "/ferrari-849-testarossa-spider/"].includes(path) && <PromoBanners />}
         {path !== "/" && (

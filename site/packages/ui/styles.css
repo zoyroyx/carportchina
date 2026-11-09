@@ -3938,3 +3938,24 @@ html { scroll-padding-top: 88px; }
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .site-header-shell { background: color-mix(in srgb, var(--canvas) 92%, transparent); }
 }
+
+/* Contact disclosure shares the existing compact header control. */
+.header-contact { position: relative; flex: 0 0 auto; }
+.header-contact .desktop-contact { display: none; }
+.header-contact-panel { position: absolute; top: calc(100% + 12px); right: 0; width: 270px; padding: 8px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 16px 40px #0002; }
+.header-contact-panel[hidden] { display: none; }
+.header-contact-panel a { display: grid; gap: 6px; padding: 14px; border-radius: 6px; }
+.header-contact-panel a:hover { background: var(--muted); }
+.header-contact-panel a + a { border-top: 1px solid var(--border); }
+.header-contact-panel small { color: var(--secondary); font-size: 12px; }
+.header-contact-panel strong { font-size: 16px; font-weight: 600; }
+.contact-office { margin-block: 24px 32px; }
+.contact-office h2 { font-size: 1.25rem; margin-bottom: 12px; }
+.contact-office p { margin-bottom: 6px; }
+.contact-office p:last-child { color: var(--secondary); }
+.contact-group { display: flex; width: fit-content; gap: 12px; margin-top: 20px; min-height: 44px; align-items: center; }
+@media (min-width: 1024px) {
+  .header-contact .desktop-contact { display: inline-flex; }
+  .header-contact .mobile-contact { display: none; }
+}
+@media (max-width: 1023px) { .header-contact-panel { display: none; } }

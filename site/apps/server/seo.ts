@@ -105,7 +105,7 @@ export function llmsTxt(props: AppProps): string {
 > Подбор и доставка автомобилей из Китая, Кореи, ОАЭ и Европы, сопровождение покупки и обслуживание.
 
 Оператор сайта: ${legalOperator.shortName}, ИНН ${legalOperator.inn}, ОГРН ${legalOperator.ogrn}. Контакт: ${legalOperator.email}.${props.company?.contacts?.phone ? ` Телефон: ${props.company.contacts.phone}.` : ''}
-Официальный сайт: ${SITE_ORIGIN}/. Язык: русский. Компания входит в ${legalOperator.group}.
+${props.company?.contacts?.messenger ? `Telegram для связи: ${props.company.contacts.messenger}.\n` : ""}${props.company?.contacts?.telegramGroup ? `Группа Telegram: ${props.company.contacts.telegramGroup}.\n` : ""}${props.company?.contacts?.officeAddress ? `Офис: ${props.company.contacts.officeAddress}. ${props.company.contacts.officeDirections ?? ""}.\n` : ""}Официальный сайт: ${SITE_ORIGIN}/. Язык: русский. Компания входит в ${legalOperator.group}.
 Актуальные цены, комплектации и условия уточняются по конкретному предложению. Каталог регулярно пополняется.
 
 ## Текстовый справочник
@@ -152,7 +152,7 @@ export function llmsFullTxt(props: AppProps): string {
 ИНН: ${legalOperator.inn}. КПП: ${legalOperator.kpp}. ОГРН: ${legalOperator.ogrn}.
 Юридический адрес: ${legalOperator.address}.
 Почта: ${legalOperator.email}.${props.company?.contacts?.phone ? `\nТелефон: ${props.company.contacts.phone}.` : ''}
-Заявки принимаются через формы на страницах сайта, по телефону и электронной почте.
+${props.company?.contacts?.messenger ? `Telegram для связи: ${props.company.contacts.messenger}.\n` : ""}${props.company?.contacts?.telegramGroup ? `Группа Telegram: ${props.company.contacts.telegramGroup}.\n` : ""}${props.company?.contacts?.officeAddress ? `Офис: ${props.company.contacts.officeAddress}. ${props.company.contacts.officeDirections ?? ""}.\n` : ""}Заявки принимаются через формы на страницах сайта, по телефону, в Telegram и по электронной почте.
 
 ## Покупка автомобиля
 
@@ -248,6 +248,12 @@ export function buildSeo(props: AppProps, publicSite = false) {
     if (props.company.contacts.legalName) org.legalName = props.company.contacts.legalName;
     org.telephone = props.company.contacts.phone;
       org.email = props.company.contacts.email;
+    if (props.company.contacts.telegramGroup) org.sameAs = [props.company.contacts.telegramGroup];
+    if (props.company.contacts.officeAddress) org.location = {
+      "@type": "Place", name: "Офис CarPort China",
+      address: props.company.contacts.officeAddress,
+      description: props.company.contacts.officeDirections,
+    };
     if (props.company.contacts.address)
       org.address = props.company.contacts.address;
   }

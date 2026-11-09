@@ -1,1 +1,11 @@
-{"contacts":{"phone":"+79265916556","email":"corp@carportchina.ru"},"stories":[]}
+{
+  "contacts": {
+    "phone": "+79265916556",
+    "email": "corp@carportchina.ru",
+    "messenger": "https://t.me/leons8888",
+    "telegramGroup": "https://t.me/carportchina",
+    "officeAddress": "115563, Москва, Каширское шоссе, д. 61, 6 этаж",
+    "officeDirections": "Метро Домодедовская"
+  },
+  "stories": []
+}
