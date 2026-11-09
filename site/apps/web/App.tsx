@@ -948,7 +948,7 @@ function CompanyExpertise() {
   </section>;
 }
 function CompanyPhoto() {
-  return <figure className="company-hero-photo"><ServicePhoto slug="team" prominent /><figcaption>Визуализация команды CarPort China</figcaption></figure>;
+  return <figure className="company-hero-photo"><ServicePhoto slug="team" prominent /><figcaption>Наша команда</figcaption></figure>;
 }
 function Other({ path, company }: { path: string; company?: CompanyContent }) {
   if (path === "/business/")
