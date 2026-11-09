@@ -247,7 +247,15 @@ export function buildSeo(props: AppProps, publicSite = false) {
   if (props.company?.contacts) {
     if (props.company.contacts.legalName) org.legalName = props.company.contacts.legalName;
     org.telephone = props.company.contacts.phone;
-      org.email = props.company.contacts.email;
+    org.email = props.company.contacts.email;
+    if (props.company.contacts.phone || props.company.contacts.email || props.company.contacts.messenger) org.contactPoint = {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      telephone: props.company.contacts.phone,
+      email: props.company.contacts.email,
+      url: props.company.contacts.messenger,
+      availableLanguage: "ru",
+    };
     if (props.company.contacts.telegramGroup) org.sameAs = [props.company.contacts.telegramGroup];
     if (props.company.contacts.officeAddress) org.location = {
       "@type": "Place", name: "Офис CarPort China",

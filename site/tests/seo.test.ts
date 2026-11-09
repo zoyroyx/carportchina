@@ -3,6 +3,7 @@ import { buildSeo, robotsTxt, sitemap, SITE_ORIGIN } from "../apps/server/seo";
 import { staticPages, services } from "../apps/web/content";
 import records from "../data/offers.json";
 import fixtures from "./fixtures/offers.json";
+import company from "../data/company.json";
 import type { Offer } from "../packages/contracts/offers";
 import type { AppProps } from "../apps/web/App";
 const props: AppProps = {
@@ -12,6 +13,30 @@ const props: AppProps = {
   company: { contacts: null, stories: [] },
 };
 describe("SEO under carportchina.ru", () => {
+  it("publishes consistent customer contacts and separates the office from the legal address on every route", () => {
+    const paths = [...Object.keys(staticPages), ...services.map(s => `/services/${s.slug}/`), ...props.offers.map(o => `/cars/${o.slug}/`)];
+    for (const url of paths) {
+      const graph = buildSeo({ ...props, company, url }, true).graph;
+      const organizations = graph.filter(n => n["@type"] === "Organization");
+      expect(organizations).toHaveLength(1);
+      expect(organizations[0]).toMatchObject({
+        telephone: company.contacts.phone,
+        email: company.contacts.email,
+        sameAs: [company.contacts.telegramGroup],
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: company.contacts.phone,
+          email: company.contacts.email,
+          url: company.contacts.messenger,
+        },
+        location: { "@type": "Place", address: company.contacts.officeAddress, description: company.contacts.officeDirections },
+        address: { "@type": "PostalAddress", postalCode: "111024", streetAddress: "ул. Авиамоторная, д. 50, стр. 2, помещ. 49/2" },
+      });
+    }
+    const updated = { ...company, contacts: { ...company.contacts, phone: "+79990000000", messenger: "https://t.me/example" } };
+    const updatedOrg = buildSeo({ ...props, company: updated }, true).graph.find(n => n["@type"] === "Organization");
+    expect(updatedOrg).toMatchObject({ telephone: updated.contacts.phone, contactPoint: { telephone: updated.contacts.phone, url: updated.contacts.messenger } });
+  });
   it("keeps preview blocked independently of production build", () => {
     expect(buildSeo(props).robots).toBe("noindex, nofollow");
     expect(robotsTxt(false)).toContain("Disallow: /\n");
