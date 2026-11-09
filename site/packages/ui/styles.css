@@ -3870,21 +3870,21 @@ textarea:user-invalid {
 .request .request-policy { margin: -10px 0 20px; font-size: 12px; line-height: 1.6; color: var(--secondary); }
 @media (max-width: 520px) { .legal-requisites > div { grid-template-columns: 1fr; gap: 3px; } }
 
-/* Compact contact header: one slim glass layer, always reachable while scrolling. */
+/* Fully transparent sticky header; no backdrop compositing while scrolling. */
 html { scroll-padding-top: 88px; }
 .site-header-shell {
   position: sticky;
   top: 0;
   z-index: 40;
-  background: color-mix(in srgb, var(--canvas) 38%, transparent);
-  -webkit-backdrop-filter: blur(18px);
-  backdrop-filter: blur(18px);
+  background: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 .site-header-shell .site-header {
   min-height: 76px;
   height: 76px;
   gap: 16px;
-  border-bottom-color: color-mix(in srgb, var(--border) 45%, transparent);
+  border-bottom-color: transparent;
 }
 .site-header .logo { width: auto; height: 48px; gap: 8px; }
 .site-header .brand-name { font-size: 21px; }
@@ -3901,7 +3901,7 @@ html { scroll-padding-top: 88px; }
   border: 1px solid color-mix(in srgb, var(--primary) 40%, transparent);
   border-radius: 6px;
   color: var(--ink);
-  background: color-mix(in srgb, var(--canvas) 30%, transparent);
+  background: transparent;
   font-size: 0.875rem;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
@@ -3935,9 +3935,7 @@ html { scroll-padding-top: 88px; }
   .site-header .brand-symbol { display: none; }
   .site-header .brand-name { font-size: 17px; }
 }
-@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .site-header-shell { background: color-mix(in srgb, var(--canvas) 92%, transparent); }
-}
+
 
 /* Contact disclosure shares the existing compact header control. */
 .header-contact { position: relative; flex: 0 0 auto; }
