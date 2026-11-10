@@ -47,7 +47,7 @@ try {
         if (filter_var($request['contact'], FILTER_VALIDATE_EMAIL)) $mail->addReplyTo($request['contact'], $request['name']);
         $mail->Subject = 'Заявка CarPort China №' . $id;
         $mail->Body = requestBody($request, $id);
-        $mail->send();
+        if (!$mail->send()) throw new RuntimeException('Mail not accepted');
     });
 } catch (Throwable $e) {
     // Do not expose SMTP diagnostics or personal data to the client or logs.

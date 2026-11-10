@@ -46,7 +46,7 @@ function processRequest(array &$state, string $nonce, string $ipHash, string $co
     $now = $now ?? time();
     $state['sent'] = array_filter($state['sent'] ?? [], fn($item) => $item['time'] > $now - 7200);
     $state['limits'] = array_filter($state['limits'] ?? [], fn($item) => $item['time'] > $now - 900);
-    if (isset($state['sent'][$nonce])) return ['ok' => true, 'id' => $state['sent'][$nonce]['id']];
+    if (isset($state['sent'][$nonce])) return ['ok' => true, 'id' => $state['sent'][$nonce]['id'], 'delivery' => 'smtp_accepted'];
     foreach ([$ipHash => 8, $contactHash => 3, 'global' => 100] as $key => $limit) {
         if (($state['limits'][$key]['count'] ?? 0) >= $limit) return ['ok' => false, 'status' => 429, 'message' => 'Слишком много заявок. Попробуйте через 15 минут или напишите на corp@carportchina.ru.'];
     }
@@ -56,5 +56,5 @@ function processRequest(array &$state, string $nonce, string $ipHash, string $co
     $id = strtoupper(substr($nonce, 0, 10));
     $send($id);
     $state['sent'][$nonce] = ['id' => $id, 'time' => $now];
-    return ['ok' => true, 'id' => $id];
+    return ['ok' => true, 'id' => $id, 'delivery' => 'smtp_accepted'];
 }

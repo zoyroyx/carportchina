@@ -3,6 +3,7 @@ import type { Offer } from "../../packages/contracts/offers";
 import { requestCopy } from "./request-copy";
 import { trackJourney } from "./analytics";
 import { consentVersion } from "./legal-content";
+import { isMailReceipt, reportRequestSuccess } from "./request-success";
 
 export function Request({ title = "Обсудим ваш автомобиль", type = "general_selection", fields = ["Модель или пожелания", "Бюджет, если определились"], country, requestId = "request", offer }: {
   title?: string; type?: string; fields?: string[]; country?: string; requestId?: string; offer?: Offer;
@@ -20,7 +21,7 @@ export function Request({ title = "Обсудим ваш автомобиль", 
   }, [type]);
   return <section className="request section" id={requestId}>
     <div><h2>{title}</h2><p>{copy[0]}</p><p className="form-note">Оставьте телефон или почту — свяжемся с вами и уточним детали.</p></div>
-    <form aria-label={title} onSubmit={async (event) => {
+    <form className="ym-disable-submit" aria-label={title} onSubmit={async (event) => {
       event.preventDefault();
       if (busy.current || status === "sent") return;
       busy.current = true;
@@ -38,11 +39,12 @@ export function Request({ title = "Обсудим ваш автомобиль", 
           body: JSON.stringify({ token: token.current, name: data.get("name"), contact: data.get("contact"), consent: data.get("consent") === "on", consentVersion, website: data.get("website"), type, page: window.location.pathname, details: Object.fromEntries([...data.entries()].filter(([key]) => !["name", "contact", "consent", "website"].includes(key))) }),
         });
         const result = await response.json();
-        if (!response.ok || !result.ok) {
+        if (!response.ok || !isMailReceipt(result)) {
           if (response.status === 403) token.current = null;
           throw new Error(result.message || "Не удалось отправить заявку. Попробуйте ещё раз или напишите на corp@carportchina.ru.");
         }
         setStatus("sent"); setMessage(`Заявка №${result.id} отправлена. Мы свяжемся с вами по указанному контакту.`);
+        reportRequestSuccess(result);
         trackJourney("request_sent", { offerId: offer?.id, service: type });
       } catch (error) {
         setStatus("error"); setMessage(error instanceof Error && /[А-Яа-яЁё]/.test(error.message) ? error.message : "Не удалось отправить заявку. Проверьте соединение и повторите попытку или напишите на corp@carportchina.ru.");

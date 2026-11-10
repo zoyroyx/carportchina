@@ -24,6 +24,7 @@ $state = []; $sent = 0; $send = function($id) use (&$sent) { $sent++; };
 $first = processRequest($state, 'nonce1', 'ip', 'email', $send, $now);
 $duplicate = processRequest($state, 'nonce1', 'ip', 'email', $send, $now);
 check($first === $duplicate && $sent === 1, 'Retry does not duplicate email');
+check($first['delivery'] === 'smtp_accepted', 'Receipt confirms successful send callback');
 processRequest($state, 'nonce2', 'ip', 'email', $send, $now);
 processRequest($state, 'nonce3', 'ip', 'email', $send, $now);
 check(processRequest($state, 'nonce4', 'ip', 'email', $send, $now)['status'] === 429 && $sent === 3, 'Contact rate limit');
