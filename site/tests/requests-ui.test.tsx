@@ -26,7 +26,7 @@ describe("live requests", () => {
     const orgs = seo.graph.filter(node => node["@type"] === "Organization");
     expect(orgs).toHaveLength(1);
     expect(orgs[0]?.email).toBe("corp@carportchina.ru");
-    expect(orgs[0]?.telephone).toBe("+79265916556");
+    expect(orgs[0]?.telephone).toBe("+79207775504");
     expect(seo.indexable).toBe(true);
   });
 });
