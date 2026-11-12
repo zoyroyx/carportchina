@@ -1,0 +1,62 @@
+name: Build and deploy carportchina.ru
+on:
+  push:
+    branches: [main]
+    paths: ['site/**', '.github/workflows/deploy-ftp.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: carportchina-production
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: site
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 24
+      - run: npm install --global pnpm@11.25.0
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm test
+      - name: Check PHP request handler
+        run: |
+          find backend -name '*.php' -print0 | xargs -0 -n1 php -l
+          php tests/requests.php
+      - run: pnpm build:static
+      - name: Upload build artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: carportchina-static
+          path: site/dist/static/
+          include-hidden-files: true
+          retention-days: 14
+      - name: Deploy via FTP
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_PORT: ${{ secrets.FTP_PORT }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          REQUEST_SIGNING_KEY: ${{ secrets.REQUEST_SIGNING_KEY }}
+        run: python3 scripts/deploy-ftp.py
+      - name: Preserve previous entry files
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: carportchina-previous-pages
+          path: site/deploy-backup/
+          include-hidden-files: true
+          retention-days: 14
+      - name: Check deployed reviews
+        run: |
+          curl --fail --retry 3 https://carportchina.ru/reviews/ -o /tmp/carport-reviews.html
+          python3 -c "from pathlib import Path; s=Path('/tmp/carport-reviews.html').read_text(); assert 'VideoObject' in s and 'review-1.mp4' in s"

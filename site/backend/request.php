@@ -2,6 +2,7 @@
 declare(strict_types=1);
 use PHPMailer\PHPMailer\PHPMailer;
 require __DIR__ . '/request-core.php';
+require __DIR__ . '/telegram.php';
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store');
 header('X-Robots-Tag: noindex, nofollow');
@@ -48,6 +49,12 @@ try {
         $mail->Subject = 'Заявка CarPort China №' . $id;
         $mail->Body = requestBody($request, $id);
         if (!$mail->send()) throw new RuntimeException('Mail not accepted');
+    }, null, function($id) use ($request, $config) {
+        sendTelegramRequest($config, requestBody($request, $id));
+    }, function($snapshot) use ($file) {
+        rewind($file);
+        $json = json_encode($snapshot, JSON_THROW_ON_ERROR);
+        if (!ftruncate($file, 0) || fwrite($file, $json) !== strlen($json) || !fflush($file)) throw new RuntimeException('State write failed');
     });
 } catch (Throwable $e) {
     // Do not expose SMTP diagnostics or personal data to the client or logs.

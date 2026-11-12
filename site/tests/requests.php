@@ -33,6 +33,31 @@ $failure = [];
 try { processRequest($failure, 'fail', 'ip', 'email', function() { throw new RuntimeException('SMTP failed'); }, $now); } catch (RuntimeException $e) {}
 check(!isset($failure['sent']['fail']), 'SMTP failure never marked sent');
 check(processRequest($failure, 'fail', 'ip', 'email', $send, $now)['ok'], 'Retry after SMTP failure works');
+// A Telegram retry must not resend an already accepted email or count a goal early.
+$dual = []; $mails = 0; $messages = 0; $snapshots = [];
+$mailSend = function($id) use (&$mails) { $mails++; };
+$checkpoint = function($state) use (&$snapshots) { $snapshots[] = $state; };
+try { processRequest($dual, 'dual', 'ip2', 'contact2', $mailSend, $now, function() { throw new RuntimeException('Telegram unavailable'); }, $checkpoint); } catch (RuntimeException $e) {}
+check($dual['sent']['dual']['delivery'] === 'smtp_accepted' && count($snapshots) === 1, 'Partial mail delivery checkpointed');
+$telegramSend = function($id) use (&$messages) { $messages++; };
+$receipt = processRequest($dual, 'dual', 'ip2', 'contact2', $mailSend, $now, $telegramSend, $checkpoint);
+check($receipt['delivery'] === 'smtp_telegram_accepted' && $mails === 1 && $messages === 1, 'Retry completes Telegram without duplicate mail');
+check(processRequest($dual, 'dual', 'ip2', 'contact2', $mailSend, $now, $telegramSend) === $receipt && $messages === 1, 'Completed retry does not duplicate either channel');
+require __DIR__ . '/../backend/telegram.php';
+$config = ['telegram_token'=>'123:test', 'telegram_chat'=>'-123'];
+$payload = null;
+sendTelegramRequest($config, '<b>Plain text</b>', function($json) use (&$payload) {
+    $payload = json_decode($json, true);
+    return json_encode(['ok'=>true, 'result'=>['message_id'=>42, 'chat'=>['id'=>-123]]]);
+});
+check($payload['text'] === '<b>Plain text</b>' && !isset($payload['parse_mode']), 'User content sent as plain text');
+foreach ([false, '{}', '{"ok":false}', '{"ok":true,"result":{"message_id":42,"chat":{"id":-999}}}'] as $bad) {
+    $rejected = false;
+    try { sendTelegramRequest($config, 'test', fn() => $bad); } catch (RuntimeException $e) { $rejected = true; }
+    check($rejected, 'Invalid Telegram response rejected');
+}
+check(str_contains(telegramText(str_repeat('Я', 5000)), 'Полное описание'), 'Long text safely bounded with email reference');
+check(strlen(telegramText(str_repeat('😀', 5000))) < 8000, 'Astral characters respect UTF-16 limit');
 require __DIR__ . '/../backend/phpmailer/SMTP.php';
 require __DIR__ . '/../backend/HostingSMTP.php';
 class TestHostingSMTP extends HostingSMTP {

@@ -43,6 +43,8 @@ jobs:
           FTP_PORT: ${{ secrets.FTP_PORT }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           REQUEST_SIGNING_KEY: ${{ secrets.REQUEST_SIGNING_KEY }}
         run: python3 scripts/deploy-ftp.py

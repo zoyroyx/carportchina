@@ -3,7 +3,7 @@ import type { Offer } from "../../packages/contracts/offers";
 import { requestCopy } from "./request-copy";
 import { trackJourney } from "./analytics";
 import { consentVersion } from "./legal-content";
-import { isMailReceipt, reportRequestSuccess } from "./request-success";
+import { isDeliveryReceipt, reportRequestSuccess } from "./request-success";
 
 export function Request({ title = "Обсудим ваш автомобиль", type = "general_selection", fields = ["Модель или пожелания", "Бюджет, если определились"], country, requestId = "request", offer }: {
   title?: string; type?: string; fields?: string[]; country?: string; requestId?: string; offer?: Offer;
@@ -39,7 +39,7 @@ export function Request({ title = "Обсудим ваш автомобиль", 
           body: JSON.stringify({ token: token.current, name: data.get("name"), contact: data.get("contact"), consent: data.get("consent") === "on", consentVersion, website: data.get("website"), type, page: window.location.pathname, details: Object.fromEntries([...data.entries()].filter(([key]) => !["name", "contact", "consent", "website"].includes(key))) }),
         });
         const result = await response.json();
-        if (!response.ok || !isMailReceipt(result)) {
+        if (!response.ok || !isDeliveryReceipt(result)) {
           if (response.status === 403) token.current = null;
           throw new Error(result.message || "Не удалось отправить заявку. Попробуйте ещё раз или напишите на corp@carportchina.ru.");
         }

@@ -43,8 +43,12 @@ def configure_mail(ftp):
     signing_key = os.environ['REQUEST_SIGNING_KEY']
     if not password or len(signing_key) < 32:
         raise RuntimeError('Mail secrets are not configured')
+    telegram_token = os.environ['TELEGRAM_BOT_TOKEN']
+    telegram_chat = os.environ['TELEGRAM_CHAT_ID']
+    if not telegram_token or not telegram_chat.startswith('-'):
+        raise RuntimeError('Telegram secrets are not configured')
     import base64
-    encoded = base64.b64encode(json.dumps({'host': 's139.webhost1.ru', 'password': password, 'signing_key': signing_key}).encode()).decode()
+    encoded = base64.b64encode(json.dumps({'host': 's139.webhost1.ru', 'password': password, 'signing_key': signing_key, 'telegram_token': telegram_token, 'telegram_chat': telegram_chat}).encode()).decode()
     config = ("<?php return json_decode(base64_decode('" + encoded + "'), true);\n").encode()
     ftp.storbinary('STOR ' + private + '/config.next.php', io.BytesIO(config))
     ftp.rename(private + '/config.next.php', private + '/config.php')

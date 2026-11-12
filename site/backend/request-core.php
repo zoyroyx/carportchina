@@ -42,11 +42,12 @@ function requestBody(array $request, string $id): string {
 }
 
 // Only random request IDs and keyed hashes are persisted here; no contact details.
-function processRequest(array &$state, string $nonce, string $ipHash, string $contactHash, callable $send, ?int $now = null): array {
+function processRequest(array &$state, string $nonce, string $ipHash, string $contactHash, callable $send, ?int $now = null, ?callable $telegram = null, ?callable $checkpoint = null): array {
     $now = $now ?? time();
     $state['sent'] = array_filter($state['sent'] ?? [], fn($item) => $item['time'] > $now - 7200);
     $state['limits'] = array_filter($state['limits'] ?? [], fn($item) => $item['time'] > $now - 900);
-    if (isset($state['sent'][$nonce])) return ['ok' => true, 'id' => $state['sent'][$nonce]['id'], 'delivery' => 'smtp_accepted'];
+    $previous = $state['sent'][$nonce] ?? null;
+    if ($previous && (!$telegram || ($previous['delivery'] ?? '') === 'smtp_telegram_accepted')) return ['ok' => true, 'id' => $previous['id'], 'delivery' => $previous['delivery'] ?? 'smtp_accepted'];
     foreach ([$ipHash => 8, $contactHash => 3, 'global' => 100] as $key => $limit) {
         if (($state['limits'][$key]['count'] ?? 0) >= $limit) return ['ok' => false, 'status' => 429, 'message' => 'Слишком много заявок. Попробуйте через 15 минут или напишите на corp@carportchina.ru.'];
     }
@@ -54,7 +55,13 @@ function processRequest(array &$state, string $nonce, string $ipHash, string $co
         $state['limits'][$key] = ['time' => $state['limits'][$key]['time'] ?? $now, 'count' => ($state['limits'][$key]['count'] ?? 0) + 1];
     }
     $id = strtoupper(substr($nonce, 0, 10));
-    $send($id);
-    $state['sent'][$nonce] = ['id' => $id, 'time' => $now];
-    return ['ok' => true, 'id' => $id, 'delivery' => 'smtp_accepted'];
+    if (!$previous) {
+        $send($id);
+        $state['sent'][$nonce] = ['id' => $id, 'time' => $now, 'delivery' => 'smtp_accepted'];
+        if ($checkpoint) $checkpoint($state);
+    }
+    if ($telegram) $telegram($id);
+    $delivery = $telegram ? 'smtp_telegram_accepted' : 'smtp_accepted';
+    $state['sent'][$nonce] = ['id' => $id, 'time' => $now, 'delivery' => $delivery];
+    return ['ok' => true, 'id' => $id, 'delivery' => $delivery];
 }
