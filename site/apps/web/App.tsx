@@ -1,6 +1,7 @@
 import { FerrariPage } from "./FerrariPage";
 import { PromoBanners } from "./PromoBanners";
 import { DataNotice } from "./DataNotice";
+import { CookieNotice } from "./CookieNotice";
 import { legalOperator } from "./legal-content";
 import { Request } from "./Request";
 import { ClientReviews } from "./ClientReviews";
@@ -1197,6 +1198,7 @@ export function App(props: AppProps) {
         )}
       </main>
       <Footer company={props.company} />
+      <CookieNotice />
     </>
   );
 }

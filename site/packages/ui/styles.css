@@ -1,5 +1,6 @@
 @import "./ferrari.css";
 @import "./promos.css";
+@import "./cookie-notice.css";
 :root {
   font-family: "Golos Text Variable", "Golos Text", Arial, sans-serif;
   color-scheme: light;
