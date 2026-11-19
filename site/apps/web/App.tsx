@@ -31,6 +31,7 @@ import { services, titleFor, purchaseQuestions, type Service } from "./content";
 import {
   offerForPath,
   catalogQuery,
+  catalogSort,
   filterOffers,
   type Offer,
 } from "../../packages/contracts/offers";
@@ -521,43 +522,42 @@ function ServiceList({
   );
 }
 function Home({ offers, now, company }: AppProps) {
+  const stockCatalogUrl = "/cars/?availability=in_stock&sort=price_asc";
   return (
     <>
       <section className="hero">
         <div className="hero-copy">
           <span className="eyebrow">CarPort China · автомобили и сервис</span>
           <h1>
-            Подберём и привезём <em>ваш автомобиль.</em>
+            Подберём и привезём автомобиль <em>под ключ.</em>
           </h1>
           <p className="lead">
-            Найдём автомобиль под ваши пожелания или поможем выбрать из
-            каталога. Доставка, оформление и свой сервис.
+            Рассчитаем стоимость покупки, доставки,
+            таможенных платежей и оформления. Уточним срок до выдачи автомобиля.
           </p>
           <div className="actions">
-            <LinkButton href="/cars/#request">Подобрать автомобиль</LinkButton>
-            <LinkButton href="/cars/" secondary>
-              Открыть каталог
+            <LinkButton href="#request">Получить расчёт под ключ</LinkButton>
+            <LinkButton href={stockCatalogUrl} secondary>
+              Авто в наличии
             </LinkButton>
           </div>
           <p className="hero-caption">Китай · Корея · ОАЭ · Европа</p>
+          <p className="hero-caption">Автомобили 2026 года — от 2,5 млн ₽</p>
         </div>
         <HeroSlideshow />
       </section>
       <FleetActivity />
       <HomeBenefits />
-      <section className="section catalog-preview">
+      <section className="section catalog-preview" id="home-catalog">
         <div className="section-head">
           <div>
-            <h2>Авто из каталога или подбор под вас</h2>
+            <h2>Автомобили в наличии и под заказ</h2>
           </div>
           <a className="text-link" href="/cars/">
-            Перейти в каталог <Arrow />
+            Открыть каталог <Arrow />
           </a>
         </div>
-        <p className="lead">
-          Смотрите предложения в каталоге или расскажите, какой автомобиль
-          ищете. Подберём варианты под ваши задачи, комплектацию и бюджет.
-        </p>
+        <p className="catalog-preview-description">Выберите авто из наличия или закажите подбор.</p>
         {filterOffers(offers).length ? (
           <div className="vehicle-grid">
             {catalogQuery(offers, new URLSearchParams(), now)
@@ -577,12 +577,13 @@ function Home({ offers, now, company }: AppProps) {
             </a>
           </div>
         )}
-        <div className="catalog-preview-footer"><a className="text-link" href="/cars/">Весь каталог <Arrow /></a></div>
+        <div className="catalog-preview-footer"><a className="text-link" href="/cars/">Открыть каталог <Arrow /></a></div>
       </section>
       <ClientReviews />
       <CompanyProof company={company} />
       <PurchaseProcess />
       <Documents />
+      <PromoBanners compact />
       <section className="section home-services">
         <div className="section-head">
           <div>
@@ -605,7 +606,10 @@ function Home({ offers, now, company }: AppProps) {
           Условия для бизнеса
         </LinkButton>
       </section>
-      <Request />
+      <Request
+        title="Рассчитать автомобиль под ключ"
+        fields={["Модель и комплектация", "Город выдачи", "Бюджет, если определились"]}
+      />
     </>
   );
 }
@@ -618,6 +622,7 @@ function Catalog({ url, offers, now }: AppProps) {
   }
   function setFilter(key: string, value: string) {
     const next = new URLSearchParams(params);
+    if (key === "availability" && value === "in_stock") next.delete("sort");
     if (value) next.set(key, value); else next.delete(key);
     updateFilters(next);
   }
@@ -626,7 +631,7 @@ function Catalog({ url, offers, now }: AppProps) {
     const restore = () => {
       const next = new URLSearchParams(window.location.search);
       setParams(next);
-      if (next.get("brand") || next.get("sort") || next.get("vat")) setMoreFilters(true);
+
     };
     restore();
     window.addEventListener("popstate", restore);
@@ -634,9 +639,10 @@ function Catalog({ url, offers, now }: AppProps) {
   }, []);
   const brand = params.get("brand") ?? "";
   const vat = params.get("vat") === "true";
-  const [moreFilters, setMoreFilters] = useState(
-    !!brand || vat || !!params.get("sort"),
-  );
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const mode = params.get("availability");
+  const heading = mode === "in_stock" ? "Автомобили в наличии" : mode === "to_order" ? "Автомобили под заказ" : "Автомобили";
+  const sortLabels: Record<string, string> = { price_asc: "Сначала дешевле", price_desc: "Сначала дороже", year_desc: "Сначала новее" };
   const filtered = catalogQuery(offers, params, now);
   const hasFilters = ["q", "brand", "vat", "budget", "availability", "sort"].some(
     (key) => !!params.get(key),
@@ -646,16 +652,22 @@ function Catalog({ url, offers, now }: AppProps) {
   }, []);
   return (
     <>
-      <div className="catalog-heading"><Intro eyebrow="Каталог" title="Автомобили">
-        Сначала — автомобили в наличии. Выберите готовый вариант или сравните
-        стоимость поставки под заказ.
-      </Intro><p className="catalog-update-note">Каталог постоянно пополняется новыми моделями. Не нашли свой автомобиль? <a href="#request">Расскажите, что ищете ↗</a></p></div>
-      <form
+      <div className="catalog-toolbar">
+        <h1>{heading}</h1>
+        <label className="catalog-quick-search">
+          <span className="sr-only">Марка или модель</span>
+          <input name="q" form="catalog-filters" type="search" maxLength={100} value={params.get("q") ?? ""}
+            onChange={e => setFilter("q", e.target.value)} placeholder="Марка или модель" />
+        </label>
+        <button type="button" className="button secondary" aria-expanded={filtersOpen} aria-controls="catalog-filters"
+          onClick={() => setFiltersOpen(!filtersOpen)}>Фильтры</button>
+      </div>
+      <form id="catalog-filters" hidden={!filtersOpen}
         className="filters catalog-filters"
         aria-label="Фильтр автомобилей"
         method="get"
         action="/cars/"
-        onSubmit={e => { e.preventDefault(); trackJourney("catalog_filter"); }}
+        onSubmit={e => { e.preventDefault(); setFiltersOpen(false); trackJourney("catalog_filter"); }}
       >
         <fieldset className="availability-filter">
           <legend>Способ покупки</legend>
@@ -663,17 +675,6 @@ function Catalog({ url, offers, now }: AppProps) {
             <label key={value}><input type="radio" name="availability" value={value} checked={(params.get("availability") ?? "") === value} onChange={() => setFilter("availability", value)} /><span>{label}</span></label>
           ))}
         </fieldset>
-        <label className="catalog-search">
-          Марка или модель
-          <input
-            name="q"
-            type="search"
-            maxLength={100}
-            value={params.get("q") ?? ""}
-            onChange={e => setFilter("q", e.target.value)}
-            placeholder="Toyota, ZEEKR, Monjaro"
-          />
-        </label>
         <label>
           Бюджет, ₽
           <input
@@ -688,18 +689,7 @@ function Catalog({ url, offers, now }: AppProps) {
             placeholder="Без ограничения"
           />
         </label>
-        <button
-          type="button"
-          className="catalog-filter-toggle text-link"
-          aria-expanded={moreFilters}
-          aria-controls="catalog-more"
-          onClick={() => setMoreFilters(!moreFilters)}
-        >
-          {moreFilters
-            ? "Скрыть дополнительные фильтры"
-            : "Марка, сортировка и НДС"}
-        </button>
-        <div id="catalog-more" className="catalog-more" data-open={moreFilters}>
+        <div className="catalog-more" data-open="true">
           <label>
             Марка
             <select name="brand" aria-label="Марка" value={brand} onChange={e => setFilter("brand", e.target.value)}>
@@ -713,8 +703,8 @@ function Catalog({ url, offers, now }: AppProps) {
           </label>
           <label>
             Сортировка
-            <select name="sort" aria-label="Сортировка" value={params.get("sort") ?? ""} onChange={e => setFilter("sort", e.target.value)}>
-              <option value="">Сначала в наличии</option>
+            <select name="sort" aria-label="Сортировка" value={catalogSort(params)} onChange={e => setFilter("sort", e.target.value)}>
+              {params.get("availability") !== "in_stock" && <option value="">Сначала в наличии</option>}
               <option value="price_asc">Сначала дешевле</option>
               <option value="price_desc">Сначала дороже</option>
               <option value="year_desc">Сначала новее</option>
@@ -734,10 +724,9 @@ function Catalog({ url, offers, now }: AppProps) {
         <div className="catalog-filter-actions"><button className="button">Показать</button>
         <a href="/cars/" className="text-link" onClick={e => { e.preventDefault(); resetFilters(); }}>Сбросить</a></div>
       </form>
-      <p className="catalog-price-note">Цены по предложениям поставщика. Итоговую стоимость и наличие подтвердим при обращении.{params.get("availability") === "to_order" ? " Бюджет и сортировка учитывают цену под заказ." : " Для доступных машин указан бюджет покупки из наличия."}</p>
-      <p className="catalog-count" role="status">
-        Автомобилей: {filtered.length}
-        {hasFilters ? " по выбранным условиям" : ""}
+      <p className="catalog-count" role="status">Автомобилей: {filtered.length}
+        {sortLabels[catalogSort(params)] && ` · ${sortLabels[catalogSort(params)]}`}
+        {brand && ` · ${brand}`}{params.get("budget") && ` · до ${params.get("budget")} ₽`}{vat && " · с НДС"}
       </p>
       <div>
         {filtered.length ? (
@@ -773,6 +762,8 @@ function Catalog({ url, offers, now }: AppProps) {
           </div>
         )}
       </div>
+      <p className="catalog-price-note">Цены по предложениям поставщика. Итоговую стоимость и наличие подтвердим при обращении.{params.get("availability") === "to_order" ? " Бюджет и сортировка учитывают цену под заказ." : " Для доступных машин указан бюджет покупки из наличия."}</p>
+      <PromoBanners />
       <section className="section" id="questions">
         <h2>Частые вопросы</h2>
         <FAQ items={purchaseQuestions} />
@@ -1124,6 +1115,11 @@ export function App(props: AppProps) {
   const path = new URL(props.url, "http://local").pathname;
   const service = services.find((s) => path === `/services/${s.slug}/`);
   const vehicle = offerForPath(props.offers, path);
+  const [purchaseParam, setPurchaseParam] = useState(() => new URL(props.url, "http://local").searchParams.get("availability"));
+  useEffect(() => {
+    if (vehicle) setPurchaseParam(new URLSearchParams(window.location.search).get("availability"));
+  }, [vehicle]);
+  const purchaseMode = vehicle && (purchaseParam === vehicle.availability || (purchaseParam === "to_order" && vehicle.orderPriceRub)) ? purchaseParam : null;
   const pageTitle = vehicle?.title ?? titleFor(path);
   const known = !!pageTitle;
   return (
@@ -1131,7 +1127,13 @@ export function App(props: AppProps) {
       <RouteBackground key={path} />
       <Header path={path} phone={props.company?.contacts?.phone} messenger={props.company?.contacts?.messenger} />
       <main className="wrap" id="main">
-        {known && !["/privacy/", "/consent/", "/ferrari-849-testarossa-spider/"].includes(path) && <PromoBanners />}
+        <aside className="import-fee-notice" aria-label="Предложение по привозу автомобиля">
+          <span className="import-fee-copy">Успейте оставить заявку <strong>до повышения утильсбора</strong></span>
+          <a className="button" href={path === "/" || vehicle ? "#request" : "/#request"}>
+            Оставить заявку <Arrow />
+          </a>
+        </aside>
+        {known && !["/", "/cars/", "/privacy/", "/consent/", "/ferrari-849-testarossa-spider/"].includes(path) && <PromoBanners />}
         {path !== "/" && (
           <nav aria-label="Хлебные крошки" className="breadcrumbs">
             <ol>
@@ -1180,7 +1182,7 @@ export function App(props: AppProps) {
           <FerrariPage />
         ) : vehicle ? (
           <>
-            <VehicleDetails offer={vehicle} now={props.now} />
+            <VehicleDetails offer={vehicle} now={props.now} purchaseMode={purchaseMode} />
             <section className="section">
               <h2>Поддержка после покупки</h2>
               <ServiceList />
@@ -1188,6 +1190,7 @@ export function App(props: AppProps) {
             <Request
               title="Предложение по автомобилю"
               offer={vehicle}
+              purchaseMode={purchaseMode}
               fields={["Вопрос или пожелания"]}
             />
           </>

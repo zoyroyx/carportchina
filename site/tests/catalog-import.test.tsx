@@ -22,6 +22,26 @@ describe('November catalog import',()=>{
   const result=catalogQuery(offers,new URLSearchParams('availability=in_stock&q=Toyota&budget=4500000&sort=price_asc'),now);
   expect(result.map(o=>o.model)).toEqual(['RAV4','Camry 85']);
  });
+ it('opens the stock filter cheapest first and honors an explicit sort',()=>{
+  const params = new URLSearchParams('availability=in_stock&utm_source=yandex');
+  const cheapest = catalogQuery(offers, params, now);
+  expect(cheapest.slice(0,3).map(o=>o.model)).toEqual(['Civic','CX-5','Q2']);
+  params.set('sort','price_desc');
+  expect(catalogQuery(offers, params, now)[0].stockPriceRub).toBeGreaterThan(cheapest[0].stockPriceRub!);
+ });
+ it.each([['рав4','RAV4'], ['RAV 4','RAV4'], ['тойота камри','Camry 85'], ['мазда сх-5','CX-5'], ['CX5','CX-5']])('finds the stock model for %s',(q,model)=>{
+  const params = new URLSearchParams({ availability: 'in_stock', q });
+  expect(catalogQuery(offers, params, now).map(o=>o.model)).toEqual([model]);
+ });
+ it('carries order context from the catalog into the vehicle price and application',()=>{
+  const offer = offers.find(o=>o.model==='Civic')!;
+  const url = `/cars/${offer.slug}/?availability=to_order`;
+  const catalog = render({url:'/cars/?availability=to_order',offers,now}).html;
+  expect(catalog).toContain(`href="${url}"`);
+  const detail = render({url,offers,now}).html;
+  expect(detail.indexOf('2 700 000')).toBeLessThan(detail.indexOf('3 030 000'));
+  expect(detail).toContain('name="Способ покупки" value="Под заказ"');
+ });
  it('includes dual-price models under order filter without inventing stock',()=>{
   const result=catalogQuery(offers,new URLSearchParams('availability=to_order'),now);
   expect(result.some(o=>o.model==='Camry 85')).toBe(true);

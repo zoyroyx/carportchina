@@ -50,3 +50,15 @@
   .promo-links { gap: 2px 10px; }
 }
 @media (prefers-reduced-motion: reduce) { .promo-slide { transition: none; } }
+
+/* On the homepage, related offers follow the registration details. */
+.promo-inline { scroll-margin-top: 92px; }
+.promo-inline .promo-stage { height: 90px; }
+.promo-inline .promo-copy { padding-block: 4px; }
+.promo-inline .promo-copy :is(.promo-kicker, p) { display: none; }
+.promo-inline .promo-copy h2 { font-size: clamp(16px, 2vw, 22px); }
+@media (max-width: 380px) {
+  .promo-inline .promo-copy { width: calc(100% - 78px); }
+  .promo-inline .promo-controls { top: 0; bottom: 0; align-items: center; }
+  .promo-inline .promo-arrow { width: 36px; }
+}

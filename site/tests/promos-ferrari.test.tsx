@@ -8,11 +8,11 @@ import { buildSeo, sitemap } from "../apps/server/seo";
 import { titleFor } from "../apps/web/content";
 
 describe("promotions and Ferrari allocation", () => {
-  it("starts with Ferrari and keeps other slides out of keyboard navigation", () => {
+  it("starts with residency and keeps the service slide out of keyboard navigation until selected", () => {
     const html = renderToStaticMarkup(<PromoBanners />);
-    expect(promos[0].id).toBe("ferrari");
-    expect(html.match(/inert=""/g)).toHaveLength(2);
-    expect(html).toContain(ferrariPath);
+    expect(promos.map(promo => promo.id)).toEqual(["residency", "service"]);
+    expect(html.match(/inert=""/g)).toHaveLength(1);
+    expect(html).not.toContain(ferrariPath);
     for (const promo of promos) {
       for (const width of [960, 1920]) expect(existsSync(`public/photos/promos/${promo.image}-${width}.webp`)).toBe(true);
       for (const link of promo.links) expect(titleFor(link.href)).toBeTruthy();

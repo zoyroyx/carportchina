@@ -153,18 +153,37 @@ export function catalogPrice(o: Offer, now: number, purchaseMode = ""): bigint |
   }
   return isCurrent(o.validUntil, now) && o.amountMinor !== null ? BigInt(o.amountMinor) : null;
 }
+export function catalogSort(params: URLSearchParams): string {
+  return params.get("sort") || (params.get("availability") === "in_stock" ? "price_asc" : "");
+}
+
+// Common Russian spellings of brands and models in the catalog.
+const catalogAliases: Record<string, string> = {
+  тойота: "toyota", тоёта: "toyota", рав: "rav", равчик: "rav4", камри: "camry",
+  хайлендер: "highlander", ленд: "land", крузер: "cruiser", мазда: "mazda", сх: "cx",
+  хонда: "honda", цивик: "civic", сивик: "civic", ауди: "audi", ку: "q", бмв: "bmw", икс: "x",
+  мерседес: "mercedes", фольксваген: "volkswagen", зикр: "zeekr", джили: "geely",
+  монджаро: "monjaro", чанган: "changan", порше: "porsche", кайен: "cayenne",
+  кулинан: "cullinan", куллинан: "cullinan", денза: "denza", сяоми: "xiaomi",
+};
+function catalogSearchText(text: string): string {
+  return text.toLocaleLowerCase("ru")
+    .replace(/[а-яё]+/g, word => catalogAliases[word] ?? word)
+    .replace(/[\s\p{Pd}]+/gu, "");
+}
+
 export function catalogQuery(
   offers: Offer[],
   params: URLSearchParams,
   now: number,
 ): Offer[] {
-  const q = (params.get("q") ?? "").trim().toLocaleLowerCase("ru");
+  const q = catalogSearchText(params.get("q") ?? "");
   const budget = params.get("budget") ?? "";
   const max =
     /^\d{1,10}$/.test(budget) && BigInt(budget) > 0n
       ? BigInt(budget) * 100n
       : null;
-  const sort = params.get("sort") ?? "";
+  const sort = catalogSort(params);
   const result = filterOffers(
     offers,
     params.get("brand") ?? "",
@@ -173,9 +192,7 @@ export function catalogQuery(
     (o) =>
       (!params.get("availability") || (params.get("availability") === "to_order" ? o.availability === "to_order" || !!o.orderPriceRub : o.availability === params.get("availability"))) &&
       (!q ||
-        `${o.brand} ${o.model ?? ""} ${o.title} ${o.trim ?? ""}`
-          .toLocaleLowerCase("ru")
-          .includes(q)) &&
+        catalogSearchText(`${o.brand} ${o.model ?? ""} ${o.title} ${o.trim ?? ""}`).includes(q)) &&
       (max === null ||
         (catalogPrice(o, now, params.get("availability") ?? "") !== null && catalogPrice(o, now, params.get("availability") ?? "")! <= max)),
   );

@@ -9,15 +9,22 @@ import {
 } from "../../packages/contracts/offers";
 import { trackJourney } from "./analytics";
 const availabilityLabels: Record<string, string> = { in_stock: "В наличии", to_order: "Под заказ", in_transit: "В пути", unknown: "Уточнить наличие" };
-function Availability({ offer }: { offer: Offer }) {
-  return <span className={`vehicle-availability ${offer.availability === "in_stock" ? "is-stock" : ""}`}>{availabilityLabels[offer.availability ?? "unknown"]}</span>;
+function Availability({ offer, purchaseMode }: { offer: Offer; purchaseMode?: string | null }) {
+  const availability = purchaseMode || offer.availability || "unknown";
+  return <span className={`vehicle-availability ${availability === "in_stock" ? "is-stock" : ""}`}>{availabilityLabels[availability]}</span>;
 }
-function VehiclePrice({ offer, now }: { offer: Offer; now: number }) {
+function VehiclePrice({ offer, now, purchaseMode }: { offer: Offer; now: number; purchaseMode?: string | null }) {
   if (offer.priceKind === "on_request" && (offer.stockPriceRub || offer.orderPriceRub)) {
     const rub = (value: number) => new Intl.NumberFormat("ru-RU").format(value) + " ₽";
+    const rows = [
+      { label: "В наличии", amount: offer.stockPriceRub, stock: true },
+      { label: "Под заказ", amount: offer.orderPriceRub, stock: false },
+    ].filter(row => row.amount);
+    if (purchaseMode === "to_order") rows.reverse();
     return <>
-      {offer.stockPriceRub && <span className="vehicle-price-option is-stock"><span>В наличии</span><strong>от {rub(offer.stockPriceRub)}</strong></span>}
-      {offer.orderPriceRub && <span className={`vehicle-price-option ${offer.stockPriceRub ? "is-alternative" : ""}`}><span>Под заказ</span><strong>от {rub(offer.orderPriceRub)}</strong></span>}
+      {rows.map((row, index) => <span key={row.label} className={`vehicle-price-option ${index ? "is-alternative" : row.stock ? "is-stock" : ""}`}>
+        <span>{row.label}</span><strong>от {rub(row.amount!)}</strong>
+      </span>)}
       <span className="vehicle-price-caption">По предложению от {offer.sourcePrice?.date.split("-").reverse().join(".")} · итоговый расчёт индивидуально</span>
     </>;
   }
@@ -56,13 +63,13 @@ export function VehicleCard({ offer, now, purchaseMode = "" }: { offer: Offer; n
   const cover = covers[offer.slug];
   const src = cover?.src ?? imageSource(offer.gallery?.[0]?.src ?? offer.image);
   return (
-    <a className="vehicle-card" href={`/cars/${offer.slug}/`}>
+    <a className="vehicle-card" href={`/cars/${offer.slug}/${purchaseMode ? "?availability=" + encodeURIComponent(purchaseMode) : ""}`}>
       <div className="vehicle-card-media">
         {src ? <img src={src} alt={offer.title} loading="lazy" width={cover?.width ?? 640} height={cover?.height ?? 400} srcSet={cover?.srcSet} sizes="(max-width: 639px) calc((100vw - 44px) / 2), (max-width: 1023px) calc((100vw - 80px) / 3), (max-width: 1519px) calc((100vw - 140px) / 4), 345px" decoding="async" /> : <span>Фотографии по запросу</span>}
         {!!offer.gallery?.length && <span className="vehicle-photo-count" aria-label={`Фотографий: ${offer.gallery.length}`}>▧ {offer.gallery.length}</span>}
       </div>
       <div className="vehicle-card-copy">
-        <Availability offer={offer} />
+        <Availability offer={offer} purchaseMode={purchaseMode} />
         <h3>{offer.title}</h3>
         <p className="vehicle-meta">{[offer.year, offer.trim].filter(Boolean).join(" · ")}</p>
         <CardPrice offer={offer} now={now} purchaseMode={purchaseMode} />
@@ -71,7 +78,7 @@ export function VehicleCard({ offer, now, purchaseMode = "" }: { offer: Offer; n
     </a>
   );
 }
-export function VehicleDetails({ offer, now }: { offer: Offer; now: number }) {
+export function VehicleDetails({ offer, now, purchaseMode }: { offer: Offer; now: number; purchaseMode?: string | null }) {
   const photos = (
     offer.gallery?.length
       ? offer.gallery
@@ -156,7 +163,7 @@ export function VehicleDetails({ offer, now }: { offer: Offer; now: number }) {
         <div className="vehicle-summary">
           <span className="eyebrow">{offer.brand} · Автомобиль</span>
           <h1>{offer.title}</h1>
-          <Availability offer={offer} />
+          <Availability offer={offer} purchaseMode={purchaseMode} />
           {offer.availabilityNote && <p className="vehicle-meta">{offer.availabilityNote}</p>}
           {offer.trim && <p className="lead">{offer.trim}</p>}
           {offer.highlights && (
@@ -167,7 +174,7 @@ export function VehicleDetails({ offer, now }: { offer: Offer; now: number }) {
             </ul>
           )}
           <p className="vehicle-price">
-            <VehiclePrice offer={offer} now={now} />
+            <VehiclePrice offer={offer} now={now} purchaseMode={purchaseMode} />
           </p>
           {offer.sourcePrice && (
             <p className="vehicle-meta">{offer.sourcePrice.note}</p>
@@ -188,7 +195,7 @@ export function VehicleDetails({ offer, now }: { offer: Offer; now: number }) {
               </p>
             )}
           <a href="#request" className="button">
-            {offer.availability === "in_stock" ? "Хочу этот автомобиль" : "Узнать условия покупки"} <span aria-hidden="true">↗</span>
+            {purchaseMode === "to_order" ? "Заказать этот автомобиль" : offer.availability === "in_stock" ? "Хочу этот автомобиль" : "Узнать условия покупки"} <span aria-hidden="true">↗</span>
           </a>
           <a href="#specifications" className="text-link">
             Характеристики ↓

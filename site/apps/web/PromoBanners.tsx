@@ -3,14 +3,6 @@ import { useDeferredImages } from "./useDeferredImages";
 
 export const promos = [
   {
-    id: "ferrari", label: "Ferrari", kicker: "Эксклюзивная квота CarPort China",
-    title: "Ferrari 849 Testarossa Spider",
-    description: "Одна квота. Ваша конфигурация. Поставка летом 2027.",
-    compact: "Одна квота · лето 2027",
-    image: "ferrari-849", alt: "Ferrari 849 Testarossa Spider, рекламная композиция",
-    links: [{ label: "Открыть предложение", href: "/ferrari-849-testarossa-spider/" }],
-  },
-  {
     id: "residency", label: "ПМЖ", kicker: "Два направления. Один партнёр.",
     title: "ПМЖ в Беларуси и Кыргызстане",
     description: "Сопровождение, документы и вопросы автомобиля.",
@@ -29,7 +21,7 @@ export const promos = [
 
 ] as const;
 
-export function PromoBanners() {
+export function PromoBanners({ compact = false }: { compact?: boolean }) {
   const id = useId();
   const root = useRef<HTMLElement>(null);
   const [active, setActive] = useState(0);
@@ -61,12 +53,12 @@ export function PromoBanners() {
   }, [running, active]);
 
   const select = (index: number) => { setActive(index); setPaused(true); };
-  return <section ref={root} className="promo-banners" aria-label="Предложения CarPort China" aria-roledescription="карусель"
+  return <section ref={root} id={compact ? "home-offers" : undefined} className={compact ? "promo-banners promo-inline" : "promo-banners"} aria-label="Предложения CarPort China" aria-roledescription="карусель"
     onPointerEnter={event => { if (event.pointerType === "mouse") setHovered(true); }} onPointerLeave={() => setHovered(false)}
     onFocusCapture={() => setFocused(true)} onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false); }}>
     <div className="promo-stage" id={`${id}-slides`}>
       {promos.map((promo, index) => <article key={promo.id} className={`promo-slide promo-${promo.id}${active === index ? " is-active" : ""}`} inert={active !== index} aria-hidden={active !== index} aria-label={`${index + 1} из ${promos.length}: ${promo.label}`} aria-roledescription="слайд">
-        {(index === 0 || index === active || secondaryImages) && <img className="promo-photo" src={`/photos/promos/${promo.image}-1920.webp`} srcSet={`/photos/promos/${promo.image}-960.webp 960w, /photos/promos/${promo.image}-1920.webp 1920w`} sizes="(max-width: 640px) 100vw, 80vw" width={2172} height={724} alt={promo.alt} fetchPriority={index === 0 ? "auto" : "low"} loading={index === active ? "eager" : "lazy"} decoding="async" />}
+        {(index === 0 || index === active || secondaryImages) && <img className="promo-photo" src={`/photos/promos/${promo.image}-1920.webp`} srcSet={`/photos/promos/${promo.image}-960.webp 960w, /photos/promos/${promo.image}-1920.webp 1920w`} sizes="(max-width: 640px) 100vw, 80vw" width={2172} height={724} alt={promo.alt} fetchPriority={index === 0 ? "auto" : "low"} loading={!compact && index === active ? "eager" : "lazy"} decoding="async" />}
         <div className="promo-shade" aria-hidden="true" />
         <div className="promo-copy"><span className="promo-kicker">{promo.kicker}</span><h2>{promo.title}</h2><p className="promo-description">{promo.description}</p><p className="promo-compact">{promo.compact}</p>
           <div className="promo-links">{promo.links.map(link => <a key={link.href} href={link.href}>{link.label}<span aria-hidden="true">↗</span></a>)}</div>

@@ -5,10 +5,11 @@ import { trackJourney } from "./analytics";
 import { consentVersion } from "./legal-content";
 import { isDeliveryReceipt, reportRequestSuccess } from "./request-success";
 
-export function Request({ title = "Обсудим ваш автомобиль", type = "general_selection", fields = ["Модель или пожелания", "Бюджет, если определились"], country, requestId = "request", offer }: {
-  title?: string; type?: string; fields?: string[]; country?: string; requestId?: string; offer?: Offer;
+export function Request({ title = "Обсудим ваш автомобиль", type = "general_selection", fields = ["Модель или пожелания", "Бюджет, если определились"], country, requestId = "request", offer, purchaseMode }: {
+  title?: string; type?: string; fields?: string[]; country?: string; requestId?: string; offer?: Offer; purchaseMode?: string | null;
 }) {
   const copy = requestCopy[type] ?? requestCopy.general_selection!;
+  const purchaseLabel = purchaseMode === "to_order" ? "Под заказ" : purchaseMode === "in_stock" ? "В наличии" : purchaseMode === "in_transit" ? "В пути" : "";
   const [ready, setReady] = useState(false);
   const [topic, setTopic] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -52,7 +53,7 @@ export function Request({ title = "Обсудим ваш автомобиль", 
     }} aria-busy={status === "sending"}>
       <fieldset disabled={!ready || status === "sending" || status === "sent"}>
         <legend className="sr-only">Заявка и контакт для ответа</legend>
-        {offer && <><input type="hidden" name="Автомобиль" value={offer.title} /><input type="hidden" name="Код предложения" value={offer.id} /><p className="request-context">Автомобиль: <strong>{offer.title}</strong></p></>}
+        {offer && <><input type="hidden" name="Автомобиль" value={offer.title} /><input type="hidden" name="Код предложения" value={offer.id} />{purchaseLabel && <input type="hidden" name="Способ покупки" value={purchaseLabel} />}<p className="request-context">Автомобиль: <strong>{offer.title}</strong>{purchaseLabel && ` · ${purchaseLabel}`}</p></>}
         {country && <input type="hidden" name="Страна" value={country} />}
         <div className="form-grid">
           <label>Ваше имя<input className="ym-disable-keys" name="name" autoComplete="name" maxLength={80} required placeholder="Как к вам обращаться" /></label>
