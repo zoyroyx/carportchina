@@ -53,7 +53,9 @@ export function Request({ title = "Обсудим ваш автомобиль", 
     }} aria-busy={status === "sending"}>
       <fieldset disabled={!ready || status === "sending" || status === "sent"}>
         <legend className="sr-only">Заявка и контакт для ответа</legend>
-        {offer && <><input type="hidden" name="Автомобиль" value={offer.title} /><input type="hidden" name="Код предложения" value={offer.id} />{purchaseLabel && <input type="hidden" name="Способ покупки" value={purchaseLabel} />}<p className="request-context">Автомобиль: <strong>{offer.title}</strong>{purchaseLabel && ` · ${purchaseLabel}`}</p></>}
+        {offer && <><input type="hidden" name="Автомобиль" value={offer.title} /><input type="hidden" name="Код предложения" value={offer.id} /><p className="request-context">Автомобиль: <strong>{offer.title}</strong>{purchaseLabel && ` · ${purchaseLabel}`}</p></>}
+        {purchaseLabel && <input type="hidden" name="Способ покупки" value={purchaseLabel} />}
+        {!offer && purchaseLabel && <p className="request-context">Способ покупки: <strong>{purchaseLabel}</strong></p>}
         {country && <input type="hidden" name="Страна" value={country} />}
         <div className="form-grid">
           <label>Ваше имя<input className="ym-disable-keys" name="name" autoComplete="name" maxLength={80} required placeholder="Как к вам обращаться" /></label>

@@ -768,7 +768,7 @@ function Catalog({ url, offers, now }: AppProps) {
         <h2>Частые вопросы</h2>
         <FAQ items={purchaseQuestions} />
       </section>
-      <Request title="Поможем выбрать автомобиль" />
+      <Request title="Поможем выбрать автомобиль" purchaseMode={mode} />
     </>
   );
 }
@@ -1129,7 +1129,7 @@ export function App(props: AppProps) {
       <main className="wrap" id="main">
         <aside className="import-fee-notice" aria-label="Предложение по привозу автомобиля">
           <span className="import-fee-copy">Успейте оставить заявку <strong>до повышения утильсбора</strong></span>
-          <a className="button" href={path === "/" || vehicle ? "#request" : "/#request"}>
+          <a className="button" href={path === "/" || path === "/cars/" || vehicle ? "#request" : "/#request"}>
             Оставить заявку <Arrow />
           </a>
         </aside>

@@ -42,6 +42,12 @@ describe('November catalog import',()=>{
   expect(detail.indexOf('2 700 000')).toBeLessThan(detail.indexOf('3 030 000'));
   expect(detail).toContain('name="Способ покупки" value="Под заказ"');
  });
+ it.each([['in_stock','В наличии'],['to_order','Под заказ']])('keeps the catalog CTA and application in %s mode',(mode,label)=>{
+  const html = render({url:`/cars/?availability=${mode}`,offers,now}).html;
+  const banner = html.slice(html.indexOf('class="import-fee-notice"')).split('</aside>')[0];
+  expect(banner).toContain('href="#request"');
+  expect(html).toContain(`name="Способ покупки" value="${label}"`);
+ });
  it('includes dual-price models under order filter without inventing stock',()=>{
   const result=catalogQuery(offers,new URLSearchParams('availability=to_order'),now);
   expect(result.some(o=>o.model==='Camry 85')).toBe(true);
